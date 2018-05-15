@@ -1,0 +1,1 @@
+Skúsim urobiť RunBota ktorý bude informovať o štafete
