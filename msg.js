@@ -2,7 +2,7 @@
 
 var dataAccess = require('./dataAccess');
 
-const defaultMessage = "Ahoj, tu je runbot od DXC Technology. Skús sa ma niečo opýtať, napríklad: tim 29 alebo úsek 13" 
+const defaultMessage = "Ahoj, tu je runbot od DXC Technology. Skús sa ma niečo opýtať, napríklad: tim 29 alebo úsek 13"
 
 //////////////////////
 // Known messages
@@ -15,38 +15,46 @@ const replaceLeg = /(usek|Usek|úsek|Úsek|leg|Leg)\s+/;
 
 
 
-function processMessage(message) {
-    // console.log('input: ' + message)
-    // if(message == '?') {
-    //     return helpMessage;
-    // }
+function processMessage(message, callback) {
+    if (matchTim.test(message)) {
+        // chce info o time
+        var teamNumber = parseInt(message.replace(replaceTim, ''));
 
-    if(matchTim.test(message)) {
-        var teamNumber = parseInt(message.replace(replaceTim, ''));        
-        return formatTeam(dataAccess.getTeam(teamNumber));
+        dataAccess.getTeam(teamNumber, function (err, team) {
+            if(err) {
+                callback(message, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
+            } else {
+                callback(message, formatTeam(team));
+            }
+        })
+    } else if (matchLeg.test(message)) {
+        // chce info o useku
+        var legNumber = parseInt(message.replace(replaceLeg, ''));
+
+        dataAccess.getLeg(legNumber, function (err, leg) {
+            if(err) {
+                callback(message, "Nepodarilo sa mi zistiť info o tomto úseku, skús prosím ešte raz.");
+            } else {
+                callback(message, formatLeg(leg));
+            }
+        })
+    } else {
+        callback(message, defaultMessage);
     }
-    
-    if(matchLeg.test(message)) {
-        var legNumber = parseInt(message.replace(replaceLeg, ''));        
-        return formatLeg(dataAccess.getLeg(legNumber));
-    }
-    
-    return defaultMessage;
 }
 
 function formatTeam(team) {
     if(team == undefined) {
-        return "O tíme sa takýmto číslom neviem, tímov je " + dataAccess.getTeamCount();
+        return "O tíme sa takýmto číslom neviem, skús iné číslo";
     }
-    return "Tím " + team.id + " sa volá " + team.name + ". Štartoval o " + team.start + " v kategórii " + team.category;
+    return "Tím " + team.team + " sa volá " + team.name + ". Štartoval o " + team.startTimeKE + " v kategórii " + team.category;
 }
 
 function formatLeg(leg) {
-    if(leg == undefined) {
+    if (leg == undefined) {
         return "Takýto úsek neexistuje, skús medzi 1 a 48.";
     }
-    var d = parseFloat(leg.distance);
-    return "Úsek " + leg.id + ": " + leg.from + " - " + leg.to + " meria " + (d/1000).toFixed(2) + " km. Stúpanie " + parseFloat(leg.up).toFixed(0) + " m, klesanie " + parseFloat(leg.down).toFixed(0) + " m.";
+    return "Úsek " + leg.leg + ": " + leg.from + " - " + leg.to + " meria " + leg.distance + " km. Stúpanie " + leg.up + " m, klesanie " + leg.down + " m.";
 }
 
 exports.processMessage = processMessage;
