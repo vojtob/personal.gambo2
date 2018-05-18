@@ -3,6 +3,7 @@ AWS.config.update({
     region: "eu-central-1",
     endpoint: "http://localhost:8000"
 });
+AWS.config.update({endpoint: "https://dynamodb.eu-central-1.amazonaws.com"});
 
 
 var fs = require('fs');
@@ -14,7 +15,7 @@ var docClient = new AWS.DynamoDB.DocumentClient();
 
 var bufferStream = new stream.PassThrough();
 
-fs.readFile('../res/dataTheRunTeam.csv', function (err, buf) {
+fs.readFile('./res/dataTheRunTeam.csv', function (err, buf) {
     bufferStream.end(windows1250.decode(buf.toString('binary')));
 });
 
@@ -31,7 +32,8 @@ lineReader.on('line', function (line) {
             "team": parseInt(sline[0]),
             "name": sline[1],
             "startTimeKE": sline[2],
-            "category": sline[3]
+            "startTimeTeplicka": sline[3],
+            "category": sline[4]
         }
     }
 

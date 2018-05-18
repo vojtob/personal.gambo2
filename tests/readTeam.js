@@ -4,13 +4,14 @@ AWS.config.update({
     region: "eu-central-1",
     endpoint: "http://localhost:8000"
 });
+AWS.config.update({endpoint: "https://dynamodb.eu-central-1.amazonaws.com"});
 
 var docClient = new AWS.DynamoDB.DocumentClient()
 
 var params = {
     TableName: "Team",
     Key: {
-        "team": 10
+        "team": 29
     }
 };
 

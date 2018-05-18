@@ -4,6 +4,7 @@ AWS.config.update({
     region: "eu-central-1",
     endpoint: "http://localhost:8000"
 });
+AWS.config.update({endpoint: "https://dynamodb.eu-central-1.amazonaws.com"});
 
 var docClient = new AWS.DynamoDB.DocumentClient() 
 
@@ -37,7 +38,23 @@ function getItem(itemID, tableName, keyParam, callback) {
         }
     });
 }
+
+function putTeam(team, callback) {
+    var params = {
+        TableName: "Team",
+        Item: team
+    }
+
+    docClient.put(params, function (err, data) {
+        if (err) {
+            console.error("Unable to update item. Error JSON:", JSON.stringify(err, null, 2));
+        } else {
+            console.log("UpdateItem succeeded:", JSON.stringify(data, null, 2));
+        }
+    });
+}
     
 exports.getTeam = getTeam;
 exports.getLeg = getLeg;
+exports.putTeam = putTeam;
 // exports.getTeamCount = getTeamCount;
