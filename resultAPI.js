@@ -91,25 +91,34 @@ function recalculateLegs(team) {
             leg.startTime = team.results[index-1].endTime;
         }
 
-        // end time podla toho ci mame skutocne trvanie
         if(leg.realDuration) {
+            // end time podla toho ci mame skutocne trvanie
             leg.endTime = st.secToTime(st.timeToSec(leg.startTime) + st.timeToSec(leg.realDuration));
-        } else {
-            leg.endTime = st.secToTime(st.timeToSec(leg.startTime) + st.timeToSec(leg.plannedDuration));
-        }
-
-        // planned duration
-        totalPlannedDuration += st.timeToSec(leg.plannedDuration);
-        // real duration
-        if(leg.realDuration) {
+            // total real duration
             totalRealDuration += st.timeToSec(leg.realDuration);
+            // diff
+            leg.diff = st.secToDuration(st.timeToSec(leg.realDuration) - st.timeToSec(leg.plannedDuration));
+            // real tempo
+            leg.realTempo = st.getTempo(leg.realDuration, leg.distance);
         } else {
+            // end time podla toho ci mame skutocne trvanie
+            leg.endTime = st.secToTime(st.timeToSec(leg.startTime) + st.timeToSec(leg.plannedDuration));
+            // total real duration
             totalRealDuration += st.timeToSec(leg.plannedDuration);
-        }        
+            // diff
+            delete leg.diff;
+            // real tempo
+            delete leg.realTempo;
+        }
+        // planned tempo
+        leg.plannedTempo = st.getTempo(leg.plannedDuration, leg.distance);
+        // planned total duration
+        totalPlannedDuration += st.timeToSec(leg.plannedDuration);
     }
 
     team.totalRealDuration = st.secToDuration(totalRealDuration);
     team.totalPlannedDuration = st.secToDuration(totalPlannedDuration);
+    team.totalDiff = st.secToDuration(st.timeToSec(team.totalRealDuration) - st.timeToSec(team.totalPlannedDuration));
     
     return team;
 }

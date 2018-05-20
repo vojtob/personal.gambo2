@@ -1,15 +1,6 @@
 var AWS = require("aws-sdk");
-// var st = require("../simpleTime");
 var resultAPI = require("../resultAPI");
 var dataAccess = require('../dataAccess');
-
-AWS.config.update({
-    region: "eu-central-1",
-    endpoint: "http://localhost:8000"
-});
-AWS.config.update({endpoint: "https://dynamodb.eu-central-1.amazonaws.com"});
-
-var docClient = new AWS.DynamoDB.DocumentClient()
 
 // read team data
 var lineReader = require('readline');

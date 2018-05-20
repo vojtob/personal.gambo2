@@ -4,7 +4,7 @@ AWS.config.update({
     region: "eu-central-1",
     endpoint: "http://localhost:8000"
 });
-AWS.config.update({endpoint: "https://dynamodb.eu-central-1.amazonaws.com"});
+// AWS.config.update({endpoint: "https://dynamodb.eu-central-1.amazonaws.com"});
 
 var dynamodb = new AWS.DynamoDB();
 
