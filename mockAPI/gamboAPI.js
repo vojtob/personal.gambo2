@@ -25,5 +25,21 @@ app.get('/results', function(req, res) {
     })
 });
 
+app.get('/legs', function(req, res) {
+    console.log(req);
+    var event = {};
+    event.httpMethod = "GET";
+    event.resource = "/legs";
+    event.queryStringParameters = {};
+    if(req.query.legID) {
+        event.queryStringParameters.legID = req.query.legID;
+    }
+    console.log(event);
+
+    lambda.handler(event, null, function(err, response) {
+        res.send(response.body);
+    })
+});
+
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 

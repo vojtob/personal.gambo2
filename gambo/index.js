@@ -20,23 +20,21 @@ exports.handler = (event, context, callback) => {
 };
 
 function processLegs(event, context, callback) {
-    if (event.queryStringParameters !== null && event.queryStringParameters !== undefined) {
-        if (event.queryStringParameters.legID !== undefined && 
-            event.queryStringParameters.legID !== null && 
-            event.queryStringParameters.legID !== "") {
-                var legID = parseInt(event.queryStringParameters.legID);
-                console.log("Received legID: " + legID);
-                info.getLeg(legID, function(err, leg) {
-                    if(err) {
-                        sendError(err, callback);
-                    } else {
-                        sendLeg(leg, callback);
-                    }
-                });
-            
-        } else {
-            sendLegs(callback);
-        }
+    if (event.queryStringParameters === null || event.queryStringParameters === undefined) {
+        // bez parametrov
+        sendLegs(callback);
+    }
+
+    if(checkParam(event.queryStringParameters, "legID")) {
+        var legID = parseInt(event.queryStringParameters.legID);
+        console.log("Received legID: " + legID);
+        info.getLeg(legID, function(err, leg) {
+            if(err) {
+                sendError(err, callback);
+            } else {
+                sendLeg(leg, callback);
+            }
+        });
     } else {
         sendLegs(callback);
     }
@@ -46,25 +44,23 @@ function processTeams(event, context, callback) {
 }
 
 function processResults(event, context, callback) {
-    if (event.queryStringParameters !== null && event.queryStringParameters !== undefined) {
-        if (event.queryStringParameters.legID !== undefined && 
-            event.queryStringParameters.legID !== null && 
-            event.queryStringParameters.legID !== "") {
-                var legID = parseInt(event.queryStringParameters.legID);
-                console.log("Request result for legID: " + legID);
-                results.getResult(29, legID, function(err, result) {
-                    if(err) {
-                        sendError(err, callback);
-                    } else {
-                        sendResult(result, callback);
-                    }
-                });
-            
-        } else {
-            sendLegs(callback);
-        }
+    if (event.queryStringParameters === null || event.queryStringParameters === undefined) {
+        // bez parametrov
+        sendError({message:"neviem ake vysledky chces"}, callback);
+    }
+    
+    if(checkParam(event.queryStringParameters, "legID")) {
+        var legID = parseInt(event.queryStringParameters.legID);
+        console.log("Request result for legID: " + legID);
+        results.getResult(29, legID, function(err, result) {
+            if(err) {
+                sendError(err, callback);
+            } else {
+                sendResult(result, callback);
+            }
+        });
     } else {
-        sendLegs(callback);
+        sendError({message:"neviem ake vysledky chces"}, callback);
     }
 }
 
@@ -106,5 +102,13 @@ function sendOK(data, callback) {
     };
     // console.log(response);
     callback(null, response);
+}
+
+function checkParam(queryStringParameters, paramName) {
+    if (!queryStringParameters.hasOwnProperty(paramName)) {
+        return false;
+    }
+    return (queryStringParameters[paramName] !== null && 
+        queryStringParameters[paramName] !== "");
 }
 
