@@ -44,7 +44,7 @@ function getTeamResult(teamID, callback) {
         if(err) {
             callback(err, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
         } else {
-            callback(null, team.legs);
+            callback(null, team);
         }
     })
 }
@@ -96,6 +96,7 @@ function recalculateLegs(team) {
     var totalRealDuration = 0;
     var totalPlannedDuration = 0;
     var lastLegDone = -1;
+    var totalDistance = 0;
 
     // start times
     for (let index = 0; index < 48; index++) {
@@ -138,12 +139,15 @@ function recalculateLegs(team) {
         leg.plannedTempo = st.getTempo(leg.plannedDuration, leg.distance);
         // planned total duration
         totalPlannedDuration += st.timeToSec(leg.plannedDuration);
+        totalDistance += leg.distance;
     }
 
     team.status.totalRealDuration = st.secToDuration(totalRealDuration);
     team.status.totalPlannedDuration = st.secToDuration(totalPlannedDuration);
     team.status.totalDiff = st.secToDuration(st.timeToSec(team.status.totalRealDuration) - st.timeToSec(team.status.totalPlannedDuration));
     team.status.lastLegDone = lastLegDone;
+    team.status.totalDistance = totalDistance.toFixed(2);
+    team.status.tempo = st.getTempo(team.status.totalRealDuration, totalDistance);
     
     return team;
 }

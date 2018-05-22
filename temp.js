@@ -11,12 +11,14 @@
 // console.log("diff sec " + diffSec);
 // console.log("diff " + diff);
 
-var resultAPI = require("./resultAPI");
+var resultAPI = require("./gambo/results");
 // resultAPI.setRealDuration(29, 1, "1:04:13", function(err, data) {
 //     console.log("Real duration set");
 // });
-// resultAPI.setRealDuration(29, 3, "0:45:20", function(err, data) {});
-// resultAPI.clearRealDuration(29,1, function(err, data) {
-//         console.log("Real duration cleared");
+// resultAPI.setRealDuration(29, 2, "1:11:13", function (err, data) {
+//     console.log("Real duration set");
 // });
+resultAPI.clearRealDuration(29, 1, function(err, data) {
+        console.log("Real duration cleared");
+});
 // resultAPI.setStartTeplicka(8, "17:00:00");
