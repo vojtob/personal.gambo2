@@ -31,8 +31,10 @@ lineReader.on('line', function (line) {
         Item: {
             "team": parseInt(sline[0]),
             "name": sline[1],
-            "startTimeKE": sline[2],
-            "startTimeTeplicka": sline[3],
+            "status" : {
+                "startTimeKE": sline[2],
+                "startTimeTeplicka": sline[3]
+            },
             "category": sline[4]
         }
     }

@@ -1,6 +1,6 @@
 var AWS = require("aws-sdk");
-var resultAPI = require("../resultAPI");
-var dataAccess = require('../dataAccess');
+var resultAPI = require("../../gambo/results");
+var dataAccess = require('../../gambo/dataAccess');
 
 // read team data
 var lineReader = require('readline');
@@ -11,8 +11,8 @@ dataAccess.getTeam(29, function (err, teamdb) {
         callback(message, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
     } else {
         team = teamdb;
-        if(!team.results) {
-            team.results = [];
+        if(!team.legs) {
+            team.legs = [];
         }
         
         var stream = require('stream');
@@ -20,7 +20,11 @@ dataAccess.getTeam(29, function (err, teamdb) {
         var fs = require('fs');
         var windows1250 = require('windows-1250');
         fs.readFile('./res/dataTheRunGula.csv', function (err, buf) {
-            bufferStream.end(windows1250.decode(buf.toString('binary')));
+            if(err) {
+                console.log(err);
+            } else {
+                bufferStream.end(windows1250.decode(buf.toString('binary')));
+            }
         });
         lineReader = require('readline').createInterface({
             input: bufferStream
@@ -30,7 +34,7 @@ dataAccess.getTeam(29, function (err, teamdb) {
             // add result for the team
             sline = line.split(";");
             // console.log("process leg " + parseInt(sline[0]) + " : " + sline);
-            team.results.push( { distance: parseFloat(sline[3].replace(',', '.')), runnerName: sline[1], plannedDuration: sline[5] });
+            team.legs.push( { runnerName: sline[1], distance: parseFloat(sline[3].replace(',', '.')), plannedDuration: sline[5] });
         });
         
         lineReader.on('close', function (line) {

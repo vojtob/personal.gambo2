@@ -1,4 +1,4 @@
-var msgParser = require('./msg');
+var msgParser = require('./runbot/msg');
 
 var testInputs = [
     "Ahoj Vojto",

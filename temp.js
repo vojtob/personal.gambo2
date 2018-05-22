@@ -12,7 +12,11 @@
 // console.log("diff " + diff);
 
 var resultAPI = require("./resultAPI");
-// resultAPI.setRealDuration(29, 1, "1:04:13");
-// resultAPI.setRealDuration(29, 3, "0:45:20");
-resultAPI.clearRealDuration(29,3);
+// resultAPI.setRealDuration(29, 1, "1:04:13", function(err, data) {
+//     console.log("Real duration set");
+// });
+// resultAPI.setRealDuration(29, 3, "0:45:20", function(err, data) {});
+// resultAPI.clearRealDuration(29,1, function(err, data) {
+//         console.log("Real duration cleared");
+// });
 // resultAPI.setStartTeplicka(8, "17:00:00");

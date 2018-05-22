@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+
+<body>
+
+<h2>Use JavaScript to Change Text</h2>
+<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+
+<p id="demo"></p>
+
+<script>
+    $.get("https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/legs?legID=9", function (response) {
+        document.getElementById("demo").innerHTML = response.from + " -> " + response.to;
+    });
+
+// document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script> 
+
+</body>
+</html>
