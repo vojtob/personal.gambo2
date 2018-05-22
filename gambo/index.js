@@ -2,7 +2,7 @@ var info = require("./info");
 var results = require("./results");
 
 exports.handler = (event, context, callback) => {
-    console.log('Received event a: ' + JSON.stringify(event));
+    console.log('Received event: ' + JSON.stringify(event));
     
     if((event.httpMethod == "GET") && (event.resource == "/legs")) {
         // get legs
@@ -23,11 +23,12 @@ function processLegs(event, context, callback) {
     if (event.queryStringParameters === null || event.queryStringParameters === undefined) {
         // bez parametrov
         sendLegs(callback);
+        return;
     }
 
     if(checkParam(event.queryStringParameters, "legID")) {
         var legID = parseInt(event.queryStringParameters.legID);
-        console.log("Received legID: " + legID);
+        console.log("GET results for legID: " + legID);
         info.getLeg(legID, function(err, leg) {
             if(err) {
                 sendError(err, callback);
@@ -44,23 +45,44 @@ function processTeams(event, context, callback) {
 }
 
 function processResults(event, context, callback) {
+    console.log("process results");
     if (event.queryStringParameters === null || event.queryStringParameters === undefined) {
         // bez parametrov
         sendError({message:"neviem ake vysledky chces"}, callback);
+        return;
     }
+    if(!checkParam(event.queryStringParameters, "teamID")) {
+        sendError({message:"musi byt definovane teamID"}, callback);
+        return;
+    }
+    var teamID = parseInt(event.queryStringParameters.teamID);
+    console.log("Request results for team: " + teamID);
     
     if(checkParam(event.queryStringParameters, "legID")) {
+        // vysledky teamu na useku
         var legID = parseInt(event.queryStringParameters.legID);
         console.log("Request result for legID: " + legID);
-        results.getResult(29, legID, function(err, result) {
+        results.getResult(teamID, legID, function(err, result) {
             if(err) {
                 sendError(err, callback);
+                return;
             } else {
-                sendResult(result, callback);
+                sendOK(result, callback);
+                return;
             }
         });
     } else {
-        sendError({message:"neviem ake vysledky chces"}, callback);
+        // kompletne vysledky teamu
+        console.log("Request team results");
+        results.getTeamResult(teamID, function(err, result) {
+            if(err) {
+                sendError(err, callback);
+                return;
+            } else {
+                sendOK(result, callback);
+                return;
+            }
+        });
     }
 }
 
@@ -75,10 +97,6 @@ function sendLegs(callback) {
         legs.push(i);
     }
     sendOK(legs, callback);
-}
-
-function sendResult(result, callback) {
-    sendOK(result, callback);
 }
 
 function sendError(err, callback) {

@@ -13,20 +13,20 @@ var docClient = new AWS.DynamoDB.DocumentClient()
 // }
 
 function getTeam(teamID, callback) {
-    getItem(teamID, "Team", {team:teamID}, callback);
+    getItem("Team", {team:teamID}, callback);
 }
 
 function getLeg(legID, callback) {
-    getItem(legID, "Leg", {leg:legID}, callback);
+    getItem("Leg", {leg:legID}, callback);
 }
 
-function getItem(itemID, tableName, keyParam, callback) {
-    // console.log("get" + tableName + " " + keyParam + " " + itemID);
+function getItem(tableName, keyParam, callback) {
+    console.log("get" + tableName + " " + JSON.stringify(keyParam));
     var params = {
         TableName: tableName,
         Key: keyParam
     };
-    // console.log(params);
+    console.log(params);
     
     docClient.get(params, function (err, data) {
         if (err) {

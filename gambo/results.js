@@ -39,6 +39,16 @@ function getResult(teamID, legID, callback) {
     })
 }
 
+function getTeamResult(teamID, callback) {
+    dataAccess.getTeam(teamID, function (err, team) {
+        if(err) {
+            callback(err, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
+        } else {
+            callback(null, team.legs);
+        }
+    })
+}
+
 // function setPlannedDuration(teamID, leg, duration) {
 //     dataAccess.getTeam(teamID, function (err, team) {
 //         if(err) {
@@ -141,6 +151,7 @@ function recalculateLegs(team) {
 exports.setRealDuration = setRealDuration;
 exports.clearRealDuration = clearRealDuration;
 exports.getResult = getResult;
+exports.getTeamResult = getTeamResult;
 // internal
 exports.recalculateLegs = recalculateLegs;
 // modify plan
