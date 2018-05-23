@@ -18,7 +18,7 @@
 
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <h1>The Run - DXC dream team</h1>
     <!-- <div class="card" style="width: 18rem;">
       <img class="card-img-top" src=".../100px180/" alt="Card image cap">
@@ -28,87 +28,128 @@
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div> -->
-    <p id="demo2">demo2</p>
+    <p id="demo">demo</p>
+    <p id="resultsTablePlaceholder"></p>
 
 
     <script>
-      var serviceAddress = "http://localhost:3000";
-      // var serviceAddress = "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod";
-      $.get(serviceAddress + "/results?teamID=29", function (response) {
-        var output = "";
-        output += '<table class="table table-striped table-responsive">';
-        output += '<thead>';
-        output += '<tr>';
-        output += '<th scope="col">#</th>';
-        output += '<th scope="col">Bežec</th>';
-        output += '<th scope="col">Štart</th>';
-        output += '<th scope="col">Dĺžka</th>';
-        output += '<th scope="col">Tempo</th>';
-        output += '<th scope="col">Trvanie</th>';
-        output += '<th scope="col">Rozdiel</th>';
-        output += '</tr>';
-        output += '</thead >';
-        output += '<tbody>';
-        for (let index = 0; index < 48; index++) {
-          if ((index - 1) == response.status.lastLegDone) {
-            output += '<tr style="background-color:orange">';
-          } else {
-            output += '<tr>';
-          }
-          const element = response.legs[index];
-          output += '<th scope="row">' + (index + 1) + '</th>';
-          output += '<td>' + element.runnerName + '</td>';
-          output += '<td>' + element.startTime + '</td>';
-          output += '<td>' + element.distance + '</td>';
-          if (element.realDuration) {
-            output += '<td>' + element.realTempo + '</td>';
-            output += '<td>' + element.realDuration + '</td>';
-            if (element.diff.startsWith('-') || element.diff.startsWith('0:00:00')) {
-              output += '<td style="color:MediumSeaGreen">' + element.diff + '</td>';
-            } else {
-              output += '<td style="color:tomato">' + element.diff + '</td>';
-            }
-          } else {
-            output += '<td>' + element.plannedTempo + '</td>';
-            output += '<td>' + element.plannedDuration + '</td>';
+      $("body").data("teamID", 29);
+      // var serviceAddress = "http://localhost:3000";
+      var serviceAddress = "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod";
+      drawTable();
+
+      function drawTable() {
+        var teamID = $("body").data("teamID");
+        $.get(serviceAddress + "/results?teamID=" + teamID, function (response) {
+          var output = "";
+          output += '<table class="table table-striped table-responsive">';
+          output += '<thead>';
+          output += '<tr>';
+          output += '<th scope="col">#</th>';
+          output += '<th scope="col">Bežec</th>';
+          output += '<th scope="col">Štart</th>';
+          output += '<th scope="col">Dĺžka</th>';
+          output += '<th scope="col">Tempo</th>';
+          output += '<th scope="col">Trvanie</th>';
+          output += '<th scope="col">Rozdiel</th>';
+          output += '</tr>';
+          output += '</thead >';
+          output += '<tbody>';
+          for (let index = 0; index < 48; index++) {
             if ((index - 1) == response.status.lastLegDone) {
-              output += '<td>' + '<button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Dobehnuté</button>' + '</td>';
+              output += '<tr style="background-color:orange">';
+              $("body").data("legID", index + 1);
             } else {
-              output += '<td>' + ' ' + '</td>';
+              output += '<tr>';
             }
+            const element = response.legs[index];
+            output += '<th scope="row">' + (index + 1) + '</th>';
+            output += '<td>' + element.runnerName + '</td>';
+            output += '<td>' + element.startTime + '</td>';
+            output += '<td>' + element.distance + '</td>';
+            if (element.realDuration) {
+              output += '<td>' + element.realTempo + '</td>';
+              output += '<td>' + element.realDuration + '</td>';
+              if (element.diff.startsWith('-') || element.diff.startsWith('0:00:00')) {
+                output += '<td style="color:MediumSeaGreen">' + element.diff;
+              } else {
+                output += '<td style="color:tomato">' + element.diff;
+              }
+              if ((index) == response.status.lastLegDone) {
+                output += ' <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModalDelete"><i class="far fa-trash-alt"></i></button>';
+              }
+              output += '</td>'
+            } else {
+              output += '<td>' + element.plannedTempo + '</td>';
+              output += '<td>' + element.plannedDuration + '</td>';
+              if ((index - 1) == response.status.lastLegDone) {
+                output += '<td>' + '<button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Dobehnuté</button>' + '</td>';
+              } else {
+                output += '<td>' + ' ' + '</td>';
+              }
+            }
+            output += '</tr>';
+          }
+          output += '<tr>';
+          output += '<th scope="row">' + ' ' + '</th>';
+          output += '<td>' + 'SPOLU' + '</td>';
+          output += '<td>' + response.legs[47].endTime + '</td>';
+          output += '<td>' + response.status.totalDistance + '</td>';
+          output += '<td>' + response.status.tempo + '</td>';
+          output += '<td>' + response.status.totalRealDuration + '</td>';
+          if (response.status.totalDiff.startsWith('-') || response.status.totalDiff.startsWith('0:00:00')) {
+            output += '<td style="color:MediumSeaGreen">' + response.status.totalDiff + '</td>';
+          } else {
+            output += '<td style="color:tomato">' + response.status.totalDiff + '</td>';
           }
           output += '</tr>';
-        }
-        output += '<tr>';
-        output += '<th scope="row">' + ' ' + '</th>';
-        output += '<td>' + 'SPOLU' + '</td>';
-        output += '<td>' + response.legs[47].endTime + '</td>';
-        output += '<td>' + response.status.totalDistance + '</td>';
-        output += '<td>' + response.status.tempo + '</td>';
-        output += '<td>' + response.status.totalRealDuration + '</td>';
-        if (response.status.totalDiff.startsWith('-') || response.status.totalDiff.startsWith('0:00:00')) {
-          output += '<td style="color:MediumSeaGreen">' + response.status.totalDiff + '</td>';
-        } else {
-          output += '<td style="color:tomato">' + response.status.totalDiff + '</td>';
-        }
-        output += '</tr>';
 
-        output += '<tbody>';
-        document.getElementById("demo2").innerHTML = output;
-        console.log(typeof response);
-        console.log(response);
-      });
+          output += '<tbody>';
+          document.getElementById("resultsTablePlaceholder").innerHTML = output;
+          console.log(typeof response);
+          console.log(response);
+        });
+      }
 
-  // $.get("http://localhost:3000/legs?legID=9", function (response) {
-  //     document.getElementById("demo2").innerHTML = response.from + " -> " + response.to;
-  // });
+      function setLegDuration() {
+        console.log("POST set result!");
+        var teamID = $("body").data("teamID");
+        var legID = $("body").data("legID");
+        var legDuration = document.getElementById("legDuration").value;
+        console.log("post set legDuration to " + legDuration + " on leg " + legID + " for team " + teamID);
+        // $.ajax({
+        //   url: 'serviceAddress + "/result?legDuration=" + legDuration',
+        //   type: 'PUT',
+        //   success: function (response) {
+        //   }
+        // });
+        $.post(serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID + "&legDuration=" + legDuration, function (response, status) {
+          console.log("POST response: " + JSON.stringify(response));
+          console.log("Status: " + status);
+          drawTable();
+        });
+      }
 
-
-  // $.get("https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/legs?legID=9", function (response) {
-  //     document.getElementById("demo").innerHTML = response.from + " -> " + response.to;
-  // });
+      function clearLegDuration() {
+        console.log("POST clear result!");
+        var teamID = $("body").data("teamID");
+        var legID = $("body").data("legID") - 1;
+        console.log("post clear legDuration from leg " + legID + " for team " + teamID);
+        // $.ajax({
+        //   url: 'serviceAddress + "/result?legDuration=" + legDuration',
+        //   type: 'PUT',
+        //   success: function (response) {
+        //   }
+        // });
+        $.post(serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID, function (response, status) {
+          console.log("POST response: " + JSON.stringify(response));
+          console.log("Status: " + status);
+          drawTable();
+        });
+      }
 
     </script>
+
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-sm">
@@ -119,7 +160,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Ako dlho bežal?</h4>
           </div> -->
-          <form action="localhost:3000" method="post">
+          <form action="">
             <div class="modal-body">
               <div class="form-group">
                 <label for="legDuration">Úsek som zabehol za:</label>
@@ -133,10 +174,36 @@
                 </div>
               </div>
               <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Späť</button>
-              <button type="submit" class="btn btn-success float-right" data-dismiss="modal">Zadaj</button>
+              <button type="button" class="btn btn-success float-right" data-dismiss="modal" onclick="setLegDuration()"><i class="fas fa-check-circle"></i> Zadaj</button>
             </div>
             <!-- <div class="modal-footer">
             </div> -->
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modal delete -->
+    <div id="myModalDelete" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-sm">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <!-- <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Ako dlho bežal?</h4>
+            </div> -->
+          <form action="">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="legDuration">Naozaj zmazať čas na úseku?</label>
+              </div>
+              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Nezmazať</button>
+              <button type="button" class="btn btn-danger float-right" data-dismiss="modal" onclick="clearLegDuration()"><i class="fas fa-exclamation-triangle"></i> Zmazať</button>
+            </div>
+            <!-- <div class="modal-footer">
+              </div> -->
           </form>
         </div>
 

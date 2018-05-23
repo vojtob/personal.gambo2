@@ -125,8 +125,8 @@ function recalculateLegs(team) {
             lastLegDone = index;
         } else {
             // end time podla toho ci mame skutocne trvanie
-            console.log("start " + leg.startTime);
-            console.log("dur " + leg.plannedDuration);
+            // console.log("start " + leg.startTime);
+            // console.log("dur " + leg.plannedDuration);
             leg.endTime = st.secToTime(st.timeToSec(leg.startTime) + st.timeToSec(leg.plannedDuration));
             // total real duration
             totalRealDuration += st.timeToSec(leg.plannedDuration);

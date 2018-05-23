@@ -23,7 +23,7 @@ aws dynamodb create-table --table-name Leg --attribute-definitions AttributeName
 /***************
 *** Deploy web
 ***************/
-aws s3 cp C:\Projects_src\gambo2\gambo.runbot\gambo.web\test.html s3://gambo-vojtob
+aws s3 cp C:\Projects_src\gambo2\gambo.runbot\gambo.web\theRun.html s3://gambo-vojtob
 aws s3 cp . s3://gambo-vojtob --recursive
 aws s3 sync . s3://gambo-vojtob --exclude *.tmp
 
