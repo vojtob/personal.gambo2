@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <title>The Run results - DXC dream team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <div class="container">
+    <h1>The Run - DXC dream team</h1>
+    <!-- <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div> -->
+    <p id="demo2">demo2</p>
+
+
+    <script>
+      var serviceAddress = "http://localhost:3000";
+      // var serviceAddress = "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod";
+      $.get(serviceAddress + "/results?teamID=29", function (response) {
+        var output = "";
+        output += '<table class="table table-striped table-responsive">';
+        output += '<thead>';
+        output += '<tr>';
+        output += '<th scope="col">#</th>';
+        output += '<th scope="col">Bežec</th>';
+        output += '<th scope="col">Štart</th>';
+        output += '<th scope="col">Dĺžka</th>';
+        output += '<th scope="col">Tempo</th>';
+        output += '<th scope="col">Trvanie</th>';
+        output += '<th scope="col">Rozdiel</th>';
+        output += '</tr>';
+        output += '</thead >';
+        output += '<tbody>';
+        for (let index = 0; index < 48; index++) {
+          if ((index - 1) == response.status.lastLegDone) {
+            output += '<tr style="background-color:orange">';
+          } else {
+            output += '<tr>';
+          }
+          const element = response.legs[index];
+          output += '<th scope="row">' + (index + 1) + '</th>';
+          output += '<td>' + element.runnerName + '</td>';
+          output += '<td>' + element.startTime + '</td>';
+          output += '<td>' + element.distance + '</td>';
+          if (element.realDuration) {
+            output += '<td>' + element.realTempo + '</td>';
+            output += '<td>' + element.realDuration + '</td>';
+            if (element.diff.startsWith('-') || element.diff.startsWith('0:00:00')) {
+              output += '<td style="color:MediumSeaGreen">' + element.diff + '</td>';
+            } else {
+              output += '<td style="color:tomato">' + element.diff + '</td>';
+            }
+          } else {
+            output += '<td>' + element.plannedTempo + '</td>';
+            output += '<td>' + element.plannedDuration + '</td>';
+            if ((index - 1) == response.status.lastLegDone) {
+              output += '<td>' + '<button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Dobehnuté</button>' + '</td>';
+            } else {
+              output += '<td>' + ' ' + '</td>';
+            }
+          }
+          output += '</tr>';
+        }
+        output += '<tr>';
+        output += '<th scope="row">' + ' ' + '</th>';
+        output += '<td>' + 'SPOLU' + '</td>';
+        output += '<td>' + response.legs[47].endTime + '</td>';
+        output += '<td>' + response.status.totalDistance + '</td>';
+        output += '<td>' + response.status.tempo + '</td>';
+        output += '<td>' + response.status.totalRealDuration + '</td>';
+        if (response.status.totalDiff.startsWith('-') || response.status.totalDiff.startsWith('0:00:00')) {
+          output += '<td style="color:MediumSeaGreen">' + response.status.totalDiff + '</td>';
+        } else {
+          output += '<td style="color:tomato">' + response.status.totalDiff + '</td>';
+        }
+        output += '</tr>';
+
+        output += '<tbody>';
+        document.getElementById("demo2").innerHTML = output;
+        console.log(typeof response);
+        console.log(response);
+      });
+
+  // $.get("http://localhost:3000/legs?legID=9", function (response) {
+  //     document.getElementById("demo2").innerHTML = response.from + " -> " + response.to;
+  // });
+
+
+  // $.get("https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/legs?legID=9", function (response) {
+  //     document.getElementById("demo").innerHTML = response.from + " -> " + response.to;
+  // });
+
+    </script>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-sm">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <!-- <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Ako dlho bežal?</h4>
+          </div> -->
+          <form action="localhost:3000" method="post">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="legDuration">Úsek som zabehol za:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                      <i class="fas fa-stopwatch"></i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control" id="legDuration" placeholder="napr. 0:48:13">
+                </div>
+              </div>
+              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Späť</button>
+              <button type="submit" class="btn btn-success float-right" data-dismiss="modal">Zadaj</button>
+            </div>
+            <!-- <div class="modal-footer">
+            </div> -->
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
