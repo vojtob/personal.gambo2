@@ -4,20 +4,37 @@ AWS.config.update({
     region: "eu-central-1",
     endpoint: "http://localhost:8000"
 });
-AWS.config.update({endpoint: "https://dynamodb.eu-central-1.amazonaws.com"});
+// AWS.config.update({endpoint: "https://dynamodb.eu-central-1.amazonaws.com"});
 
-var docClient = new AWS.DynamoDB.DocumentClient() 
+var docClient = new AWS.DynamoDB.DocumentClient()
 
 // function getTeamCount(teamID) {
 //     return teams.length;
 // }
 
 function getTeam(teamID, callback) {
-    getItem("Team", {team:teamID}, callback);
+    getItem("Team", { team: teamID }, callback);
 }
 
-function getLeg(legID, callback) {
-    getItem("Leg", {leg:legID}, callback);
+function getLeg(legIndex, callback) {
+    getItem("Route", { legID: legIndex }, callback);
+}
+
+function getLegs(callback) {
+    var params = {
+        TableName: "Route",
+    };
+
+    docClient.scan(params, function (err, data) {
+        if (err) {
+            console.error("Unable to scan items. Error JSON:", JSON.stringify(err, null, 2));
+            callback(err, null);
+        } else {
+            console.log("Scan succeeded");
+            // console.log("Scan succeeded:", JSON.stringify(data, null, 2));
+            callback(null, data.Items);
+        }
+    });
 }
 
 function getItem(tableName, keyParam, callback) {
@@ -27,7 +44,7 @@ function getItem(tableName, keyParam, callback) {
         Key: keyParam
     };
     console.log(params);
-    
+
     docClient.get(params, function (err, data) {
         if (err) {
             console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
@@ -55,8 +72,18 @@ function putTeam(team, callback) {
         }
     });
 }
-    
+
+function generalPut(params, callback) {
+    docClient.put(params, function (err, data) {
+        callback(err, data);
+    });
+}
+
 exports.getTeam = getTeam;
 exports.getLeg = getLeg;
+exports.getLegs = getLegs;
 exports.putTeam = putTeam;
+
+exports.generalPut = generalPut;
+
 // exports.getTeamCount = getTeamCount;

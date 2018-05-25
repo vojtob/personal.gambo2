@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <title>The Run results - DXC dream team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <div class="container">
+    <h1>Kryštáľová guľa - DXC dream team</h1>
+
+    <!-- <div class="card text-white bg-primary">
+      <div class="card-body">
+
+          <form class="form-inline">
+              <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fas fa-stopwatch"></i>
+                  </div>
+                </div>
+                <input type="text" class="form-control" id="legDuration" placeholder="skutočnosť, napr. 0:45:23">
+              </div>
+    
+              <button type="button" class="btn btn-success mb-2" onclick="setLegDuration()">
+                <i class="fas fa-check-circle"></i> Dobehnuté</button>
+            </form>
+    
+      </div>
+    </div> -->
+
+    <p id="resultsTablePlaceholder"></p>
+
+    <script>
+      $("body").data("teamID", 29);
+      var serviceAddress = "http://localhost:3000";
+      // var serviceAddress = "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod";
+      drawTable();
+
+      function drawTable() {
+        var teamID = $("body").data("teamID");
+        $.get(serviceAddress + "/results?teamID=" + teamID, function (response) {
+          $("body").data("legID", response.status.lastLegDone + 2);
+          var output = "";
+
+          for (let index = 0; index < 48; index++) {
+            const leg = response.legs[index];
+            output += getLeg(leg, index, response.status.lastLegDone);
+          }
+          output += '<div class="card bg-secondary text-white">' +
+            '<div class="card-body">' +
+            '<p class="card-text">';
+          var diffColor;
+          var diffSpeed;
+          if (response.status.totalDiff.startsWith('-') || response.status.totalDiff.startsWith('0:00:00')) {
+            diffColor = 'MediumSeaGreen';
+            diffSpeed = 'rýchlejšie'
+          } else {
+            diffColor = 'tomato';
+            diffSpeed = 'pomalšie'
+          };
+          output += "O <strong>" + response.legs[47].endTime + '</strong>';
+          if (response.status.lastLegDone == 47) {
+            output += " sme dorazili do cieľa. ";
+          } else {
+            output += " dorazíme do cieľa. ";
+          }
+          output +=
+            response.status.totalDistance + ' km za ' + response.status.totalRealDuration +
+            " tempom " + response.status.tempo +
+            ', to je o <span style="color:' + diffColor + '">' + response.status.totalDiff + '</span> ' + diffSpeed +
+            ' ako guľa';
+
+          document.getElementById("resultsTablePlaceholder").innerHTML = output;
+          console.log(typeof response);
+          console.log(response);
+        });
+      }
+
+      function getLeg(leg, legIndex, lastLegDoneIndex) {
+        var alreadyRun = (legIndex <= lastLegDoneIndex);
+        var toRun = ((lastLegDoneIndex + 1) < legIndex);
+
+        var output = "";
+
+        if (alreadyRun) {
+          // uz zabehnute
+          output = '<div class="card"><div class="card-body">';
+          getZabehnutyLegText(legIndex, leg, legIndex == lastLegDoneIndex).forEach(textElement => {
+            output += '<div class="card-text">' + textElement + '</div>';
+          });
+          output += '</div></div > ';
+
+        } else if (toRun) {
+          // este sa len pobezi
+          output = '<div class="card"><div class="card-body">';
+          getBuduciLegText(legIndex, leg).forEach(textElement => {
+            output += '<div class="card-text">' + textElement + '</div>';
+          });
+          output += '</div></div > ';
+        } else {
+          // prave bezi
+          output = '<div class="card bg-warning"><div class="card-body">';
+          getAktualyLegText(legIndex, leg).forEach(textElement => {
+            output += '<div class="card-text">' + textElement + '</div>';
+          });
+          output += '<p><form class="form-inline">' +
+            '<div class="input-group mb-2 mr-sm-2">' +
+            '<div class="input-group-prepend">' +
+            '<div class="input-group-text">' +
+            '<i class="fas fa-stopwatch"></i>' +
+            '</div>' +
+            '</div>' +
+            '<input type="text" class="form-control" id="legDuration" placeholder="skutočnosť, napr. 0:45:23">' +
+            '</div>' +
+            '<button type="button" class="btn btn-success mb-2" onclick="setLegDuration()">' +
+            '<i class="fas fa-check-circle"></i> Dobehnuté</button>' +
+            '</form></p>';
+          // leg.desc.forEach(descLine => {
+          //   output += '<div class="card-text">' + descLine + '</div>';
+          // });
+          output += '</div></div > ';
+        }
+
+        return output;
+      }
+
+      function getZabehnutyLegText(legIndex, leg, lastLeg) {
+        // uz zabehnute
+        var diffColor;
+        var zabehol;
+        var plusSign;
+        if ((leg.runnerName.slice(-1) == 'a') || (leg.runnerName.slice(-1) == 'á')) {
+          zabehol = ' zabehla ';
+        } else {
+          zabehol = ' zabehol ';
+        };
+        if (leg.diff.startsWith('-') || leg.diff.startsWith('0:00:00')) {
+          diffColor = 'MediumSeaGreen';
+          plusSign = "";
+        } else {
+          diffColor = 'tomato';
+          plusSign = "+";
+        };
+
+        var legArray = [];
+        var legText = (legIndex + 1) + '. ' + leg.runnerName + zabehol + ' tempom ' + leg.realTempo +
+          ' za ' + leg.realDuration +
+          ' (<span style="color:' + diffColor + '">' + plusSign + leg.diff + '</span>)';
+        legArray.push(legText);
+
+        legText = getLegDesc(leg);
+        legArray.push(legText);
+        legText = getLegDesc2(leg, lastLeg);
+        legArray.push(legText);
+
+        console.log(legArray);
+
+        return legArray;
+      }
+
+      function getAktualyLegText(legIndex, leg) {
+        // teraz bezi
+        var legArray = [];
+        var legText = (legIndex + 1) + '. ' + leg.runnerName + ' beží tempom ' + leg.plannedTempo +
+          ' od <strong>' + leg.startTime + '</strong> do ' + leg.endTime + ' (' + leg.plannedDuration + ')';
+        legArray.push(legText);
+
+        legText = getLegDesc(leg);
+        legArray.push(legText);
+        legText = getLegDesc2(leg, false);
+        legArray.push(legText);
+
+        console.log(legArray);
+
+        return legArray;
+      }
+
+      function getBuduciLegText(legIndex, leg) {
+        // bude bezat
+        var legArray = [];
+        var legText = (legIndex + 1) + '. ' + leg.runnerName + ' pobeží tempom ' + leg.plannedTempo +
+          ' od <strong>' + leg.startTime + '</strong> do ' + leg.endTime + ' (' + leg.plannedDuration + ')';
+        legArray.push(legText);
+
+        legText = getLegDesc(leg);
+        legArray.push(legText);
+        legText = getLegDesc2(leg, false);
+        legArray.push(legText);
+
+        console.log(legArray);
+
+        return legArray;
+      }
+
+      function getLegDesc(leg) {
+        text = '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxfromLat + ',' + leg.gpxfromLng + '" target="_blank">' + leg.from + '</a>' +
+          ' <i class="fas fa-caret-right"></i> ' +
+          '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank">' + leg.to + '</a>';
+        // if (addDesc) {
+        // }
+        return text;
+
+        // return '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxfromLat + ',' + leg.gpxfromLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i></a> ' +
+        // leg.from + 
+        // ' <a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i> </a>' +
+        // leg.to;
+      }
+
+      function getLegDesc2(leg, addDelete) {
+        var text = '<div class="row">' +
+          '<div class="col-auto"><i class="fas fa-arrows-alt-h"></i> ' + leg.distance + ' km</div>' +
+          '<div class="col-auto"><i class="fas fa-long-arrow-alt-up"></i>' + leg.up + ' </div>' +
+          '<div class="col-auto"><i class="fas fa-long-arrow-alt-down"></i>' + leg.down + '</div>' +
+          '<div class="col-auto"><i class="fas fa-heartbeat"></i>' + leg.difficulty + '</div>';
+        text += '<div class="col-auto">' +
+          '<a data-toggle="collapse" href="#desc' + leg.legID + '" role="button" aria-expanded="false" aria-controls="collapseExample">' +
+          '<i class="far fa-list-alt"></i></a></div>';
+        if (addDelete) {
+          text += '<div class="col-auto">' +
+            '<a data-toggle="collapse" href="#deleteDuration" role="button" aria-expanded="false" aria-controls="collapseExample">' +
+            '<i class="far fa-trash-alt"></i></a></div>';
+        }
+        text += '</div>';
+        text += '<p><div class="collapse" id="desc' + leg.legID + '">';
+        leg.desc.forEach(descLine => {
+          text += '<div class="card-text">' + descLine + '</div>';
+        });
+        text += '</div></p>';
+
+        if (addDelete) {
+          // zmazanie
+          text += '<p><div class="collapse" id="deleteDuration">';
+          text += '<div class="row">' +
+            '<div class="col-auto"><label for="legDuration">Naozaj zmazať čas na úseku?</label></div>' +
+            '<div class="col-auto"><button data-toggle="collapse" href="#deleteDuration" type="button" class="btn btn-outline-dark">Nezmazať</button></div>' +
+            '<div class="col-auto"><button type="button" class="btn btn-danger" onclick="clearLegDuration()"><i class="fas fa-exclamation-triangle"></i> Zmazať</button></div>' +
+            '</div>';
+          text += '</div></p>';
+        }
+
+        return text;
+      }
+
+      function setLegDuration() {
+        console.log("POST set result!");
+        var teamID = $("body").data("teamID");
+        var legID = $("body").data("legID");
+        var legDuration = document.getElementById("legDuration").value;
+        console.log("post set legDuration to " + legDuration + " on leg " + legID + " for team " + teamID);
+        // $.ajax({
+        //   url: 'serviceAddress + "/result?legDuration=" + legDuration',
+        //   type: 'PUT',
+        //   success: function (response) {
+        //   }
+        // });
+        $.post(serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID + "&legDuration=" + legDuration, function (response, status) {
+          console.log("POST response: " + JSON.stringify(response));
+          console.log("Status: " + status);
+          drawTable();
+        });
+      }
+
+      function clearLegDuration() {
+        console.log("POST clear result!");
+        var teamID = $("body").data("teamID");
+        var legID = $("body").data("legID") - 1;
+        console.log("post clear legDuration from leg " + legID + " for team " + teamID);
+        // $.ajax({
+        //   url: 'serviceAddress + "/result?legDuration=" + legDuration',
+        //   type: 'PUT',
+        //   success: function (response) {
+        //   }
+        // });
+        $.post(serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID, function (response, status) {
+          console.log("POST response: " + JSON.stringify(response));
+          console.log("Status: " + status);
+          drawTable();
+        });
+      }
+
+    </script>
+
+    <!-- Modal delete -->
+    <div id="myModalDelete" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-sm">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <form action="">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="legDuration">Naozaj zmazať čas na úseku?</label>
+              </div>
+              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Nezmazať</button>
+              <button type="button" class="btn btn-danger float-right" data-dismiss="modal" onclick="clearLegDuration()">
+                <i class="fas fa-exclamation-triangle"></i> Zmazať</button>
+            </div>
+            <!-- <div class="modal-footer">
+              </div> -->
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

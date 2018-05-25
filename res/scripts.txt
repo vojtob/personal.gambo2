@@ -16,9 +16,9 @@ aws dynamodb create-table --table-name Team --attribute-definitions AttributeNam
 *** Leg
 ***************/
 
-aws dynamodb delete-table --table-name Team --endpoint-url http://localhost:8000
+aws dynamodb delete-table --table-name Route --endpoint-url http://localhost:8000
 
-aws dynamodb create-table --table-name Leg --attribute-definitions AttributeName=leg,AttributeType=N --key-schema AttributeName=leg,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --endpoint-url http://localhost:8000
+aws dynamodb create-table --table-name Route --attribute-definitions AttributeName=legID,AttributeType=N --key-schema AttributeName=legID,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --endpoint-url http://localhost:8000
 
 /***************
 *** Deploy web

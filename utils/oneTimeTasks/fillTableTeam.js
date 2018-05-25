@@ -1,17 +1,9 @@
-var AWS = require("aws-sdk");
-AWS.config.update({
-    region: "eu-central-1",
-    endpoint: "http://localhost:8000"
-});
-AWS.config.update({endpoint: "https://dynamodb.eu-central-1.amazonaws.com"});
-
+var dataAccess = require('../../gambo/dataAccess');
 
 var fs = require('fs');
 var lineReader = require('readline');
 var windows1250 = require('windows-1250');
 var stream = require('stream');
-
-var docClient = new AWS.DynamoDB.DocumentClient();
 
 var bufferStream = new stream.PassThrough();
 
@@ -24,6 +16,7 @@ var lineReader = require('readline').createInterface({
 });
 
 lineReader.on('line', function (line) {
+    console.log("uloz team " + line);
     sline = line.split(";");
 
     var params = {
@@ -31,7 +24,7 @@ lineReader.on('line', function (line) {
         Item: {
             "team": parseInt(sline[0]),
             "name": sline[1],
-            "status" : {
+            "status": {
                 "startTimeKE": sline[2],
                 "startTimeTeplicka": sline[3]
             },
@@ -39,11 +32,11 @@ lineReader.on('line', function (line) {
         }
     }
 
-    docClient.put(params, function (err, data) {
+    dataAccess.generalPut(params, function (err, data) {
         if (err) {
-            console.error("Unable to result", line, ". Error JSON:", JSON.stringify(err, null, 2));
+            callback("Neviem ulozit team", err);
         } else {
-            console.log("Put Result succeeded:", line);
+            console.log("Team ulozeny uspesne: ", data);
         }
     });
 });

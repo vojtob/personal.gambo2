@@ -1,23 +1,9 @@
-var AWS = require("aws-sdk");
+var dataAccess = require("../gambo/dataAccess");
 
-AWS.config.update({
-    region: "eu-central-1",
-    endpoint: "http://localhost:8000"
-});
+// dataAccess.getLeg(9, function(err, data) {
+//     console.log(JSON.stringify(data, null, 2));
+// })
 
-var docClient = new AWS.DynamoDB.DocumentClient()
-
-var params = {
-    TableName: "Leg",
-    Key: {
-        "leg": 1
-    }
-};
-
-docClient.get(params, function (err, data) {
-    if (err) {
-        console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
-    } else {
-        console.log("GetItem succeeded:", JSON.stringify(data, null, 2));
-    }
-});
+dataAccess.getLegs(function(err, data) {
+    console.log(JSON.stringify(data, null, 2));
+})
