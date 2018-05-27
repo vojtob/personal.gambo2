@@ -4,19 +4,27 @@ const app = express();
 const lambda = require("../gambo/index");
 
 app.get('/', function(req, res) {
-    console.log("GET: " + JSON.stringify(req));
-    res.send('Hello World!');
+    processGeneral(req, res);
 });
 
 app.post('/', function(req, res) {
-    console.log("GOT POST");
-    console.log(req);
-    res.send('GOT POST');
+    processGeneral(req, res);
 });
 
 app.post('/results', function(req, res) {
-    console.log("GOT POST result");
-    console.log(req);
+    processRequest(req, res);
+});
+
+app.get('/results', function(req, res) {
+    processRequest(req, res);
+});
+
+app.get('/legs', function(req, res) {
+    processRequest(req, res);
+});
+
+function processRequest(req, res) {
+    console.log("gamboAPI event !! method: " + req.method + "  path: " + req.path);
     var event = {};
     event.httpMethod = req.method;
     event.resource = req.path;
@@ -26,42 +34,14 @@ app.post('/results', function(req, res) {
     lambda.handler(event, null, function(err, response) {
         sendResponse(res, response);
     })
-});
+};
 
-app.get('/results', function(req, res) {
-    // console.log(req);
-    var event = {};
-    event.httpMethod = "GET";
-    event.resource = "/results";
-    event.queryStringParameters = {};
-    if(req.query.legID) {
-        event.queryStringParameters.legID = req.query.legID;
-    };
-    if (req.query.teamID) {
-        event.queryStringParameters.teamID = req.query.teamID;
-    }
-    console.log("simulate event: " + JSON.stringify(event));
+function processGeneral(req, res) {
+    console.log("gamboAPI event, unknown resource !! method: " + req.method + "  path: " + req.path);
+    console.log("req: " + JSON.stringify(req));
+    res.send('Hello World!');
+};
 
-    lambda.handler(event, null, function(err, response) {
-        sendResponse(res, response);
-    })
-});
-
-app.get('/legs', function(req, res) {
-    console.log(req);
-    var event = {};
-    event.httpMethod = "GET";
-    event.resource = "/legs";
-    event.queryStringParameters = {};
-    if(req.query.legID) {
-        event.queryStringParameters.legID = req.query.legID;
-    }
-    console.log(event);
-
-    lambda.handler(event, null, function(err, response) {
-        sendResponse(res, response);
-    })
-});
 
 function sendResponse(res, response) {
     res.set("Access-Control-Allow-Origin", "*");

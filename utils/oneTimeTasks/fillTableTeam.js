@@ -20,7 +20,7 @@ lineReader.on('line', function (line) {
     sline = line.split(";");
 
     var params = {
-        TableName: "Team",
+        TableName: "TheRunTeam",
         Item: {
             "team": parseInt(sline[0]),
             "name": sline[1],

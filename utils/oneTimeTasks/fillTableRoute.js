@@ -23,7 +23,7 @@ fs.readFile('route.js', 'utf8', function (err, data) {
             // console.log(leg);
             // store into db
             params = {
-                TableName: "Route",
+                TableName: "TheRunRoute",
                 Item: leg
             }
 

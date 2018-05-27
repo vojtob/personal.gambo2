@@ -2,7 +2,7 @@
 <html lang="sk">
 
 <head>
-  <title>The Run results - DXC dream team</title>
+  <title>The Run results - DXC Dream Team</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -19,34 +19,14 @@
 
 <body>
   <div class="container">
-    <h1>Kryštáľová guľa - DXC dream team</h1>
-
-    <!-- <div class="card text-white bg-primary">
-      <div class="card-body">
-
-          <form class="form-inline">
-              <div class="input-group mb-2 mr-sm-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fas fa-stopwatch"></i>
-                  </div>
-                </div>
-                <input type="text" class="form-control" id="legDuration" placeholder="skutočnosť, napr. 0:45:23">
-              </div>
-    
-              <button type="button" class="btn btn-success mb-2" onclick="setLegDuration()">
-                <i class="fas fa-check-circle"></i> Dobehnuté</button>
-            </form>
-    
-      </div>
-    </div> -->
+    <h1>Kryštáľová guľa - DXC Dream Team</h1>
 
     <p id="resultsTablePlaceholder"></p>
 
     <script>
       $("body").data("teamID", 29);
-      var serviceAddress = "http://localhost:3000";
-      // var serviceAddress = "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod";
+      // var serviceAddress = "http://localhost:3000";
+      var serviceAddress = "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod";
       drawTable();
 
       function drawTable() {
@@ -90,12 +70,9 @@
       }
 
       function getLeg(leg, legIndex, lastLegDoneIndex) {
-        var alreadyRun = (legIndex <= lastLegDoneIndex);
-        var toRun = ((lastLegDoneIndex + 1) < legIndex);
-
         var output = "";
 
-        if (alreadyRun) {
+        if (legIndex <= lastLegDoneIndex) {
           // uz zabehnute
           output = '<div class="card"><div class="card-body">';
           getZabehnutyLegText(legIndex, leg, legIndex == lastLegDoneIndex).forEach(textElement => {
@@ -103,7 +80,7 @@
           });
           output += '</div></div > ';
 
-        } else if (toRun) {
+        } else if ((lastLegDoneIndex + 1) < legIndex) {
           // este sa len pobezi
           output = '<div class="card"><div class="card-body">';
           getBuduciLegText(legIndex, leg).forEach(textElement => {
@@ -206,17 +183,15 @@
       }
 
       function getLegDesc(leg) {
-        text = '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxfromLat + ',' + leg.gpxfromLng + '" target="_blank">' + leg.from + '</a>' +
-          ' <i class="fas fa-caret-right"></i> ' +
-          '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank">' + leg.to + '</a>';
-        // if (addDesc) {
-        // }
-        return text;
+        // text = '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxfromLat + ',' + leg.gpxfromLng + '" target="_blank">' + leg.from + '</a>' +
+        //   ' <i class="fas fa-caret-right"></i> ' +
+        //   '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank">' + leg.to + '</a>';
+        // return text;
 
-        // return '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxfromLat + ',' + leg.gpxfromLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i></a> ' +
-        // leg.from + 
-        // ' <a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i> </a>' +
-        // leg.to;
+        return '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxfromLat + ',' + leg.gpxfromLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i></a> ' +
+        leg.from + 
+        ' <a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i> </a>' +
+        leg.to;
       }
 
       function getLegDesc2(leg, addDelete) {
@@ -292,29 +267,6 @@
       }
 
     </script>
-
-    <!-- Modal delete -->
-    <div id="myModalDelete" class="modal fade" role="dialog">
-      <div class="modal-dialog modal-sm">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <form action="">
-            <div class="modal-body">
-              <div class="form-group">
-                <label for="legDuration">Naozaj zmazať čas na úseku?</label>
-              </div>
-              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Nezmazať</button>
-              <button type="button" class="btn btn-danger float-right" data-dismiss="modal" onclick="clearLegDuration()">
-                <i class="fas fa-exclamation-triangle"></i> Zmazať</button>
-            </div>
-            <!-- <div class="modal-footer">
-              </div> -->
-          </form>
-        </div>
-
-      </div>
-    </div>
 
   </div>
 

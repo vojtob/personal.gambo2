@@ -1,0 +1,36 @@
+/***************
+*** Leg
+***************/
+
+aws dynamodb delete-table --table-name TheRunRoute --endpoint-url http://localhost:8000
+
+aws dynamodb create-table --table-name TheRunRoute --attribute-definitions AttributeName=legID,AttributeType=N --key-schema AttributeName=legID,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --endpoint-url http://localhost:8000
+
+/***************
+*** Team
+***************/
+
+aws dynamodb delete-table --table-name TheRunTeam --endpoint-url http://localhost:8000
+
+aws dynamodb create-table --table-name TheRunTeam --attribute-definitions AttributeName=team,AttributeType=N --key-schema AttributeName=team,KeyType=HASH --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=1 --endpoint-url http://localhost:8000
+
+
+/***************
+*** Deploy web
+***************/
+aws s3 cp C:\Projects_src\gambo2\gambo\gambo.web\gambo.html s3://gambo-vojtob
+
+
+/***************
+*** Deploy lambda gambo
+***************/
+aws s3 cp C:\Users\balintv\Downloads\gambo.zip s3://gambo-vojtob
+s3://gambo-vojtob/gambo.zip
+
+/***************
+*** RUN
+***************/
+
+http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com/gambo.html
+
+file:///C:/Projects_src/gambo2/gambo/gambo.web/gambo.html

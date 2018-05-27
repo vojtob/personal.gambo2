@@ -1,0 +1,39 @@
+arn:aws:s3:::gambo-vojtob
+
+aws dynamodb list-tables --endpoint-url http://localhost:8000
+
+aws dynamodb describe-table --table-name Team --endpoint-url http://localhost:8000
+
+
+
+
+http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com
+
+http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com/theRun.html
+file:///C:/Projects_src/gambo2/gambo.runbot/gambo.web/test.html
+
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+
+curl -v -X GET "https://2u800wmtf0.execute-api.eu-central-1.amazonaws.com/test/runbot?hub.verify_token=VOJTO_DXC_RUNBOT&hub.challenge=CHALLENGE_VOJTO_ACCEPTED&hub.mode=subscribe"
+
+curl -H "Content-Type: application/json" -X POST "localhost:1337/webhook" -d '{"object": "page", "entry": [{"messaging": [{"message": "TEST_MESSAGE"}]}]}'
+
+
+
+https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/leg?legID=9
+
+
+https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/leg
+
+curl -X GET "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/leg"
+
+curl -H "Content-Type: application/json" -X POST "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/leg" 
+
+http://localhost:3000/results?teamID=29&legID=24
+http://localhost:3000/results?teamID=29
+
+
+curl -X GET "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/legs?legID=9"
+curl -X GET "http://localhost:3000/legs?legID=9"
+
+legID=1&legDuration=1:10:11
