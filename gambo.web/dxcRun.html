@@ -82,18 +82,6 @@
           getAktualyLegText(legIndex, leg).forEach(textElement => {
             output += '<div class="card-text">' + textElement + '</div>';
           });
-          output += '<p><form class="form-inline">' +
-            '<div class="input-group mb-2 mr-sm-2">' +
-            '<div class="input-group-prepend">' +
-            '<div class="input-group-text">' +
-            '<i class="fas fa-stopwatch"></i>' +
-            '</div>' +
-            '</div>' +
-            '<input type="text" class="form-control" id="legDurationInput" placeholder="skutočnosť, napr. 0:45:23" onkeydown = "if (event.keyCode == 13) {document.getElementById(\'setLegDurationBtn\').click()}">' +
-            '</div>' +
-            '<button type="button" id="setLegDurationBtn" class="btn btn-success mb-2" onclick="setLegDuration()">' +
-            '<i class="fas fa-check-circle"></i> Dobehnuté</button>' +
-            '</form></p>';
           output += '</div></div > ';
         }
 
@@ -111,7 +99,7 @@
           diffColor = 'tomato';
           plusSign = "+";
         };
-
+        
         return ' (<span style="color:' + diffColor + '">' + plusSign + diff + '</span>)';
       }
 
@@ -189,9 +177,9 @@
         // return text;
 
         return '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxfromLat + ',' + leg.gpxfromLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i></a> ' +
-          leg.from +
-          ' <a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i> </a>' +
-          leg.to;
+        leg.from + 
+        ' <a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i> </a>' +
+        leg.to;
       }
 
       function getLegDesc2(leg, addDelete) {
@@ -200,31 +188,7 @@
           '<div class="col-auto"><i class="fas fa-long-arrow-alt-up"></i>' + leg.up + ' </div>' +
           '<div class="col-auto"><i class="fas fa-long-arrow-alt-down"></i>' + leg.down + '</div>' +
           '<div class="col-auto"><i class="fas fa-heartbeat"></i>' + leg.difficulty + '</div>';
-        text += '<div class="col-auto">' +
-          '<a data-toggle="collapse" href="#desc' + leg.legID + '" role="button" aria-expanded="false" aria-controls="collapseExample">' +
-          '<i class="far fa-list-alt"></i></a></div>';
-        if (addDelete) {
-          text += '<div class="col-auto">' +
-            '<a data-toggle="collapse" href="#deleteDuration" role="button" aria-expanded="false" aria-controls="collapseExample">' +
-            '<i class="far fa-trash-alt"></i></a></div>';
-        }
         text += '</div>';
-        text += '<p><div class="collapse" id="desc' + leg.legID + '">';
-        leg.desc.forEach(descLine => {
-          text += '<div class="card-text">' + descLine + '</div>';
-        });
-        text += '</div></p>';
-
-        if (addDelete) {
-          // zmazanie
-          text += '<p><div class="collapse" id="deleteDuration">';
-          text += '<div class="row">' +
-            '<div class="col-auto"><label for="legDuration">Naozaj zmazať čas na úseku?</label></div>' +
-            '<div class="col-auto"><button data-toggle="collapse" href="#deleteDuration" type="button" class="btn btn-outline-dark">Nezmazať</button></div>' +
-            '<div class="col-auto"><button type="button" class="btn btn-danger" onclick="clearLegDuration()"><i class="fas fa-exclamation-triangle"></i> Zmazať</button></div>' +
-            '</div>';
-          text += '</div></p>';
-        }
 
         return text;
       }
@@ -233,7 +197,7 @@
         console.log("POST set result!");
         var teamID = $("body").data("teamID");
         var legID = $("body").data("legID");
-        var legDuration = document.getElementById("legDurationInput").value;
+        var legDuration = document.getElementById("legDuration").value;
         console.log("post set legDuration to " + legDuration + " on leg " + legID + " for team " + teamID);
         // $.ajax({
         //   url: 'serviceAddress + "/result?legDuration=" + legDuration',
@@ -253,6 +217,12 @@
         var teamID = $("body").data("teamID");
         var legID = $("body").data("legID") - 1;
         console.log("post clear legDuration from leg " + legID + " for team " + teamID);
+        // $.ajax({
+        //   url: 'serviceAddress + "/result?legDuration=" + legDuration',
+        //   type: 'PUT',
+        //   success: function (response) {
+        //   }
+        // });
         $.post(serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID, function (response, status) {
           console.log("POST response: " + JSON.stringify(response));
           console.log("Status: " + status);
@@ -263,21 +233,6 @@
     </script>
 
   </div>
-
-  <!-- <script>
-    var input = document.getElementById("legDurationInput");
-    input.addEventListener("keyup", function (event) {
-      console.log("ENTER !!!!!!!!");
-      // Cancel the default action, if needed
-      event.preventDefault();
-      // Number 13 is the "Enter" key on the keyboard
-      if (event.keyCode === 13) {
-        // Trigger the button element with a click
-        document.getElementById("setLegDurationBtn").click();
-        // setLegDuration();
-      }
-    });
-  </script> -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

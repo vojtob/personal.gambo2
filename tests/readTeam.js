@@ -1,4 +1,4 @@
-    var dataAccess = require("../gambo/dataAccess");
+    var dataAccess = require("../gambo.core/dataAccess");
 
     dataAccess.getTeam(29, function(err, data) {
         console.log(JSON.stringify(data, null, 2));

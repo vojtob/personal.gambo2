@@ -33,4 +33,4 @@ s3://gambo-vojtob/gambo.zip
 
 http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com/gambo.html
 
-file:///C:/Projects_src/gambo2/gambo/gambo.web/gambo.html
+file:///C:/Projects_src/gambo2/gambo.web/gambo.html

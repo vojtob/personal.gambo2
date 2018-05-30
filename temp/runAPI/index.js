@@ -1,5 +1,5 @@
-var info = require("./info");
-var results = require("./results");
+var info = require("./gambo.core/info");
+var results = require("./gambo.core/results");
 
 exports.handler = (event, context, callback) => {
     console.log('Received event: ' + JSON.stringify(event));

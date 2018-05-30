@@ -1,6 +1,10 @@
 var AWS = require("aws-sdk");
 var config = require('./config');
 
+console.log('config:' + JSON.stringify(config));
+console.log('region:' + config.region);
+console.log('endpoint:' + config.endpoint);
+
 AWS.config.update({
     region: config.region,
     endpoint: config.endpoint
