@@ -41,12 +41,12 @@ archive.on('error', function(err) {
 archive.pipe(output);
  
 // append a file
-archive.file('./gambo.runbot/index.js', { name: 'index.js' });
-archive.file('./gambo.runbot/msg.js', { name: 'msg.js' });
-archive.file('./utils/configAWS.js', { name: 'gambo.core/config.js' });
+archive.file('../gambo.runbot/index.js', { name: 'index.js' });
+archive.file('../gambo.runbot/msg.js', { name: 'msg.js' });
+archive.file('../utils/configAWS.js', { name: 'gambo.core/config.js' });
 
 // append files from a sub-directory and naming it `new-subdir` within the archive
-archive.directory('./gambo.core/', 'gambo.core');
+archive.directory('../gambo.core/', 'gambo.core');
   
 // finalize the archive (ie we are done appending files but streams have to finish yet)
 // 'close', 'end' or 'finish' may be fired right after calling this method so register to them beforehand

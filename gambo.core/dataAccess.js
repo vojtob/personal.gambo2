@@ -8,6 +8,8 @@ AWS.config.update({
 
 var docClient = new AWS.DynamoDB.DocumentClient()
 
+// TEST PRENOSU 2
+
 // function getTeamCount(teamID) {
 //     return teams.length;
 // }

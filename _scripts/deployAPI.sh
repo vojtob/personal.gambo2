@@ -1,10 +1,3 @@
-rm -r ../temp/runAPI
-mkdir ../temp/runAPI
-cd ../gambo.API/
-cp -r . ../temp/runAPI
-cd ../gambo.core/
-cp -r . ../temp/runAPI
-cd ../mockAPI/
-cp -r . ../temp/runAPI
-cd ../utils
-node ../temp/runAPI/gamboAPI.js
+rm ../temp/gamboAPI.zip
+node ../utils/zipAPI.js
+aws lambda update-function-code --function-name gambo --zip-file  fileb://../temp/gamboAPI.zip --publish 
