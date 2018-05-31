@@ -8,12 +8,6 @@ AWS.config.update({
 
 var docClient = new AWS.DynamoDB.DocumentClient()
 
-// TEST PRENOSU 2
-
-// function getTeamCount(teamID) {
-//     return teams.length;
-// }
-
 function getTeam(teamID, callback) {
     getItem("TheRunTeam", { team: teamID }, callback);
 }
@@ -65,15 +59,6 @@ function putTeam(team, callback) {
     }
 
     generalPut(params, callback);
-    // docClient.put(params, function (err, data) {
-    //     if (err) {
-    //         console.error("Unable to update item. Error JSON:", JSON.stringify(err, null, 2));
-    //         callback(err, data);
-    //     } else {
-    //         console.log("UpdateItem succeeded:", JSON.stringify(data, null, 2));
-    //         callback(err, data);
-    //     }
-    // });
 }
 
 function generalPut(params, callback) {
@@ -88,5 +73,3 @@ exports.getLegs = getLegs;
 exports.putTeam = putTeam;
 
 exports.generalPut = generalPut;
-
-// exports.getTeamCount = getTeamCount;

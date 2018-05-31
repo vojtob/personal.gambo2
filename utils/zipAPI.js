@@ -44,7 +44,7 @@ archive.pipe(output);
 archive.file('../gambo.API/index.js', { name: 'index.js' });
  
 // append a file
-archive.file('../utils/configAWS.js', { name: 'gambo.core/config.js' });
+archive.file('../config/configAWS.js', { name: 'gambo.core/config.js' });
  
 // append files from a sub-directory and naming it `new-subdir` within the archive
 archive.directory('../gambo.core/', 'gambo.core');
