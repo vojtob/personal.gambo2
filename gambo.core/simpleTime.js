@@ -1,11 +1,19 @@
 function timeToSec(timeString) {
+    // console.log("timestring " + timeString);
     var parts = timeString.split(":");
-    var hour = parseInt(parts[0]);
-    var min = parseInt(parts[1]);
-    var sec = parseInt(parts[2]);
-    // console.log(parts);
-    var t = hour*3600 + min*60 + sec;
-    return t;
+    sec = 0;
+    parts.forEach(part => {
+        sec = 60*sec + parseInt(part);
+        // console.log("part " + part + " sec " + sec);
+    });
+    // console.log("sec " +sec);
+    return sec;
+    // var hour = parseInt(parts[0]);
+    // var min = parseInt(parts[1]);
+    // var sec = parseInt(parts[2]);
+    // // console.log(parts);
+    // var t = hour*3600 + min*60 + sec;
+    // return t;
 }
 
 function secToTime(timeSec) {

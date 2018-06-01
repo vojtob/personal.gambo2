@@ -23,6 +23,10 @@ app.get('/legs', function(req, res) {
     processRequest(req, res);
 });
 
+app.post('/plan', function(req, res) {
+    processRequest(req, res);
+});
+
 function processRequest(req, res) {
     console.log("gamboAPI event !! method: " + req.method + "  path: " + req.path);
     var event = {};

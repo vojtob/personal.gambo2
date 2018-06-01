@@ -16,21 +16,40 @@ aws dynamodb create-table --table-name TheRunTeam --attribute-definitions Attrib
 
 
 /***************
-*** Deploy web
-***************/
-aws s3 cp C:\Projects_src\gambo2\gambo.web\gambo.html s3://gambo-vojtob
-
-
-/***************
-*** Deploy lambda gambo
-***************/
-aws s3 cp C:\Projects_src\gambo2\temp\gamboAPI.zip s3://gambo-vojtob
-s3://gambo-vojtob/gambo.zip
-
-/***************
-*** RUN
+*** RUN AWS
 ***************/
 
 http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com/gambo.html
+http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com/dxcRun.html
+http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com/policy.html
+
+/***************
+*** RUN local
+***************/
 
 file:///C:/Projects_src/gambo2/gambo.web/gambo.html
+file:///C:/Projects_src/gambo2/gambo.web/dxcRun.html
+
+/***************
+*** PLAN
+***************/
+
+curl -H "Content-Type: application/json" -X POST "localhost:3000/plan?legID=9&tempo=5:46"
+curl -H "Content-Type: application/json" -X POST "http://localhost:3000/plan?startKE=10:00:00" 
+
+curl -H "Content-Type: application/json" -X POST "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/plan?startKE=10:00:00" 
+
+
+/***************
+*** Test api
+***************/
+
+http://localhost:3000/results?teamID=29&legID=12
+http://localhost:3000/results?teamID=29
+
+curl -X GET "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/legs?legID=9"
+curl -X GET "http://localhost:3000/legs?legID=9"
+
+http://localhost:3000/plan?teamID=29&legID=9&tempo=5:46
+
+

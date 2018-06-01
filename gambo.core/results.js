@@ -3,11 +3,11 @@ var dataAccess = require('./dataAccess');
 
 function setRealDuration(teamID, legID, duration, callback) {
     dataAccess.getTeam(teamID, function (err, team) {
-        if(err) {
+        if (err) {
             callback(err, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
         } else {
             // set real duration
-            team.legs[legID-1].realDuration = duration;
+            team.legs[legID - 1].realDuration = duration;
             team = recalculateLegs(team);
             // store new results
             dataAccess.putTeam(team, callback)
@@ -17,11 +17,11 @@ function setRealDuration(teamID, legID, duration, callback) {
 
 function clearRealDuration(teamID, legID, callback) {
     dataAccess.getTeam(teamID, function (err, team) {
-        if(err) {
+        if (err) {
             callback(err, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
         } else {
             // delete real duration
-            delete team.legs[legID-1].realDuration;
+            delete team.legs[legID - 1].realDuration;
             team = recalculateLegs(team);
             // store new results
             dataAccess.putTeam(team, callback)
@@ -31,17 +31,17 @@ function clearRealDuration(teamID, legID, callback) {
 
 function getResult(teamID, legID, callback) {
     dataAccess.getTeam(teamID, function (err, team) {
-        if(err) {
+        if (err) {
             callback(err, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
         } else {
-            callback(null, team.legs[legID-1]);
+            callback(null, team.legs[legID - 1]);
         }
     })
 }
 
 function getTeamResult(teamID, callback) {
     dataAccess.getTeam(teamID, function (err, team) {
-        if(err) {
+        if (err) {
             callback(err, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
         } else {
             callback(null, team);
@@ -63,33 +63,72 @@ function getTeamResult(teamID, callback) {
 //     })
 // }
 
-// function setStartKosice(teamID, startTime) {
-//     dataAccess.getTeam(teamID, function (err, team) {
-//         if(err) {
-//             callback(message, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
-//         } else {
-//             // set real duration
-//             team.startTimeKE = startTime;
-//             team = recalculateLegs(team);
-//             // store new results
-//             dataAccess.putTeam(team, function(err, data) {})
-//         }
-//     })
-// }
+function setPlannedTempo(teamID, leg, tempo, callback) {
+    dataAccess.getTeam(teamID, function (err, team) {
+        if (err) {
+            callback(err, null);
+        } else {
+            // set real duration
+            var dist = team.legs[leg - 1].distance;
+            var tempoSec = st.timeToSec(tempo);
+            console.log("tempoSec " + tempoSec);
+            var dur = Math.round(tempoSec * dist);
+            console.log("dur " + dur);
+            var planDur = st.secToDuration(dur);
+            console.log("planDur " + planDur);
+            team.legs[leg - 1].plannedDuration = planDur;
+            console.log("team legs planned dur " + team.legs[leg - 1].plannedDuration);
+            // team.legs[leg - 1].plannedTempo = tempo;
+            team = recalculateLegs(team);
+            // store new results
+            console.log("team legs planned dur 2 " + team.legs[leg - 1].plannedDuration);
+            dataAccess.putTeam(team, function (err, data) { })
+        }
+    })
 
-// function setStartTeplicka(teamID, startTime) {
-//     dataAccess.getTeam(teamID, function (err, team) {
-//         if(err) {
-//             callback(message, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
-//         } else {
-//             // set real duration
-//             team.startTimeTeplicka = startTime;
-//             team = recalculateLegs(team);
-//             // store new results
-//             dataAccess.putTeam(team, function(err, data) {})
-//         }
-//     })
-// }
+
+    dataAccess.getTeam(teamID, function (err, team) {
+        if (err) {
+            callback(message, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
+        } else {
+            // set real duration
+            team = recalculateLegs(team);
+            // store new results
+            dataAccess.putTeam(team, function (err, data) { callback(err, data) })
+        }
+    })
+}
+
+function setStartKosice(teamID, startTime, callback) {
+    dataAccess.getTeam(teamID, function (err, team) {
+        if (err) {
+            callback(err, null);
+        } else {
+            // set real duration
+            team.status.startTimeKE = startTime;
+            team = recalculateLegs(team);
+            // store new results
+            dataAccess.putTeam(team, function (err, data) { 
+                console.log("start KE " + team.legs[0].startTime);
+                callback(err,data);
+            });
+        }
+    })
+}
+
+function setStartTeplicka(teamID, startTime) {
+    dataAccess.getTeam(teamID, function (err, team) {
+        if (err) {
+            callback(err, null);
+        } else {
+            // set real duration
+            team.status.startTimeTeplicka = startTime;
+            team = recalculateLegs(team);
+            // store new results
+            dataAccess.putTeam(team, function (err, data) { callback(err,data) })
+        }
+    })
+}
 
 function recalculateLegs(team) {
     var leg;
@@ -103,17 +142,17 @@ function recalculateLegs(team) {
         leg = team.legs[index];
 
         // start time
-        if(index == 0) {
+        if (index == 0) {
             // prvy a teplickovy usek sa nemenia startove casy
             leg.startTime = team.status.startTimeKE;
         } else if (index == 28) {
             leg.startTime = team.status.startTimeTeplicka;
         } else {
             // ostatne sa nastavia podla predosleho end time
-            leg.startTime = team.legs[index-1].endTime;
+            leg.startTime = team.legs[index - 1].endTime;
         }
 
-        if(leg.realDuration) {
+        if (leg.realDuration) {
             // end time podla toho ci mame skutocne trvanie
             leg.endTime = st.secToTime(st.timeToSec(leg.startTime) + st.timeToSec(leg.realDuration));
             // total real duration
@@ -148,7 +187,7 @@ function recalculateLegs(team) {
     team.status.lastLegDone = lastLegDone;
     team.status.totalDistance = totalDistance.toFixed(2);
     team.status.tempo = st.getTempo(team.status.totalRealDuration, totalDistance);
-    
+
     return team;
 }
 
@@ -160,5 +199,6 @@ exports.getTeamResult = getTeamResult;
 exports.recalculateLegs = recalculateLegs;
 // modify plan
 // exports.setPlannedDuration = setPlannedDuration;
-// exports.setStartKosice = setStartKosice;
-// exports.setStartTeplicka = setStartTeplicka;
+exports.setPlannedTempo = setPlannedTempo;
+exports.setStartKosice = setStartKosice;
+exports.setStartTeplicka = setStartTeplicka;
