@@ -82,6 +82,7 @@ function getResults(event, context, callback) {
         console.log("Request team results");
         results.getTeamResult(teamID, function (err, result) {
             if (err) {
+                console.log("error get Team ", JSON.stringify(err));
                 sendError(err, callback);
                 return;
             } else {
@@ -239,7 +240,19 @@ function processPlan(event, context, callback) {
         return;
     }
 
-    sendError("neviem co mam v plane zmenit", callback);
+    // recalculate
+    results.recalculate(teamID, function (err, result) {
+    // results.transform(teamID, function (err, result) {
+        if (err) {
+            console.log("could not recalculate");
+            console.log(JSON.stringify(err));
+            sendError(err, callback);
+        } else {
+            console.log("recalculated successfully");
+            // console.log(JSON.stringify(result));
+            sendOK("OK", callback);
+        }
+    });
 }
 
 function sendLeg(leg, callback) {

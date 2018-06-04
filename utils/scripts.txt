@@ -17,15 +17,19 @@ file:///C:/Projects_src/gambo2/gambo.web/dxcRun.html
 *** PLAN
 ***************/
 
+// change tempo
+curl -H "Content-Type: application/json" -X POST "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/plan?legID=16&tempo=5:45" 
 curl -H "Content-Type: application/json" -X POST "localhost:3000/plan?legID=9&tempo=5:46"
+
+// change start
+curl -H "Content-Type: application/json" -X POST "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/plan?startKE=10:00:00" 
+curl -H "Content-Type: application/json" -X POST "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/plan?startTE=15:30:00" 
 curl -H "Content-Type: application/json" -X POST "http://localhost:3000/plan?startKE=10:00:00" 
 curl -H "Content-Type: application/json" -X POST "http://localhost:3000/plan?startTE=15:30:00" 
 
-curl -H "Content-Type: application/json" -X POST "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/plan?startKE=10:00:00" 
-curl -H "Content-Type: application/json" -X POST "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/plan?startTE=15:30:00" 
-
+// change distance
 curl -H "Content-Type: application/json" -X POST "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/plan?legID=24&dist=11.3"
-curl -H "Content-Type: application/json" -X POST "http://localhost:3000/plan?startTE=15:30:00/plan?legID=24&dist=11.3"
+curl -H "Content-Type: application/json" -X POST "http://localhost:3000/plan?legID=24&dist=11.3"
 
 /***************
 *** Test api

@@ -25,32 +25,32 @@
 
     <script>
       $("body").data("teamID", 29);
-      var serviceAddress = "http://localhost:3000";
-      // var serviceAddress = "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod";
+      // var serviceAddress = "http://localhost:3000";
+      var serviceAddress = "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod";
       drawTable();
 
       function drawTable() {
         var teamID = $("body").data("teamID");
         $.get(serviceAddress + "/results?teamID=" + teamID, function (response) {
-          $("body").data("legID", response.status.lastLegDone + 2);
+          $("body").data("legID", response.lastLegDone + 2);
           var output = "";
 
           for (let index = 0; index < 48; index++) {
             const leg = response.legs[index];
-            output += getLeg(leg, index, response.status.lastLegDone);
+            output += getLeg(leg, index, response.lastLegDone);
           }
           output += '<div class="card bg-secondary text-white">' +
             '<div class="card-body">' +
             '<p class="card-text">';
-          output += "O <strong>" + response.legs[47].endTime + '</strong> ' + getDiffText(response.status.totalDiff);
-          if (response.status.lastLegDone == 47) {
+              output += "O <strong>" + response.legs[47].endTime + '</strong> ' + getDiffText(response.real.diff);
+          if (response.lastLegDone == 47) {
             output += " sme dorazili do cieľa. ";
           } else {
             output += " dorazíme do cieľa. ";
           }
           output +=
-            response.status.totalDistance + ' km za ' + response.status.totalRealDuration +
-            " tempom " + response.status.tempo + '.';
+            response.route.distance + ' km za ' + response.real.duration +
+            " tempom " + response.real.tempo + '.';
 
           document.getElementById("resultsTablePlaceholder").innerHTML = output;
           console.log(typeof response);
