@@ -49,20 +49,6 @@ function getTeamResult(teamID, callback) {
     })
 }
 
-// function setPlannedDuration(teamID, leg, duration) {
-//     dataAccess.getTeam(teamID, function (err, team) {
-//         if(err) {
-//             callback(message, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
-//         } else {
-//             // set real duration
-//             team.legs[leg-1].plannedDuration = duration;
-//             team = recalculateLegs(team);
-//             // store new results
-//             dataAccess.putTeam(team, function(err, data) {})
-//         }
-//     })
-// }
-
 function setPlannedTempo(teamID, leg, tempo, callback) {
     dataAccess.getTeam(teamID, function (err, team) {
         if (err) {
@@ -82,19 +68,40 @@ function setPlannedTempo(teamID, leg, tempo, callback) {
             team = recalculateLegs(team);
             // store new results
             console.log("team legs planned dur 2 " + team.legs[leg - 1].plannedDuration);
-            dataAccess.putTeam(team, function (err, data) { })
+            dataAccess.putTeam(team, callback);
         }
     })
+}
 
-
+function setDistance(teamID, leg, dist, callback) {
     dataAccess.getTeam(teamID, function (err, team) {
         if (err) {
-            callback(message, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
+            callback(err, null);
         } else {
             // set real duration
+            var tempo = team.legs[leg - 1].plannedTempo; 
+            var tempoSec = st.timeToSec(tempo);
+            console.log("tempoSec " + tempoSec);
+            console.log("dist: " + dist);
+            console.log("dist type of : " + typeof dist);
+            var fDist = parseFloat(dist);
+            console.log("fdist: " + fDist);
+            fDist = Math.round(fDist * 100) /100;
+            console.log("fdist 2 : " + fDist);
+            var dur = Math.round(tempoSec * fDist);
+            console.log("dur sec: " + dur);
+            var planDur = st.secToDuration(dur);
+            console.log("planDur " + planDur);
+            team.legs[leg - 1].plannedDuration = planDur;
+            team.legs[leg - 1].distance = fDist;
+            console.log("team legs planned dur " + team.legs[leg - 1].plannedDuration);
+            console.log("team legs planned dist " + team.legs[leg - 1].distance);
+            // team.legs[leg - 1].plannedTempo = tempo;
             team = recalculateLegs(team);
             // store new results
-            dataAccess.putTeam(team, function (err, data) { callback(err, data) })
+            console.log("team legs planned dur 2 " + team.legs[leg - 1].plannedDuration);
+            console.log("team legs planned dist 2 " + team.legs[leg - 1].distance);
+            dataAccess.putTeam(team, callback);
         }
     })
 }
@@ -116,7 +123,7 @@ function setStartKosice(teamID, startTime, callback) {
     })
 }
 
-function setStartTeplicka(teamID, startTime) {
+function setStartTeplicka(teamID, startTime, callback) {
     dataAccess.getTeam(teamID, function (err, team) {
         if (err) {
             callback(err, null);
@@ -179,12 +186,15 @@ function recalculateLegs(team) {
         // planned total duration
         totalPlannedDuration += st.timeToSec(leg.plannedDuration);
         totalDistance += leg.distance;
+        totalDistance = Math.round(totalDistance *100) / 100;
+        console.log("index " + index + " leg distance " + leg.distance + " total distance " + totalDistance);
     }
 
     team.status.totalRealDuration = st.secToDuration(totalRealDuration);
     team.status.totalPlannedDuration = st.secToDuration(totalPlannedDuration);
     team.status.totalDiff = st.secToDuration(st.timeToSec(team.status.totalRealDuration) - st.timeToSec(team.status.totalPlannedDuration));
     team.status.lastLegDone = lastLegDone;
+    console.log("!! total distance " + totalDistance);
     team.status.totalDistance = totalDistance.toFixed(2);
     team.status.tempo = st.getTempo(team.status.totalRealDuration, totalDistance);
 
@@ -202,3 +212,4 @@ exports.recalculateLegs = recalculateLegs;
 exports.setPlannedTempo = setPlannedTempo;
 exports.setStartKosice = setStartKosice;
 exports.setStartTeplicka = setStartTeplicka;
+exports.setDistance = setDistance;

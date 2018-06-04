@@ -220,6 +220,25 @@ function processPlan(event, context, callback) {
         return;
     }
 
+    if (checkParam(event.queryStringParameters, "legID") && checkParam(event.queryStringParameters, "dist")) {
+        // zmena planovaneho tempa
+        var legID = parseInt(event.queryStringParameters.legID);
+        var dist = parseFloat(event.queryStringParameters.dist).toFixed(2);
+        console.log("zmena dlzky useku " + legID + " na " + dist);
+        results.setDistance(teamID, legID, dist, function (err, result) {
+            if (err) {
+                console.log("could not set distance");
+                console.log(JSON.stringify(err));
+                sendError(err, callback);
+            } else {
+                console.log("distance set successfully");
+                // console.log(JSON.stringify(result));
+                sendOK("OK", callback);
+            }
+        });
+        return;
+    }
+
     sendError("neviem co mam v plane zmenit", callback);
 }
 
