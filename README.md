@@ -1,4 +1,13 @@
-Skúsim urobiť RunBota ktorý bude informovať o štafete
+# Jednoduché info o bežeckých pretekoch
+
+![obrázok architektúry](Architecture/gambo-Arch.png)
+
+
+
+[TODO](Architecture/memos/todo.md)
+
+
+### FB ChatBot (RunBot)
 
 |File   |Popis                                            |
 |-------|-------------------------------------------------|
