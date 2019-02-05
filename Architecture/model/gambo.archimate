@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Gambo" id="53a0b637-90e3-452d-a96c-1d41fb55d5a4" version="4.0.0">
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Gambo" id="53a0b637-90e3-452d-a96c-1d41fb55d5a4" version="4.0.1">
   <folder name="Strategy" id="6f92513a-eade-4564-a83a-0415c2a43f70" type="strategy"/>
-  <folder name="Business" id="c04d7e39-7e8a-4e33-a315-18e5d1c98925" type="business"/>
+  <folder name="Business" id="c04d7e39-7e8a-4e33-a315-18e5d1c98925" type="business">
+    <element xsi:type="archimate:BusinessObject" name="Teams, Runners, Users" id="a4ea751d-7ba3-4ce7-9dee-294cc1112775">
+      <documentation>What team run in different races with the same name? What if it has a different runners in different years?&#xD;
+Where is mapping between a runner and team? And how it is related to race?</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" name="Races" id="c0cb7cda-f4d1-4268-8755-c88a9a4ea2e4">
+      <documentation>Each race is described by some rules and route. Each route could have some legs, handovers, ... . This is description of a race, there is nothing about runners, results.&#xD;
+&#xD;
+Should race include runner/team references?</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" name="Results" id="2120d7f2-20a5-4b1c-8402-9ad80c211c5a"/>
+  </folder>
   <folder name="Application" id="f7560356-8e0b-4e6c-b8cb-eb00f6aac5b1" type="application">
     <element xsi:type="archimate:ApplicationInterface" name="Gambo API" id="86c5ac9d-9c38-406f-a934-8bc2bcf50885">
       <documentation>/results&#xD;
@@ -186,6 +197,17 @@
       </child>
       <child xsi:type="archimate:DiagramObject" id="a459ddda-f815-4abb-bad6-6fb5e3fea497" textPosition="1" archimateElement="1ed9c6ad-1847-435f-a6e2-79676921bb7c" type="1">
         <bounds x="990" y="672" width="180" height="107"/>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Gambo Data" id="c3ad7bcb-d1bf-446c-855e-2f316b0afca4">
+      <child xsi:type="archimate:DiagramObject" id="0097c52e-dffc-48df-8a3d-00d70ab8d138" archimateElement="a4ea751d-7ba3-4ce7-9dee-294cc1112775">
+        <bounds x="240" y="270" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="c8f27e93-a35a-45c8-9b99-92947f63c62b" archimateElement="c0cb7cda-f4d1-4268-8755-c88a9a4ea2e4">
+        <bounds x="390" y="270" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="0f4cc485-47a5-4656-8ef4-7c45786958cd" archimateElement="2120d7f2-20a5-4b1c-8402-9ad80c211c5a">
+        <bounds x="540" y="270" width="120" height="50"/>
       </child>
     </element>
   </folder>
