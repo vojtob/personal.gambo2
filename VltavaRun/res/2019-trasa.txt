@@ -1,0 +1,1525 @@
+1
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Zadov – Churánov, stadion / 49.0673939N, 13.6195222E
+Lipka, za železnicním prejezdem / 49.0195900N, 13.7325347E
+Presunte se pres Paseky, Šindlov, Nový Svet do Lipky (cca 21 km, 30 min.).
+Parkování na ploše u pily.
+14,10 km
+Lipka
+Propozice Vltava Run 2019
+3
+70 % asfalt, 30 % trail
+stoupání 160 m
+klesání 380 m
+Lesní cestou na žlutou TZ vlevo, rozcestí V Polci vpravo po cyklostezce c. 1203, Pláne po cyklo c. 1040, Nové Hute 
+vpravo po zelené TZ, ve Studeném potoce po žluté vlevo, rozcestí Šindlov, Pod Kamennou po žluté, rozcestí V Srncím 
+vpravo po modré, Lipka za železnicním prejezdem.
+1 107 m n.m.
+4 km 8 km 12 km
+868 m n.m.
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+1
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Lipka, za železnicním prejezdem / 49.0195900N, 13.7325347E
+Kubova Hut, zpevnená plocha cca 1 km rozcestí Basumské louky / 48.9863586N, 13.7808561E
+Pres Klášterec, Solnou lhotu, Korkusovu hut po silnici c. 4, do Kubovy Hute, pres koleje vlevo (10,4 km, 10 min.). 
+9 km
+Kubova Hut
+Propozice Vltava Run 2019
+3
+80 % asfalt, 20 % trail
+stoupání 300 m
+klesání 140 m
+Po žluté TZ, rozcestí Pod Svetlou horou vlevo po cervené TZ, po 4 km pred Kubovou Hutí odbocit vpravo na neznacenou 
+lesní/polní cestu smerem dolu do Kubovy Hute, pres hlavní silnici, okolo penzionu pod Boubínem, za železnicní tratí doleva 
+na modrou a dál pokracovat po modré TZ - rozcestí Pod Basumskou loukou.
+Parkování na zpevnené ploše cca 1 km za prejezdem. POZOR! Omezená kapacita parkovište! Prosíme, zdržte se zde pouze 
+na dobu nezbytne nutnou k predávce štafety. Povolený cas stání auta je maximálne 15 min. pred a 5 min. po dobehu bežce.
+2,2 km 4,5 km 6,7 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+1 112 m n.m.
+891 m n.m.
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Kubova Hut, zpevnená plocha cca 1 km rozcestí Basumské louky / 48.9863586N, 13.7808561E
+Lenora, fotbalové hrište / 48.9197733N, 13.7956967E
+Presunte se po silnici c. 4 pres Horní Vltavici, odbocit vlevo na silnici c. 39. Lenora (cca 10 km, 12 min.).
+9,90 km
+Lenora
+Propozice Vltava Run 2019
+2
+70 % asfalt, 30 % trail
+stoupání 100 m
+klesání 400 m
+300 m po zelené rovne pak vpravo, po 3,3 km na rozcestí vpravo pres koleje, na silnici vlevo, pres Záton rovne po Židovské 
+ceste, dále po dlouhohrbetní ceste až do Lenory, pres železnicní prejezd a dále po Cyklostezce 33, predávka Lenora, 
+fotbalové hrište.
+Parkování u fotbalového hrište. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné komunikaci jako dobeh bežcu 
+do predávky. POZOR! Omezená kapacita parkovište! Prosíme, zdržte se zde pouze na dobu nezbytne nutnou k predávce 
+štafety. Povolený cas stání auta je maximálne 15 min. pred a 5 min. po dobehu bežce.
+1 062 m n.m.
+2,5 km 5 km 7,4 km
+756 m n.m.
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+4
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Lenora, fotbalové hrište / 48.9197733N, 13.7956967E
+Stožec, parkovište pred penzionem Pstruh / 48.8592456N, 13.8191339E
+Po silnici c. 39, vpravo na Soumarský most, Ceské Žleby a Stožec (14 km, 19 min.).
+9,80 km
+Stožec
+Propozice Vltava Run 2019
+2
+80 % asfalt, 20 % trail
+stoupání 150 m
+klesání 140 m
+Po modré TZ cca 2 km, rozcestí Zelená cesta odbocit vlevo po zelené TZ - cyklo c. 33, križovatka Volarské šance odbocit 
+vpravo, po žluté na rozcestí Dobrá, vlevo po cyklo c. 1024 na Križovatku u potoka vpravo stále po cyklo c. 1024, rozcestí 
+Stožecká luka rovne, vlevo po žluté TZ na Stožec.
+Parkování na verejném parkovišti pred penzionem Pstruh. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné 
+komunikaci jako dobeh bežcu do predávky. POZOR! Omezená kapacita parkovište! Prosíme, zdržte se zde pouze na dobu 
+nezbytne nutnou k predávce štafety. Povolený cas stání auta je maximálne 15 min. pred a 5 min. po dobehu bežce.
+747 m n.m.
+2,4 km 4,9 km 7,3 km
+822 m n.m.
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+4
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+5
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Stožec, parkovište pred penzionem Pstruh / 48.8592456N, 13.8191339E
+Nová Pec, fotbalové hrište / 48.7915017N, 13.9488361E
+Zpet na silnici c. 39, vpravo na Volary, Belou a Novou Pec (31 km, 34 min.).
+15,40 km
+Nová Pec
+Propozice Vltava Run 2019
+2
+100 % asfalt
+stoupání 80 m
+klesání 100 m
+Po cyklostezce c. 33 Vltavská, kolem info centrum Šumava, Cerný kríž – stále cyklo c. 33, Pekná, Ovesná, Nová Pec rozcestí 
+u fotbalového hrište.
+Parkování na fotbalovém hrišti. Po tráve jezdete opatrne. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné 
+komunikaci jako výbeh bežcu z predávky. 
+780 m n.m.
+4 km 8 km 12 km
+725 m n.m.
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+5
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+6
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Nová Pec, fotbalové hrište / 48.7915017N, 13.9488361E
+Horní Planá, parkovište / 48.7614844N, 14.0251931E
+Belá, Želnava, Pernek po silnici c. 39, Horní Planá (11 km, 13 min.).
+7,90 km
+Horní Planá
+Propozice Vltava Run 2019
+2
+100 % asfalt
+stoupání 45 m
+klesání 45 m
+Na križovatce na predávce odbocit doleva kolem fotbalového hrište, pokracovat pres most,porád po cyklostezce c. 33,
+na rozcestí Belá doprava, za žel. prejezdem Pernek podél trate po cyklostezce c. 33 a pokracovat rovne po trase až do Horní 
+Plané.
+POZOR! Na trase 3x žel. prejezd.
+Parkování na velkém parkovišti u kempu. Dávejte pozor na bežce, kterí sbíhají na predávku. UPOZORNENÍ: Caravan 
+Camping Horní Planá je plne obsazen a nebude prijímat závodníky akce ani je pouštet do areálu.
+2 km 4 km 6 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+752 m n.m.
+724 m n.m.
+6
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+7
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Horní Planá, parkovište / 48.7614844N, 14.0251931E
+Olšina, Rekreacní zarízení, parkovište / 48.7778781N, 14.0926225E
+Horní Planá, Hodnov, Olšina (6,5 km, cca 11 min.).
+12,80 km
+Olšina
+Propozice Vltava Run 2019
+3
+100 % asfalt
+stoupání 170 m
+klesání 140 m
+V Horní Plané sebehnout z Jiráskovy ulice na cyklostezku c. 33 doprava, podél kolejí, Jenišov. POZOR! Prebeh pres koleje, 
+následne prebeh pres silnici, stále po cyklo Karlovy Dvory I., Hurka, v Hurce za Penzionem U Médu doleva na modrou TZ, 
+Žlábek, za rozcestím Žlábek sebeh z modré TZ rovne cca 2,4 km na rozcestí pred Hodnovem doprava po cervené TZ do 
+Olšiny.
+Parkování na zadním parkovišti za areálem. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné komunikaci jako 
+dobeh bežcu do predávky. 
+3,2 km 6,4 km 9,6 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+726 m n.m.
+793 m n.m.
+7
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+8
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Olšina, Rekreacní zarízení, parkovište / 48.7778781N, 14.0926225E
+Cerná v Pošumaví, slepá ulice / 48.7450900N, 14.1190883E
+Zpet na Hodnov, Horní Planou, Hurku do Cerné v Pošumaví. (14 km, cca 17 min.).
+6,40 km
+Cerná v Pošumaví
+Propozice Vltava Run 2019
+2,5
+40 % asfalt, 60 % trail
+stoupání 130 m
+klesání 120 m
+Z Olšiny po silnici a cervené TZ kolem rybníku Olšina, pres žel. stanici Olšina, odbocit vpravo pres koleje na Hodnov. POZOR! 
+Žel. prejezd. Pak rovne po lesní  ceste,  Orechovka cca 2,5 km,na rozcestí vlevo na Mokrou,  v Mokré odbocit doprava 
+pokracovat na silnici, podbehnout silnici c. 39, pokracovat dál cca 700 m.
+Auta parkujte podél slepé nepoužívané cesty a na travnaté ploše (dle aktuálního pocasí). Následujte instrukce místních 
+organizátoru, kterí vám urcí místo k parkování. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné komunikaci jako 
+dobeh bežcu do predávky! 
+1,6 km 3,2 km 4,8 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+805 m n.m.
+727 m n.m.
+8
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+9
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Cerná v Pošumaví, slepá ulice / 48.7450900N, 14.1190883E
+Milná, pred areálem Farma Milná / 48.6948239N, 14.1516231E
+Po silnici c. 39 pres Cernou v Pošumaví, po silnici c. 163 pres Plánicku do Milné. ( 7 km, cca 7 min.).
+9,40 km
+Milná
+Propozice Vltava Run 2019
+3
+30 % asfalt, 60 % lesní zpevnená cesta
+10 % trail
+stoupání 161 m
+klesání 140 m
+Podél hlavní silnice c. 39 do Cerné v P., vlevo mezi domky, opet vlevo po modré a cyklo c. 33, Slavkovice, na rozcestníku pred 
+Muckovem vpravo po cyklo c. 33, vlevo k Plánicskému rybníku, cyklo c. 33, na rozcestí rovne na Milná, u kaplicky vlevo a na 
+konci ulice vlevo k Farma Milná.  
+Parkování na fotbalovém hrišti za zastávkou autobusu. Po tráve jezdete opatrne.
+2,4 km 4,7 km 7 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+819 m n.m.
+742 m n.m.
+9
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+10
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Milná, pred areálem Farma Milná / 48.6948239N, 14.1516231E
+Lipno nad Vltavou, prístavište / 48.6420389N, 14.2201736E
+Po silnici c. 163 pres Frymburk do Lipna nad Vltavou. (11 km , cca 12 min.).
+13,80 km
+Lipno nad Vltavou
+Propozice Vltava Run 2019
+2
+80 % asfalt, 20 % trail
+stoupání 68 m
+klesání 120 m
+Od Farmy Milná na lesní nezpevnenou cestu, po 1.4 km vpravo na zelenou TZ. Po 1.5 km prebeh pres silnici 163, vlevo na 
+cyklo c. 33, pres Frymburk, do Lipna nad Vltavou prístavište.
+Parkujte na velkém parkovišti za Supermarketem COOP.
+3,4 km 6,9 km 10 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+742 m n.m.
+781 m n.m.
+10
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+11
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Lipno nad Vltavou, prístavište / 48.6420389N, 14.2201736E
+Vyšší Brod, Rožmberská brána / 48.6219342N, 14.3046672E
+Po silnici c. 163 pres hráz, Loucovice do Vyššího Brodu. (11 km, 12 min.).
+10,10 km
+Vyšší Brod
+Propozice Vltava Run 2019
+3,5
+65 % asfalt, 35 % lesní trail
+stoupání 130 m
+klesání 270 m
+Pres prístavište po cyklo c. 33 pres hráz, POZOR prebeh silnice c. 163, Lipno žel. st., na zelenou TZ, za železnicní zast. 
+Loucovice se držte vody po pravé strane, pres most vpravo, za hotelem Kilián vlevo na modrou TZ. Rozc. Pod Kaplickou,
+Pod Pošlákem. Predávka ve Vyšším Brode u Rožmberské brány.
+Parkujte na parkovišti u kempu nebo parkovište Klášter vyšší Brod. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po 
+stejné komunikaci jako výbeh bežcu z predávky. 
+2,5 km 5 km 7,5 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+578 m n.m.
+769 m n.m.
+11
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+12
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+PRESPÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Vyšší Brod, Rožmberská brána / 48.6219342N, 14.3046672E
+Rožmberk, na rozcestí nad námestím / 48.6544903N, 14.3668597E
+Z Vyššího Brodu po silnici c. 160 do Rožmberka. (9 km, 10 min.). Prosíme, nejezdete pres Hrudkov po trase bežce! 
+6,90 km
+Rožmberk
+Propozice Vltava Run 2019
+2,5
+100 % asfalt
+stoupání 120 m
+klesání 160 m
+Sebeh dolu, za silnicí c. 163 odbocit doprava, po cervené TZ pres most, koleje do kopce, sebeh z cervené TZ rovne po silnici 
+do Hrudkova a dál do Rožmberka. V Rožmberku první odbockou vpravo, okolo Vyhlídky pana Šalamouna,  na rozcestí nad 
+námestím. POZOR zvýšená opatrnost pri sebehu do Rožmberka doprava na silnici c. 160 - zvýšený provoz.
+Parkujte na hlavním námestí dle instrukcí našich organizátoru. Prosíme dbejte na to, ze v Rožmberku se nachází velká 
+predávka a týmy si mení štafetu mezi auty. Z duvodu omezené kapacity se zdržujte na predávce minimální dobu, aby jste 
+neblokovali další týmy. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné komunikaci jako výbeh bežcu z predávky.  
+Pro delší odpocinek využijte možnosti kempu Rožmberk. Je nutná rezervace místa na webu 
+http://kemprozmberk.cz/rezervace/
+1,7 km 3,5 km 5,2 km
+638 m n.m.
+534 m n.m.
+parking
+kemp
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+12
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+13
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Rožmberk, na rozcestí nad námestím/ 48.6544903N, 14.3668597E
+Rožmitál na Šumave, náves / 48.7029336N, 14.3877975EE
+Z Rožmberku po silnici c. 160 vlevo na 163 smer Rybník, Trojany, Hnevanov (17,1 km, cca 22 min.).
+8,20 km
+Rožmitál na Šumave
+Propozice Vltava Run 2019
+4
+100 % lesní zpevnená cesta
+stoupání 270 m
+klesání 170 m
+Prebehnout pres námestí, pres most a za mostem po 220 m odbocte ostre vlevo na cyklostezku Vltavská c. 7 nahoru
+k zámku, pres Metlice stále po cyklostezce do Rožmitálu na Šumave.
+Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné komunikaci jako dobeh bežcu do predávky. POZOR! Omezená 
+kapacita parkovište! Prosíme, zdržte se zde pouze na dobu nezbytne nutnou k predávce štafety. Povolený cas stání auta je 
+maximálne 15 min. pred a 5 min. po dobehu bežce.
+5 km 10 km 15 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+720 m n.m.
+530 m n.m.
+13
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+Propozice Vltava Run 2019
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+14
+START
+Rožmitál na Šumave, náves / 48.7029336N, 14.3877975EE
+Vežovatá Pláne / 48.7763739N, 14.4104000E
+10 km
+3
+stoupání 292 m
+klesání 239 m
+15
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Vežovatá Pláne / 48.7763739N, 14.4104000E
+Zlatá Koruna, kemp Koruna / 48.8531814N, 14.3715283E
+11,50 km
+Zlatá Koruna
+Propozice Vltava Run 2019
+3
+70 % asfalt, 20 % trail
+stoupání 130 m
+klesání 360 m
+Z predávky doleva, kolem kostela vpravo na cervenou TZ, pres Vcelíny a Malcice. Za Malcicemi sebeh z cervené TZ rovne po 
+silnici do Mirkovic. V Mirkovicích opet na cervenou TZ vlevo. POZOR!!! Prebeh pres silnici c.157, stále po cervené TZ až do 
+Cernice, kde se napojíte cca na 600 m na cyklo 1197, zpet na cervenou TZ vpravo do Harazími. POZOR!! prebeh pres silnici 
+c. 39, po 150 m vlevo stále po cervené TZ sebeh do Zlaté Koruny.
+Z místa predávky po silnici c. 157 do Ceského Krumlova, vpravo na silnici c. 39 Domoradice, Prísecná, odbocit vlevo na 
+Rájov a Zlatou Korunu. (19,3 km / 23 min.).
+Na parkovišti u kempu. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné komunikaci jako dobeh bežcu do predávky.
+2,9 km 5,8 km 8,7 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+453 m n.m.
+723 m n.m.
+15
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+16
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+PRESPÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Zlatá Koruna, kemp Koruna / 48.8531814N, 14.3715283E
+Boršov, v parku na rohu ulice U Zámecku / 48.9265578N, 14.4419514E
+Zpet na Rájov, po silnici c. 39 až do Porící. V Porící sjezd na Vcelnou a Boršov a dále vlevo k predávce (cca 12,4 km, 13 min.). 
+11,10 km
+Boršov
+Propozice Vltava Run 2019
+2,5
+70 % asfalt, 30 % trail
+stoupání 130 m
+klesání 180 m
+Z kempu Koruna po modré TZ vpravo do kopce do Štekre, pres silnici rovne na polní cestu do Radostic, stále po modré do 
+Opalice, dál po modré, pres mostek do kopce a odbocit vlevo. Za cedulí Rancice na polní neznacenou cestu, po modré TZ 
+Hvízdalka, po cca 300 m sebeh z modré rovne na zpevnenou a polní cestu. Na hlavní silnici vlevo smer Boršov a dále 
+pokracovat približne 2 km podél vody po cyklo c. 7 až k Zámku Porící.
+Parkování na zelené louce.
+Pro krátký odpocinek mužete využít oddych pod širákem v parku u predávky. Dbejte zvýšené opatrnosti, príjezd a odjezd 
+aut je po stejné komunikaci jako dobeh bežcu do predávky.
+2,8 km 5,6 km 8,3 km
+539 m n.m.
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+400 m n.m.
+16
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+17
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Boršov, v parku na rohu ulice U Zámecku / 48.9264900N, 14.4419222E
+Ceské Budejovice, Náplavka / 48.9804506N, 14.4652242E
+8,20 km
+Ceské Budejovice
+Propozice Vltava Run 2019
+1
+100 % asfalt
+stoupání 10 m
+klesání 30 m
+Pred kolejemi vlevo podél trati, po cyklo c. 7 a Vltavská do CB - Rožnov, ul. Lidická po levém chodníku, odbocit vlevo na 
+Beránkovo nábreží a vlevo na cyklostezku u Vltavy (pravý breh), prvním mostem na levý breh (ul. E. Pittera) za mostem 
+vpravo po levém brehu kolem sportovního stadionu pres most ul. Husova na pravý breh, vpravo podbehnout most na 
+cyklostezku vpravo, parkovište Náplavka.
+Z predávky zpet na E55, sjezd na ul. Dlouhá louka CB, odbocit vpravo pres Dlouhý most - Husova trída, 2. odbocka vlevo za 
+mostem - ul. Resslova, 1. vlevo Klavíkova, sjezd dolu k rece Náplavka (cca 7,6 km, 9 min.).
+Na náplavce, pozor u prejezdu cyklostezky na lidi!
+2,1 km 4,1 km 6,2 km
+380 m n.m.
+411 m n.m.
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+17
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+18
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+PRESPÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Ceské Budejovice, Náplavka / 48.9804506N, 14.4652242E
+Hluboká nad Vltavou, Podskalí / 49.0509536N, 14.4450961E
+Zpet na ul. Na Dlouhé louce - E55, E49, silnice c. 105 a c. 146 do Hluboké nad Vltavou, ul. Podskalí, (cca 10,3 km, 12 min.).
+9,95 km
+Hluboká nad Vltavou
+Propozice Vltava Run 2019
+1
+100 % asfalt
+stoupání 15 m
+klesání 22 m
+Po cyklostezce na pravém brehu Vltavy rovne, po 1,4 km vlevo pres most pro peší na levý breh. U pametního kamene Josefa 
+Cepáka vpravo na cyklo c. 12 pres Bavorovice, relax areál na predávku u restaurace Rosa.
+Parkovište naproti restauraci Rosa (c. p. 1021). Omezená kapacita parkovište! Prosíme dbejte na to, že v Hluboké nad 
+Vltavou se nachází velká predávka a týmy si mení štafetu mezi auty. Z duvodu omezené kapacity se zdržujte na predávce 
+minimální dobu, aby jste neblokovali další týmy a možnost parkování pro ne. Povolený cas stání auta je maximálne 15 min. 
+pred a 5 min. po dobehu bežce. 
+Možnost delšího parkování a oddychu na základní škole Hluboká nad Vltavou, ulice Karla Capka 800. K dispozici je velká 
+telocvicna, sprchy a WC od 11. 5. 17:00 do 12. 5. 08:00. Není nutno si nic rezervovat a platit. Prosíme respektujte nocní klid a 
+spící v telocvicne. Neprespávejte na predávce a neblokujte parkování pro ostatní auta. 
+2,5 km 4,9 km 7,4 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+386 m n.m.
+371 m n.m.
+ZŠ
+Karla Capka 800
+4 min.
+autem
+PRESPÁNÍ
+18
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+19
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Hluboká nad Vltavou, Podskalí / 49.0509536N, 14.4450961E
+Purkarec, Hasicská zbrojnice  / 49.1291406N, 14.4512939E
+11,60 km
+Purkarec
+Propozice Vltava Run 2019
+2
+100 % asfalt
+stoupání 150 m
+klesání 150 m
+Pokracujte rovne po cyklo c.12. , podbeh pod mostem, vybehnete na ulici Hamry, kde se dáte doprava, pokracovat po zelené 
+TZ/NZ po levém brehu Vltavy do Purkarce. Pred kostelem sv. Jirího vlevo a dále vpravo k hasicárne na predávku. 
+Zpet na silnici c. 105, odbocit vpravo na Chlumec a dál Purkarec (cca 12 km, 16 min.). 
+Parkování  pred  penzionem Pelikán  a pred penzionem U Andela. Dbejte zvýšené opatrnosti, odjezd aut  je po stejné 
+komunikaci jako výbeh bežcu z predávky!
+2,9 km 5,7 km 8,6 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+431 m n.m.
+369 m n.m.
+19
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+20
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Purkarec, Hasicská zbrojnice  / 49.1292275N, 14.4512708E
+Hnevkovice, križovatka za zámkem Hnevkovice / 49.1957567N, 14.4468686E
+10,10 km
+Hnevkovice
+Propozice Vltava Run 2019
+1,5
+100 % asfalt
+stoupání 140 m
+klesání 150 m
+Z Purkarce pokracovat po cervené TZ, z cervené rovne po cyklo c. 1079 na Jeznice, po 4 km rozcestí rovne na cervenou TZ 
+na Litoradlice, vpravo po silnici prebeh pres hráz Hnevkovice na pravý breh, Hnevkovice na pravém brehu, križovatka za 
+zámkem. Možnost ubytování v Domove mládeže Hnevkovice - nutná rezervace.
+Po Litoradlice stejná cesta jako pro bežce, za Litoradlicemi vlevo delší cestou do Hnevkovic na pravém brehu Vltavy.
+(cca 12 km, 17 min.).
+Parkování na hrišti za zámkem Hnevkovice. POZOR! Nevjíždejte auty na trávu, nekempujte v areálu a zdržujte se po dobu 
+nezbytne nutnou na výmenu bežcu. Možnost delšího parkování a prespání máte ve sportovní hale Týn nad Vltavou. Dbejte 
+zvýšené opatrnosti, príjezd aut je po stejné komunikaci jako trasa bežcu! 
+2,5 km 5,1 km 7,6 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+460 m n.m.
+358 m n.m.
+20
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+21
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Hnevkovice, križovatka za zámkem Hnevkovice / 49.1957567N, 14.4468686E
+Chráštany, Hasicská zbrojnice / 49.2954036N, 14.3874211E
+13,40 km
+Chráštany
+Propozice Vltava Run 2019
+3
+100 % asfalt
+stoupání 200 m
+klesání 100 m
+Za predávkou stále rovne po silnici cca 1,4 km až za brod, pak sebeh na cyklostezku Vltavská, po pravém brehu smer Týn 
+nad Vltavou, vpravo za penzionem Pod Kostelem na námestí Míru, levý horní roh ul. Tyršova, po krajnici/chodníku ke 
+sportovní hale, na velké križovatce vlevo po Kolodejské, po silnici II. trídy c. 105 na Kolodeje nad Lužnicí, v Kolodejích sebeh 
+z hlavní silnice vlevo na cervenou TZ, po cca 400 m vlevo pres most, dále vpravo na silnici c. 105 pres Kolomerice až do 
+Chráštan. V Chráštanech u památníku vlevo a dále vpravo k hasicárne na predávku. 
+Do Kolodejí témer stejná trasa, cyklo nahrazena soubežnou silnicí. Z Kolodejí po silnici 10564 pres Hosty do Doubravky a 
+dále po silnici c. 10562 do Chráštan. (16 km, 22 min.).
+Parkování v centru Chráštan pred supermarketem Flop. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné 
+komunikaci jako trasa bežcu!
+3,4 km 6,7 km 10 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+352 m n.m.
+468 m n.m.
+21
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+22
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Chráštany, Hasicská zbrojnice / 49.2954036N, 14.3874211E
+Slabcice, u kostela / 49.3263925N, 14.3378289E
+6,60 km
+Slabcice
+Propozice Vltava Run 2019
+2
+100 % asfalt
+stoupání 60 m
+klesání 80 m
+Z Chráštan po silnici 105 pres obec Dražíc. Cca 500 m za obcí Dražíc zahnete vlevo na Brezí, Ovcín. V Písecké Smoleci pred 
+kaplickou vpravo na cyklo c. 1152B do Slabcic. Predávka vpravo u kostela.
+Možnost ubytování v Domove mládeže Hnevkovice - nutná rezervace.
+Pokracovat po silnici c. 105 pres Dražíc až do Nemejic, pak vlevo na silnici c. 10558 smer Slabcice (6 km , 7 min.). 
+POZOR! Omezená kapacita parkovište! Prosíme, zdržte se zde pouze na dobu nezbytne nutnou k predávce štafety. Povolený 
+cas stání auta je maximálne 15 min. pred a 5 min. po dobehu bežce. Dbejte zvýšené opatrnosti, odjezd aut je po stejné 
+komunikaci jako výbeh bežcu z predávky!
+1,6 km 3,3 km 4,9 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+473 m n.m.
+405 m n.m.
+22
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+23
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Slabcice, u kostela / 49.3263925N, 14.3378289E
+Jetetice, obecní úrad vedle hospody / 49.3844567N, 14.2917136E
+9,40 km
+Jetetice
+Propozice Vltava Run 2019
+2,5
+70 % asfalt, 30 % trail
+stoupání 157 m
+klesání 155 m
+Ze Slabcic po silnici/cyklo c. 1152, po 400 m vpravo na vedlejší silnici a po dalších 150 m vpravo na polní cestu. Po pravé 
+strane minete domy v Široké a pokracujete rovne na lesní cestu. Na rozcestí vpravo, napojení na cyklo c. 1152 a po ní pres 
+Rastory, Podolí, Myslivnu až do Jetetic. Predávka pred obecním úradem.
+Ze Slabcic po silnici 10558 pres Olešnou až k silnici c. 29. U benzínové pumpy Tank Ono vpravo do Podolí a hned první vlevo 
+na silnici c. 12121d smer Jetetice (11 km , 15 min.).
+Zákaz parkování v obci, povolen pouze prujezd pri odjezdu z predávky. Respektujte místní obcany a neblokujte prujezd obcí. 
+Parkujte na zelené louce dle instrukcí ochranky a organizátoru. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné 
+komunikaci jako trasa bežcu!
+2,3 km 4,7 km 7 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+508 m n.m.
+422 m n.m.
+23
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+24
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+PRESPÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Jetetice, obecní úrad vedle hospody / 49.3844567N, 14.2917136E
+Kvetov, náves / 49.4258694N, 14.2754147E
+9,30 km
+Kvetov
+Propozice Vltava Run 2019
+2
+90 % asfalt, 10 % trail
+stoupání 130 m
+klesání 130 m
+Po silnici/cyklo c. 1152 na Stehlovice, v Branicích sebeh do vesnice vlevo kolem rybníka, na križovatce vlevo po silnici/cyklo 
+c. 1152, rozcestí Križovatka u Tyrolského domu rovne po cyklo c. 31, Kvetov náves. Dodržujte pravidla silnicního provozu.
+POZOR! Stejná trasa jako pro bežce. Z Jetetic po silnici na Stehlovice, Branice, Kvetov (10 km, cca 13 min.).
+Parkování v Kvetove v areálu JZD, sledujte znacení.
+Parkování v Kvetove v areálu JZD vzadu na zelené louce. Parkování v obci zakázáno, povolen pouze prujezd pri odjezdu
+z predávky. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné komunikaci jako trasa bežcu!
+Je povoleno stanovat na zelené louce u auta. Budte opatrní, louka je neosvetlená. Prosíme, nezanechávejte po sobe odpadky. 
+2,3 km 4,7 km 7 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+422 m n.m.
+548 m n.m.
+24
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+25
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Kvetov, náves / 49.4258694N, 14.2754147E
+Kostelec nad Vltavou / 49.5003922N, 14.2157667E
+11,20 km
+Kostelec nad Vltavou
+Propozice Vltava Run 2019
+3
+60 % asfalt, 40 % trail
+stoupání 130 m
+klesání 100 m
+Z predávky rovne, po cca 130 m doprava, po 100 m na vidlickách vlevo na Svatý Jan Krtitel. Odboc vlevo na zelenou TZ, po 600 
+m sebeh z TZ doprava lesem. POZOR! Prebeh silnice c. 121 rovne pres Olšicky na Sobedraž. V Sobedraži vlevo nad 
+rybníckem. Na konci obce na vidlickách vpravo po polní ceste do obce Zahrádky, kde se dejte vlevo smer Kostelec.
+V Kostelci druhou odbockou vpravo, po 150 m predávka.
+Kucer, Sobedraž, Kostelec POZOR! Vjezd do obce zakázán. (11 km, cca 14 min.).
+Parkování pouze na vyhrazeném míste, sjezd ze silnice c. 19 cca 100 m vpravo na louce. Prísný zákaz vjezdu do obce! 
+2,8 km 5,6 km 8,4 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+492 m n.m.
+440 m n.m.
+25
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+26
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Kostelec nad Vltavou / 49.5003922N, 14.2157667E
+Klucenice, na návsi vlevo za kostelem / 49.5536372N, 14.2119794E
+9,50 km
+Klucenice
+Propozice Vltava Run 2019
+3
+50 % asfalt, 50 % trail
+stoupání 150 m
+klesání 170 m
+Pokracovat cca 300 m po cyklostezce a dále vpravo na modrou TZ smer Žebrákov. POZOR! Prebeh pres silnici I. Tr. c. 19 na 
+polní cestu. Po cca 2 km !POZOR! komplikovaný terén – držte se znacení. Za 2. závorou po 20 m prebehnout pres potok vlevo 
+na cervenou a modrou TZ smer Chrást, za hostincem u Námorníka doprava a rovne, na hlavní silnici vlevo po cyklo Vltavská 
+na Voltýrov, ve Voltýrove první vpravo na Klucenice – náves.
+Po silnici III. tr. 10238 a c. 102 Slavonov, Radvánov, Lašovice, Klucenice (cca 10,6 km, 14 min.).
+Parkování u hasicské zbrojnice, predávka je vzdálená cca 100 m. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné 
+komunikaci jako výbeh bežcu z predávky!
+2,4 km 4,8 km 7,1 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+482 m n.m.
+381 m n.m.
+26
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+27
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Klucenice, na návsi vlevo za kostelem / 49.5536372N, 14.2119794E
+Solenice, u lávky / 49.6125714N, 14.1877458E 
+9 km
+Solenice
+Propozice Vltava Run 2019
+2,5
+100 % asfalt
+stoupání 70 m
+klesání 240 m
+Klucenice z hl. silnice vlevo mezi domy smer prehrada Orlík po cyklo Vltavská, pred Planou po hl. silnici do Koubalova Lhota, 
+vlevo po hl. silnici na Klenovice, Klenovice rovne, na križovatce vlevo, sebeh ze silnice vpravo na rozcestí Hrebeny po modré 
+TZ, Solenice most, predávka u lávky.
+Z Klucenice na silnici c. 102 na Kosobudy, sjezd vlevo na Milešov, Hrebeny. POZOR! Krátký úsek soubežne s bežci - bežci 
+prebíhají silnici! pres Orlickou prehradu do Solenice (12,2 km, 16 min.). 
+Parkování ve slepé ulici smerem k prehrade. Prosíme dodržujte pokyny pro parkování. Dbejte zvýšené opatrnosti, odjezd aut 
+je po stejné komunikaci jako výbeh bežcu z predávky!
+2,3 km 4,5 km 6,8 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+462 m n.m.
+283 m n.m.
+27
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+28
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Solenice, u lávky / 49.6125714N, 14.1877458E
+Kamýk nad Vltavou, Duhové hrište / 49.6420669N, 14.2515394E
+9,30 km
+Kamýk nad Vltavou
+Propozice Vltava Run 2019
+4
+30 % asfalt, 70 % trail
+stoupání 240 m
+klesání 250 m
+Ze Solenice 200 m podél Vltavy, vlevo do kopce 2,4 km po zelené TZ, Vetrov po zelené TZ, rozcestí Pod Bukovcem vpravo po 
+zelené, rozcestí Zduchovice vpravo kolem zámku opet nahoru celkem 4 km, stále po zelené TZ pres kopec, zrícenina 
+Vrškamýk, nutno prelézt drevené schody, stále po zelené kolem tvrzi, na hl. silnici c. 118 doprava. POZOR! Kamýk - 
+parkovište na križovatce u Duhového hrište.
+Vetrov, Neprejov, na silnici c. 118 Zduchovice, Kamýk (cca 12 km, 18 min.).
+Parkování na parkovišti pod predávkou.
+2,3 km 4,6 km 6,9 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+274 m n.m.
+524 m n.m.
+28
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+29
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Kamýk nad Vltavou, Duhové hrište / 49.6420669N, 14.2515394E
+Líchovy, u vodní nádrže / 49.6761881N, 14.3194369E
+9,60 km
+Líchovy
+Propozice Vltava Run 2019
+2
+80 % asfalt, 20 % trail
+stoupání 160 m
+klesání 85 m
+Z Kamýku po zelené TZ smerem k mostu, pres most vlevo, za mostem vlevo po cervené TZ a po cyklo c. 301, rozcestí Hojšín 
+vpravo po cyklo c. 301, Drážkov vlevo dále po hl. silnici vlevo, za Drážkovem sebeh vpravo na polní cestu/cyklo c. 301,
+U Hradilu vlevo po modré TZ, pak vpravo po cyklo c. 301 Vltavská, Chramosty rozcestí vlevo stále po cyklo c. 301 Vltavská, 
+rovne. POZOR pres silnici I. tr. c. 18 na Líchovy u vodní nádrže.
+V Kamýku prejet most pres Vltavu, dále pres Drážkov, Hrachov vpravo na silnici c. 18 až do Líchov ( cca 11 km , 13 minut).
+Parkování na cvicné hasicské louce. Zákaz vjezdu do obce Líchovy. Dodržujte trasu pro vjezd a výjezd. Parkovište u hrište viz 
+mapa. POZOR! Omezená kapacita parkovište! Prosíme, zdržte se zde pouze na dobu nezbytne nutnou k predávce štafety. 
+Povolený cas stání auta je maximálne 15 min. pred a 5 min. po dobehu bežce.
+2,4 km 4,8 km 7,2 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+270 m n.m.
+381 m n.m.
+29
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+30
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Líchovy, u vodní nádrže / 49.6761881N, 14.3194369E
+Štola Josef, šterková plocha / 49.7289150N, 14.3495675E
+10,70 km
+Štola Josef
+Propozice Vltava Run 2019
+2,5
+75 % asfalt, 25 % trail
+stoupání 200 m
+klesání 260 m
+Mezi domky naproti zastávce po cyklo c. 301, kolem rybníku Stará Voda, na krížení odbocit vlevo, po cca 400 m vpravo na 
+Krepenice po modré TZ a cyklo c. 301, vlevo na silnici II. tr. c. 119 / cyklo c. 301, druhá doleva do osady Cihelna, po poli, do 
+lesa, v lese druhá doprava a vpravo na zpevnenou cestu, vlevo pres most na Cholín, na rozcestí Cholín vpravo po žluté TZ, 
+do kopce na rozcestí Homole, odbocit vpravo po silnici, štola Josef.
+Z Líchov po silnici I. tr. 18, sjezd vlevo na Dublovice, Krepenice. Vlevo na silnici c. 119 do Cholína. Odbocit vpravo na 
+Smilovice. Týmová auta vjezd povolen (cca 12 km, 15 min.).
+Parkování na parkovišti u Štoly Josef. Ridte se pokyny organizátoru. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po 
+stejné komunikaci jako dobeh bežcu do predávky!
+2,7 km 5,4 km 8,1 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+378 m n.m.
+270 m n.m.
+30
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+31
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Štola Josef, šterková plocha / 49.7289150N, 14.3495675E
+Živohošt, parkovište / 49.7579672N, 14.4220328E
+10,25 km
+Živohošt
+Propozice Vltava Run 2019
+4
+50 % asfalt, 50 % trail
+stoupání 260 m
+klesání 280 m
+Po naucné stezce (Zlaté psí hory) vlevo, na rozcestí vpravo po žluté TZ podél potoka (potok po levé ruce), rozcestí Mokrsko 
+vlevo a pak vpravo po naucné stezce, po žluté na rozcestí Pod Veselým vrchem, rovne stále po žluté na rozcestí Nad Sejckou 
+hájovnou, vlevo na zelenou TZ do Sejcká Lhota, pres Sejckou Lhotu rovne, Hnevšín, nástup na žlutou TZ rovne, rozcestí 
+Záhorí prostrední cestou po cyklo c. 7 Vltavská na Živohošt, rozcestí Nad Živohoští rovne, Živohošt parkovište.
+Zpet na silnici c. 102 Celina, Mokrsko, Prostrední lhota, Chotilsko na silnici c. 114, Krenicná, Záhorí, Živohošt parkovište. 
+(cca 15 km, 20 min.).
+Velké parkovište, predávka vhodná pro nocleh. Mužete stanovat na zelené louce u parkovište. Dbejte zvýšené opatrnosti, 
+príjezd a odjezd aut je po stejné komunikaci jako trasa bežcu!
+2,5 km 5,1 km 7,6 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+450 m n.m.
+278 m n.m.
+31
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+32
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Živohošt, parkovište / 49.7579672N, 14.4220328E
+Rabyne, parkovište u Autokempu Nová Rabyne / 49.8078381N, 14.4278694E
+11,20 km
+Rabyne
+Propozice Vltava Run 2019
+4
+50 % asfalt, 50 % trail
+stoupání 320 m
+klesání 320 m
+Zpet na rozcestí Nad Živohoští po cervené vpravo, pred mostem vpravo na lesní cestu a pres most, pres parkovište lanového 
+centra po modré. POZOR! místy úzká pešina, nárocný terén. Po modré Nebrich do Jablonné, v Jablonné vlevo, v zatácce 
+sebeh rovne z asfaltky na polní cestu, kolem rybnícku do Loutí. Za Loutím na hl. silnici vlevo, na križovatce vpravo Podhory. 
+V místech, kde zacíná zelená TZ, vpravo na lesní cestu (bez oznacení) - POZORNE SLEDOVAT ZNACENÍ, po cca 700 m prebeh 
+silnice a pokracovat dále lesním sebehem až na parkovište u autokempu Nová Rabyne.
+Zpet pres Záhorí na silnici c. 114, vpravo smer Blažim, dále sjet vlevo na silnici c. 11431 a pres Belice, Blaženice. Do Rabyne 
+príjezd po silnici c. 1027. (cca 20 km, 25 min.).
+Parkujte na dolní ploše urcené k parkingu. Neparkujte podél silnice a neblokujte prujezd pro ostatní auta vedoucí na 
+parkovište a ridte se pokyny organizátoru.
+2,8 km 5,6 km 8,4 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+420 m n.m.
+270 m n.m.
+32
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+33
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Rabyne, parkovište u autokempu Nová Rabyne / 49.8078381N, 14.4278694E
+Slapy, pred obecním úradem / 49.8128219N, 14.3972767E
+9,40 km
+Slapy
+Propozice Vltava Run 2019
+3
+80 % asfalt, 20 % trail
+stoupání 298 m
+klesání 231 m
+Z predávky cca 1 km do Rabyne na modrou TZ. Dále po modré TZ pres Slapskou prehradu, Trebenice, Prístrešek Kolna až na 
+rozcestí Pod Homolí, dále pokracovat po žluté TZ až do Slap obecnímu úradu.
+Z Rabyne po silnici c. 1027 pres Slapskou prehradu smer Slapy. Slapy (7 km , 11 min.).
+Respektujte zákaz vcházení do zahrad, ke zvíratum a k objektu zámku, zdržujte se pouze na míste urceném k parkování a 
+predávce. Parkujte dle pokynu organizátoru. Dbejte zvýšené opatrnosti, príjezd a odjezd aut je po stejné komunikaci jako 
+trasa bežcu!
+2,4 km 4,7 km 7,1 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+275 m n.m.
+463 m n.m.
+33
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+34
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Slapy, pred obecním úradem / 49.8128219N, 14.3972767E
+Davle, u mostu / 49.8884683N, 14.4004197E
+12,90 km
+Davle
+Propozice Vltava Run 2019
+4
+75 % asfalt, 25 % trail
+stoupání 281 m
+klesání 420 m
+Zpet na hlavní silnici a dále po modré TZ smer Údolí Kocáby, prebehnout lávku a pokracovat po žluté TZ pres Masecín do 
+Hvozdic. Na krížení TZ a cyklostezky doprava na cyklostezku smer Sloup. V obci Sloup na krížení cyklostezky a zelené TZ 
+vpravo na zelenou TZ, která klesá až do Davle. Vlevo na chodník a po cca 400 m vpravo na most pro peší.
+Ze Slap po silnici c. 102 pres Štechovice až do Davle (cca 11 km , 14 min.).
+Parkování na parkovišti u obchodu Coop.
+3,2 km 6,5 km 9,7 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+424 m n.m.
+200 m n.m.
+34
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+35
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Davle, u mostu / 49.8889419N, 14.4012028E
+Vrané nad Vltavou, základní škola / 49.9367672N, 14.3784467E
+8,20 km
+Vrané nad Vltavou
+Propozice Vltava Run 2019
+3,5
+75 % asfalt, 25 % trail
+stoupání 190 m
+klesání 160 m
+Po cervené TZ podél Vltavy, Librice, Maškuv mlýn, Oleško, Brezová - Oleško, stále po cervené TZ, rozcestí Nová Brezová 
+odbocit z cervené TZ vlevo do ulice Brezovská, první vlevo do Okružní - Vrané n Vlt., Ke Statku, vlevo do Zahradní, vpravo do 
+ul. Dlouhá, pak doleva na ulici Prícná a doprava na ulici U Školy. Predávka pred školou.
+Z Davle po silnici c. 102 do Zbraslavi vpravo pres most Závodu Míru, opet vpravo do Vraného (cca 18 km, 25 min.).
+Parkování na parkovišti u sokolovny. Dbejte zvýšené opatrnosti,  príjezd a odjezd aut  je po stejné komunikaci jako trasa 
+bežcu!
+2 km 4 km 5,9 km
+parking
+predávka
+vjezd aut
+výjezd aut
+trasa bežce
+201 m n.m.
+361 m n.m.
+35
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce
+36
+START
+CÍL
+TRASA
+BEŽCE
+TRASA
+AUTA
+PARKOVÁNÍ
+DÉLKA
+NÁROCNOST
+POVRCH
+PREVÝŠENÍ
+Vrané nad Vltavou, základní škola / 49.9367672N, 14.3784467E
+Praha Braník / 50.0277653N, 14.4008633E
+12 km
+Praha Braník
+Propozice Vltava Run 2019
+1
+100 % asfalt
+stoupání 54 m
+klesání 97 m
+Po ulici U Školy, Pod Sokolovnou, Brezovská, vlevo na ul. Ke Zvoli a Nádražní, sebeh doleva na cyklo A2, 8100 podél Vltavy 
+(úsek cca 500 m mimo cyklo, ale na trase) pres Zbraslav, U Soutoku, Vltavanu. Za Branickým mostem sebeh z cyklo doleva 
+do cíle na travnatou pláž u sportovního centra Hamr.
+Silnice soubežne s cyklostezkou (12,3 km, cca 20 min.). Z Vraného soubežne s cyklostezkou do Zbraslavi, výjezd na 
+Komoranskou, vlevo na Generála Šišky a Modranskou, vlevo na ulici V Náklích a dál na vám urcené místo k parkování.
+3 km 6 km 9 km
+235 m n.m.
+188 m n.m.
+CÍL
+A
+B
+D
+E
+F
+V Náklích
+C
+Vjezd na všechny parkovište
+z ulice V Náklích.
+Úplný zákaz stání
+na ulici Ledarská
+a U Ledáren. 
+Zákaz vjezdu
+do ulice U Kempinku
+z Modranské ulice.
+Výjezd z lokace pouze
+pres ulici U Kempinku
+na Modranskou.
+Príjezd aut
+Vltava Run
+Zákaz stání (mimo auta
+s parkovacími kartami)
+na ulici Vltavanu
+a U Kempinku. 
+PARKING
+POD MOSTEM U GOLFU
+PARKING
+HAMR BRANÍK
+A
+B
+PARKING
+VLTAVANU C
+PARKING
+U KEMPINKU D
+PARKING
+CAMP KOTVA E
+PARKING
+LEDARSKÁ F
+Ulice Vltavanu je vedená
+jako jednosmerka.
+36
+Propozice Vltava Run 2019
+trasa auta
+trasa bežce
+cíl trasy pro auto
+cíl trasy pro bežce

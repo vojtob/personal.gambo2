@@ -1,7 +1,7 @@
-const express = require('express');
-const app = express();
+express = require('express');
+app = express();
 
-const lambda = require("./index");
+lambda = require("./gambo/index");
 
 app.get('/', function(req, res) {
     processGeneral(req, res);
@@ -37,14 +37,14 @@ function processRequest(req, res) {
 
     lambda.handler(event, null, function(err, response) {
         sendResponse(res, response);
-    })
-};
+    });
+}
 
 function processGeneral(req, res) {
     console.log("gamboAPI event, unknown resource !! method: " + req.method + "  path: " + req.path);
     console.log("req: " + JSON.stringify(req));
     res.send('Hello World!');
-};
+}
 
 
 function sendResponse(res, response) {
@@ -52,5 +52,5 @@ function sendResponse(res, response) {
     res.json(JSON.parse(response.body));
 }
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, () => console.log('Example app listening on port 3000!'));
 

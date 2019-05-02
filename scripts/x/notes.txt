@@ -1,0 +1,17 @@
+aws dynamodb list-tables --endpoint-url http://localhost:8000
+
+aws dynamodb describe-table --table-name Team --endpoint-url http://localhost:8000
+
+
+curl -v -X GET "https://2u800wmtf0.execute-api.eu-central-1.amazonaws.com/test/runbot?hub.verify_token=VOJTO_DXC_RUNBOT&hub.challenge=CHALLENGE_VOJTO_ACCEPTED&hub.mode=subscribe"
+
+curl -H "Content-Type: application/json" -X POST "localhost:1337/webhook" -d '{"object": "page", "entry": [{"messaging": [{"message": "TEST_MESSAGE"}]}]}'
+
+
+
+https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/leg?legID=9
+
+
+curl -X GET "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/leg"
+
+curl -H "Content-Type: application/json" -X POST "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod/leg" 

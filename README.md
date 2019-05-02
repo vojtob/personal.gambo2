@@ -1,6 +1,6 @@
 # Jednoduché info o bežeckých pretekoch
 
-![obrázok architektúry](Architecture/gambo-Arch.png)
+![obrázok architektúry](Architecture/gambo.png)
 
 
 

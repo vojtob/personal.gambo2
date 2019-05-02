@@ -2,7 +2,7 @@
 <html lang="sk">
 
 <head>
-  <title>The Run results - DXC Dream Team</title>
+  <title>Kryštáľová guľa - DXC Dream Team</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -24,26 +24,26 @@
     <p id="resultsTablePlaceholder"></p>
 
     <script>
-      $("body").data("teamID", 29);
-      // var serviceAddress = "http://localhost:3000";
-      var serviceAddress = "https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod";
+      $("body").data("teamID", 100);
+      var serviceAddress = '';
       drawTable();
 
       function drawTable() {
         var teamID = $("body").data("teamID");
         $.get(serviceAddress + "/results?teamID=" + teamID, function (response) {
           $("body").data("legID", response.lastLegDone + 2);
-          var output = "";
+          var output = '';
+		  var legs = response.legs;
 
-          for (let index = 0; index < 48; index++) {
-            const leg = response.legs[index];
+          for (let index = 0; index < legs.length; index++) {
+            const leg = legs[index];
             output += getLeg(leg, index, response.lastLegDone);
           }
           output += '<div class="card bg-secondary text-white">' +
             '<div class="card-body">' +
             '<p class="card-text">';
-              output += "O <strong>" + response.legs[47].endTime + '</strong> ' + getDiffText(response.real.diff);
-          if (response.lastLegDone == 47) {
+              output += "O <strong>" + response.legs[legs.length-1].endTime + '</strong> ' + getDiffText(response.real.diff);
+          if (response.lastLegDone == legs.length) {
             output += " sme dorazili do cieľa. ";
           } else {
             output += " dorazíme do cieľa. ";
@@ -210,9 +210,9 @@
         }
         text += '</div>';
         text += '<p><div class="collapse" id="desc' + leg.legID + '">';
-        leg.desc.forEach(descLine => {
+        /*leg.desc.forEach(descLine => {
           text += '<div class="card-text">' + descLine + '</div>';
-        });
+        });*/
         text += '</div></p>';
 
         if (addDelete) {

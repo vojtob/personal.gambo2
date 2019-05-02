@@ -1,0 +1,404 @@
+{
+    "handovers": [
+        {
+            "gps": "49.0673939N, 13.6195222E",
+            "name": "Zadov – Churánov",
+            "detail": "stadion"
+        },
+        {
+            "gps": "49.0195900N, 13.7325347E",
+            "name": "Lipka",
+            "detail": "za železnicním prejezdem"
+        },
+        {
+            "gps": "48.9863586N, 13.7808561E",
+            "name": "Kubova Hut",
+            "detail": "zpevnená plocha cca 1 km rozcestí Basumské louky"
+        },
+        {
+            "gps": "48.9197733N, 13.7956967E",
+            "name": "Lenora",
+            "detail": "fotbalové hrište"
+        },
+        {
+            "gps": "48.8592456N, 13.8191339E",
+            "name": "Stožec",
+            "detail": "parkovište pred penzionem Pstruh"
+        },
+        {
+            "gps": "48.7915017N, 13.9488361E",
+            "name": "Nová Pec",
+            "detail": "fotbalové hrište"
+        },
+        {
+            "gps": "48.7614844N, 14.0251931E",
+            "name": "Horní Planá",
+            "detail": "parkovište"
+        },
+        {
+            "gps": "48.7778781N, 14.0926225E",
+            "name": "Olšina",
+            "detail": "Rekreacní zarízení, parkovište"
+        },
+        {
+            "gps": "48.7450900N, 14.1190883E",
+            "name": "Cerná v Pošumaví",
+            "detail": "slepá ulice"
+        },
+        {
+            "gps": "48.6948239N, 14.1516231E",
+            "name": "Milná",
+            "detail": "pred areálem Farma Milná"
+        },
+        {
+            "gps": "48.6420389N, 14.2201736E",
+            "name": "Lipno nad Vltavou",
+            "detail": "prístavište"
+        },
+        {
+            "gps": "48.6219342N, 14.3046672E",
+            "name": "Vyšší Brod",
+            "detail": "Rožmberská brána"
+        },
+        {
+            "gps": "48.6544903N, 14.3668597E",
+            "name": "Rožmberk",
+            "detail": "na rozcestí nad námestím"
+        },
+        {
+            "gps": "48.7029336N, 14.3877975EE",
+            "name": "Rožmitál na Šumave",
+            "detail": "náves"
+        },
+        {
+            "gps": "48.7763739N, 14.4104000E",
+            "name": "Vežovatá Pláne"
+        },
+        {
+            "gps": "48.8531814N, 14.3715283E",
+            "name": "Zlatá Koruna",
+            "detail": "kemp Koruna"
+        },
+        {
+            "gps": "48.9264900N, 14.4419222E",
+            "name": "Boršov",
+            "detail": "v parku na rohu ulice U Zámecku"
+        },
+        {
+            "gps": "48.9804506N, 14.4652242E",
+            "name": "Ceské Budejovice",
+            "detail": "Náplavka"
+        },
+        {
+            "gps": "49.0509536N, 14.4450961E",
+            "name": "Hluboká nad Vltavou",
+            "detail": "Podskalí"
+        },
+        {
+            "gps": "49.1292275N, 14.4512708E",
+            "name": "Purkarec",
+            "detail": "Hasicská zbrojnice"
+        },
+        {
+            "gps": "49.1957567N, 14.4468686E",
+            "name": "Hnevkovice",
+            "detail": "križovatka za zámkem Hnevkovice"
+        },
+        {
+            "gps": "49.2954036N, 14.3874211E",
+            "name": "Chráštany",
+            "detail": "Hasicská zbrojnice"
+        },
+        {
+            "gps": "49.3263925N, 14.3378289E",
+            "name": "Slabcice",
+            "detail": "u kostela"
+        },
+        {
+            "gps": "49.3844567N, 14.2917136E",
+            "name": "Jetetice",
+            "detail": "obecní úrad vedle hospody"
+        },
+        {
+            "gps": "49.4258694N, 14.2754147E",
+            "name": "Kvetov",
+            "detail": "náves"
+        },
+        {
+            "gps": "49.5003922N, 14.2157667E",
+            "name": "Kostelec nad Vltavou"
+        },
+        {
+            "gps": "49.5536372N, 14.2119794E",
+            "name": "Klucenice",
+            "detail": "na návsi vlevo za kostelem"
+        },
+        {
+            "gps": "49.6125714N, 14.1877458E",
+            "name": "Solenice",
+            "detail": "u lávky"
+        },
+        {
+            "gps": "49.6420669N, 14.2515394E",
+            "name": "Kamýk nad Vltavou",
+            "detail": "Duhové hrište"
+        },
+        {
+            "gps": "49.6761881N, 14.3194369E",
+            "name": "Líchovy",
+            "detail": "u vodní nádrže"
+        },
+        {
+            "gps": "49.7289150N, 14.3495675E",
+            "name": "Štola Josef",
+            "detail": "šterková plocha"
+        },
+        {
+            "gps": "49.7579672N, 14.4220328E",
+            "name": "Živohošt",
+            "detail": "parkovište"
+        },
+        {
+            "gps": "49.8078381N, 14.4278694E",
+            "name": "Rabyne",
+            "detail": "parkovište u autokempu Nová Rabyne"
+        },
+        {
+            "gps": "49.8128219N, 14.3972767E",
+            "name": "Slapy",
+            "detail": "pred obecním úradem"
+        },
+        {
+            "gps": "49.8889419N, 14.4012028E",
+            "name": "Davle",
+            "detail": "u mostu"
+        },
+        {
+            "gps": "49.9367672N, 14.3784467E",
+            "name": "Vrané nad Vltavou",
+            "detail": "základní škola"
+        },
+        {
+            "gps": "50.0277653N, 14.4008633E",
+            "name": "Praha Braník"
+        }
+    ],
+    "legs": [
+        {
+            "length": "14,10",
+            "difficulty": "3",
+            "upHill": "160",
+            "downHill": "380"
+        },
+        {
+            "length": "9",
+            "difficulty": "3",
+            "upHill": "300",
+            "downHill": "140"
+        },
+        {
+            "length": "9,90",
+            "difficulty": "2",
+            "upHill": "100",
+            "downHill": "400"
+        },
+        {
+            "length": "9,80",
+            "difficulty": "2",
+            "upHill": "150",
+            "downHill": "140"
+        },
+        {
+            "length": "15,40",
+            "difficulty": "2",
+            "upHill": "80",
+            "downHill": "100"
+        },
+        {
+            "length": "7,90",
+            "difficulty": "2",
+            "upHill": "45",
+            "downHill": "45"
+        },
+        {
+            "length": "12,80",
+            "difficulty": "3",
+            "upHill": "170",
+            "downHill": "140"
+        },
+        {
+            "length": "6,40",
+            "difficulty": "2,5",
+            "upHill": "130",
+            "downHill": "120"
+        },
+        {
+            "length": "9,40",
+            "difficulty": "3",
+            "upHill": "161",
+            "downHill": "140"
+        },
+        {
+            "length": "13,80",
+            "difficulty": "2",
+            "upHill": "68",
+            "downHill": "120"
+        },
+        {
+            "length": "10,10",
+            "difficulty": "3,5",
+            "upHill": "130",
+            "downHill": "270"
+        },
+        {
+            "length": "6,90",
+            "difficulty": "2,5",
+            "upHill": "120",
+            "downHill": "160"
+        },
+        {
+            "length": "8,20",
+            "difficulty": "4",
+            "upHill": "270",
+            "downHill": "170"
+        },
+        {
+            "length": "10",
+            "difficulty": "3",
+            "upHill": "292",
+            "downHill": "239"
+        },
+        {
+            "length": "11,50",
+            "difficulty": "3",
+            "upHill": "130",
+            "downHill": "360"
+        },
+        {
+            "length": "11,10",
+            "difficulty": "2,5",
+            "upHill": "130",
+            "downHill": "180"
+        },
+        {
+            "length": "8,20",
+            "difficulty": "1",
+            "upHill": "10",
+            "downHill": "30"
+        },
+        {
+            "length": "9,95",
+            "difficulty": "1",
+            "upHill": "15",
+            "downHill": "22"
+        },
+        {
+            "length": "11,60",
+            "difficulty": "2",
+            "upHill": "150",
+            "downHill": "150"
+        },
+        {
+            "length": "10,10",
+            "difficulty": "1,5",
+            "upHill": "140",
+            "downHill": "150"
+        },
+        {
+            "length": "13,40",
+            "difficulty": "3",
+            "upHill": "200",
+            "downHill": "100"
+        },
+        {
+            "length": "6,60",
+            "difficulty": "2",
+            "upHill": "60",
+            "downHill": "80"
+        },
+        {
+            "length": "9,40",
+            "difficulty": "2,5",
+            "upHill": "157",
+            "downHill": "155"
+        },
+        {
+            "length": "9,30",
+            "difficulty": "2",
+            "upHill": "130",
+            "downHill": "130"
+        },
+        {
+            "length": "11,20",
+            "difficulty": "3",
+            "upHill": "130",
+            "downHill": "100"
+        },
+        {
+            "length": "9,50",
+            "difficulty": "3",
+            "upHill": "150",
+            "downHill": "170"
+        },
+        {
+            "length": "9",
+            "difficulty": "2,5",
+            "upHill": "70",
+            "downHill": "240"
+        },
+        {
+            "length": "9,30",
+            "difficulty": "4",
+            "upHill": "240",
+            "downHill": "250"
+        },
+        {
+            "length": "9,60",
+            "difficulty": "2",
+            "upHill": "160",
+            "downHill": "85"
+        },
+        {
+            "length": "10,70",
+            "difficulty": "2,5",
+            "upHill": "200",
+            "downHill": "260"
+        },
+        {
+            "length": "10,25",
+            "difficulty": "4",
+            "upHill": "260",
+            "downHill": "280"
+        },
+        {
+            "length": "11,20",
+            "difficulty": "4",
+            "upHill": "320",
+            "downHill": "320"
+        },
+        {
+            "length": "9,40",
+            "difficulty": "3",
+            "upHill": "298",
+            "downHill": "231"
+        },
+        {
+            "length": "12,90",
+            "difficulty": "4",
+            "upHill": "281",
+            "downHill": "420"
+        },
+        {
+            "length": "8,20",
+            "difficulty": "3,5",
+            "upHill": "190",
+            "downHill": "160"
+        },
+        {
+            "length": "12",
+            "difficulty": "1",
+            "upHill": "54",
+            "downHill": "97"
+        }
+    ]
+}
