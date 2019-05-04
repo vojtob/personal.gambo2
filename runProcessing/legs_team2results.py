@@ -15,10 +15,10 @@ teamResult = {}
 teamResult["team"] = 100
 teamResult["name"] = "DXC Dream Team"
 teamResult["startTimes"] = {}
-teamResult["startTimes"][0] = "8:20:00"
+teamResult["startTimes"][0] = "7:20:00"
 teamResult["legs"] = []
     
-for i in range(36):
+for i in range(len(route['legs'])):
     legIn = route['legs'][i]
     legOut = {}
     legOut["legID"] = i+1
@@ -44,7 +44,7 @@ for i in range(36):
     
     teamResult["legs"].append(legOut)
 
-with open('VltavaRun/res/2019-teamResult.js', 'w', encoding='utf8') as f:
+with open('teamResult.js', 'w', encoding='utf8') as f:
     f.write(json.dumps(teamResult, ensure_ascii=False, indent=4))
 #    print(json.dumps(route, ensure_ascii=False, indent=4))
 

@@ -2,7 +2,7 @@
     "team": 100,
     "name": "DXC Dream Team",
     "startTimes": {
-        "0": "8:20:00"
+        "0": "7:20:00"
     },
     "legs": [
         {
