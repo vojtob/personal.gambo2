@@ -1,16 +1,6 @@
-# Jednoduché info o bežeckých pretekoch
-
-![obrázok architektúry](Architecture/gambo.png)
+# Gambo - run application
 
 
-
-[TODO](Architecture/memos/todo.md)
-
-
-### FB ChatBot (RunBot)
-
-|File   |Popis                                            |
-|-------|-------------------------------------------------|
-|webHook|lokálna simulácia webhooku, nebudem ju potrebovať|
-|app    |určené na testovanie spracovania messages        |
-|msg    |Spracovanie messagov                             |
+* [Kryštálová guľa](Architecture/memos/crystalBall/crystalBall.md) - odhad ako pobežíme a reálny priebeh
+* [Chatbot](Architecture/memos/chatbot.md) - zatiaľ nefunkčný
+* [TODO](Architecture/memos/todo.md) - čo ešte chceme urobiť
