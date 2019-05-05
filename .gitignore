@@ -11,3 +11,5 @@ Architecture/memos/img/CrystalBall-deployment-AWS.png
 Architecture/memos/img/CrystalBall-deployment-Local.png
 Architecture/memos/img/crystalBall_dataPreparation.png
 Architecture/model/gambo.archimate.bak
+scripts/deploy2AWS/release
+scripts/deployLocaly/release
