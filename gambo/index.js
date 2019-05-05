@@ -159,52 +159,25 @@ function processPlan(event, context, callback) {
         sendError({ message: "neda sa menit plan bez parametrov" }, callback);
         return;
     }
-    // if (!checkParam(event.queryStringParameters, "teamID")) {
-    //     console.log(" musi byt definovany team")
-    //     sendError({ message: "pre zadanie vysledku musi byt definovany team" }, callback);
-    //     return;
-    // }
-    var teamID = 29; //parseInt(event.queryStringParameters.teamID);
-    console.log("change plan for team: " + teamID);
 
-    if (checkParam(event.queryStringParameters, "startKE")) {
-        var startKE = event.queryStringParameters.startKE;
-        console.log("zmena start kosice -> " + startKE);
-        results.setStartKosice(teamID, startKE, function (err, result) {
-            if (err) {
-                console.log("could not set start kosice");
-                console.log(JSON.stringify(err));
-                sendError(err, callback);
-            } else {
-                console.log("start KE set successfully");
-                console.log(JSON.stringify(result));
-                sendOK("OK", callback);
-            }
-        });
+    if (!checkParam(event.queryStringParameters, "teamID")) {
+        console.log("pre upravu planu musi byt definovany team");
+        sendError({ message: "pre upravu vysledku musi byt definovany team" }, callback);
         return;
     }
-    
-    if (checkParam(event.queryStringParameters, "startTE")) {
-        var startTE = event.queryStringParameters.startTE;
-        console.log("zmena start teplicka -> " + startTE);
-        results.setStartTeplicka(teamID, startTE, function (err, result) {
-            if (err) {
-                console.log("could not set start teplicka");
-                console.log(JSON.stringify(err));
-                sendError(err, callback);
-            } else {
-                console.log("start teplicka set successfully");
-                // console.log(JSON.stringify(result));
-                sendOK("OK", callback);
-            }
-        });
+    var teamID = parseInt(event.queryStringParameters.teamID);
+    console.log("Post plan for team: " + teamID);
+
+    if (!checkParam(event.queryStringParameters, "legID")) {
+        console.log("pre upravu planu musi byt definovany leg");
+        sendError({ message: "pre upravu planu musi byt definovany leg" }, callback);
         return;
     }
-    
-    
-    if (checkParam(event.queryStringParameters, "legID") && checkParam(event.queryStringParameters, "tempo")) {
+    var legID = parseInt(event.queryStringParameters.legID);
+    console.log("Post plan for leg: " + legID);
+
+    if (checkParam(event.queryStringParameters, "tempo")) {
         // zmena planovaneho tempa
-        var legID = parseInt(event.queryStringParameters.legID);
         var tempo = event.queryStringParameters.tempo;
         console.log("zmena planovaneho tempa na useku " + legID + " na " + tempo);
         results.setPlannedTempo(teamID, legID, tempo, function (err, result) {
@@ -221,9 +194,8 @@ function processPlan(event, context, callback) {
         return;
     }
 
-    if (checkParam(event.queryStringParameters, "legID") && checkParam(event.queryStringParameters, "dist")) {
-        // zmena planovaneho tempa
-        var legID = parseInt(event.queryStringParameters.legID);
+    if (checkParam(event.queryStringParameters, "dist")) {
+        // zmena dlzky useku
         var dist = parseFloat(event.queryStringParameters.dist).toFixed(2);
         console.log("zmena dlzky useku " + legID + " na " + dist);
         results.setDistance(teamID, legID, dist, function (err, result) {
@@ -240,19 +212,39 @@ function processPlan(event, context, callback) {
         return;
     }
 
-    // recalculate
-    results.recalculate(teamID, function (err, result) {
-    // results.transform(teamID, function (err, result) {
-        if (err) {
-            console.log("could not recalculate");
-            console.log(JSON.stringify(err));
-            sendError(err, callback);
-        } else {
-            console.log("recalculated successfully");
-            // console.log(JSON.stringify(result));
-            sendOK("OK", callback);
-        }
-    });
+    if (checkParam(event.queryStringParameters, "startTime")) {
+        var startTime = event.queryStringParameters.startTime;
+        console.log("zmena startu na useku " + legID + " na " + startTime);
+        results.setStart(teamID, legID, startTime, function (err, result) {
+            if (err) {
+                console.log("could not set start");
+                console.log(JSON.stringify(err));
+                sendError(err, callback);
+            } else {
+                console.log("start set successfully");
+                // console.log(JSON.stringify(result));
+                sendOK("OK", callback);
+            }
+        });
+        return;
+    }  
+    
+    // vymazanie start time, ak nie je nic zadane
+    // nemazem prvy usek
+    if(legID != 1) {
+        console.log("vymazanie start useku " + legID);
+        results.clearStart(teamID, legID, function (err, result) {
+            if (err) {
+                console.log("could not clear start time");
+                console.log(JSON.stringify(err));
+                sendError(err, callback);
+            } else {
+                console.log("start time cleared successfully");
+                // console.log(JSON.stringify(result));
+                sendOK("OK", callback);
+            }
+        });
+    }
 }
 
 function sendLeg(leg, callback) {

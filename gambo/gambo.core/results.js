@@ -62,13 +62,41 @@ function setPlannedTempo(teamID, leg, tempo, callback) {
     });
 }
 
-function setStart(teamID, startTime, callback) {
+function setStart(teamID, legID, startTime, callback) {
     dataAccess.getTeam(teamID, function (err, team) {
         if (err) {
             callback(err, null);
         } else {
             // set real duration
-            team.startTimes[0] = startTime;
+            team.startTimes[legID-1] = startTime;
+            team = resultCalculator.recalculate(team);
+            // store new results
+            dataAccess.putTeam(team, callback);
+        }
+    });
+}
+
+function clearStart(teamID, legID, callback) {
+    dataAccess.getTeam(teamID, function (err, team) {
+        if (err) {
+            callback(err, null);
+        } else {
+            // set real duration
+            delete team.startTimes[legID-1];
+            team = resultCalculator.recalculate(team);
+            // store new results
+            dataAccess.putTeam(team, callback);
+        }
+    });
+}
+
+function setDistance(teamID, legID, distance, callback) {
+    dataAccess.getTeam(teamID, function (err, team) {
+        if (err) {
+            callback(err, null);
+        } else {
+            // set leg distance
+            team.legs[legID - 1].distance = Math.round(parseFloat(distance) * 100) / 100;
             team = resultCalculator.recalculate(team);
             // store new results
             dataAccess.putTeam(team, callback);
@@ -95,5 +123,7 @@ exports.setRealDuration = setRealDuration;
 exports.clearRealDuration = clearRealDuration;
 exports.setPlannedTempo = setPlannedTempo;
 exports.setStart = setStart;
+exports.clearStart = clearStart;
+exports.setDistance = setDistance;
 
 exports.recalculate = recalculate;

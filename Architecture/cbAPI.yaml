@@ -1,0 +1,85 @@
+openapi: "3.0.0"
+info:
+  title: Kryštálová guľa API
+  version: 0.1.0
+servers:
+  - url: http://localhost:3000
+  - url: https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod
+paths:
+  /results:
+    get:
+      summary: Vysledky timu
+      operationId: getTeamResult
+      parameters:
+        - name: teamID
+          in: query
+          description: Cislo timu
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: výsledok timu na všetkých úsekoch
+    post:
+      summary: Zadanie a zmazanie skutočného trvania behu na úseku
+      operationId: setTeamResult
+      parameters:
+        - name: teamID
+          in: query
+          description: Cislo timu
+          required: true
+          schema:
+            type: string
+        - name: legID
+          in: query
+          description: Cislo useku, indexovane od 1
+          required: true
+          schema:
+            type: string
+        - name: legDuration
+          in: query
+          description: Ak je zadaná dĺžka úseku, tak sa zapíše výsledok, ak nie je, tak sa vymaže výsledok. Formát je "01:13:47"
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: potvrdenie operácie
+  /plan:
+    post:
+      summary: Úprava plánu
+      operationId: modifyLeg
+      parameters:
+        - name: teamID
+          in: query
+          description: Cislo timu
+          required: true
+          schema:
+            type: string
+        - name: legID
+          in: query
+          description: Cislo useku, indexovane od 1
+          required: true
+          schema:
+            type: string
+        - name: startTime
+          in: query
+          description: Ak je zadané, tak sa nastaví štartový čas na tomto úseku. Formát je "07:20:00". Ak nie je zadaný žiaden ďalší parameter (ani tento), tak sa na úseku vymaže plánovaný štart.
+          required: false
+          schema:
+            type: string
+        - name: tempo
+          in: query
+          description: Ak je zadané, tak sa nastaví plánované tempo na tomto úseku. Formát je "04:35"
+          required: false
+          schema:
+            type: string
+        - name: dist
+          in: query
+          description: Ak je zadané, tak sa nastaví vzdialenosť úseku. Formát je "12.45"
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: potvrdenie operácie
