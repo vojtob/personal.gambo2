@@ -11,7 +11,7 @@ Vstup je tabuľka s úsekmi, priradenými bežcami a plánovanými tempami, tak 
 | plan, real, route | Vypočítané údaje o celom behu. Predpočítavajú sa, aby sa vedelo rýchlejšie a jednoduchšie zobrazovať na webe plánovaný čas dobehu, predpokladané priemerné tempo a podobne. |
 
 
-```javascript
+``` JSON
 {
 	"team": 29
 	"name": "DXC Dream Team",

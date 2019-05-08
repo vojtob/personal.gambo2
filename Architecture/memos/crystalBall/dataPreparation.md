@@ -12,7 +12,7 @@ Vytvorím súbor s úsekmi `exportedLegs.json`. Tento krok je špecifický pre k
 
 ### Štruktúra súboru s úsekmi `exportedLegs.json`
 
-``` javascript
+``` JSON
 {
     "handovers": [
         {
@@ -52,7 +52,7 @@ Vytvorím súbor s bežcami `bezci.tsv`, v ktorom popisujem bežcov a ich tempá
 
 ### Štruktúra súboru s bežcami `bezci.tsv`
 
-```
+``` HTML
 nr.	meno	pace
 1	Maťa Hanckova	05:30
 2	Braňo Gereg	05:00
@@ -68,7 +68,7 @@ Súbor s úsekmi `exportedLegs.json` a súbor s bežcami `bezci.tsv` skombinujem
 
 ### Štruktúra súboru s úsekmi `teamResult.json`
 
-```javascript
+```JSON
 {
 	"team": 29
 	"name": "DXC Dream Team",
