@@ -249,12 +249,25 @@
       }
 
       function clearLegDuration() {
-        console.log("POST clear result!");
+        console.log("post DELETE result!");
         var teamID = $("body").data("teamID");
         var legID = $("body").data("legID") - 1;
-        console.log("post clear legDuration from leg " + legID + " for team " + teamID);
+        console.log("delete legDuration from leg " + legID + " for team " + teamID);
+
+        // $.ajax({
+        //   url: serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID,
+        //   type: 'DELETE',
+        //   success: function(result) {
+        //     console.log("DELETE result succes");
+        //    drawTable();
+        //   },
+        //   error: function(request,msg,error) {
+        //     console.log("DELETE result failed: " + msg);
+        //     console.log(error);
+        //   }
+        // });
         $.post(serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID, function (response, status) {
-          console.log("POST response: " + JSON.stringify(response));
+          console.log("post DELETE response: " + JSON.stringify(response));
           console.log("Status: " + status);
           drawTable();
         });

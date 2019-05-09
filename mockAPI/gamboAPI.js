@@ -19,6 +19,10 @@ app.get('/results', function(req, res) {
     processRequest(req, res);
 });
 
+app.delete('/results', function(req, res) {
+    processRequest(req, res);
+});
+
 app.get('/legs', function(req, res) {
     processRequest(req, res);
 });
@@ -53,4 +57,3 @@ function sendResponse(res, response) {
 }
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
-

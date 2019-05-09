@@ -16,6 +16,9 @@ exports.handler = (event, context, callback) => {
     } else if ((event.httpMethod == "POST") && (event.resource == "/results")) {
         // get results
         postResults(event, context, callback);
+    } else if ((event.httpMethod == "DELETE") && (event.resource == "/results")) {
+        // get results
+        deleteResults(event, context, callback);
     } else if ((event.httpMethod == "POST") && (event.resource == "/plan")) {
         // change plan
         processPlan(event, context, callback);
@@ -117,38 +120,70 @@ function postResults(event, context, callback) {
     var legID = parseInt(event.queryStringParameters.legID);
     console.log("Post results for leg: " + legID);
 
-    if (checkParam(event.queryStringParameters, "legDuration")) {
-        var legDuration = event.queryStringParameters.legDuration;
-        console.log("set leg " + legID + " to " + legDuration + " for team " + teamID);
-        results.setRealDuration(teamID, legID, legDuration, function (err, result) {
-            if (err) {
-                console.log("could not set leg duration");
-                console.log(JSON.stringify(err));
-                sendError(err, callback);
-                return;
-            } else {
-                console.log("leg duration set successfully");
-                // console.log(JSON.stringify(result));
-                sendOK("OK", callback);
-                return;
-            }
-        });
-    } else {
-        console.log("clear leg " + legID + " for team " + teamID);
-        results.clearRealDuration(teamID, legID, function (err, result) {
-            if (err) {
-                console.log("could not clear leg duration");
-                console.log(JSON.stringify(err));
-                sendError(err, callback);
-                return;
-            } else {
-                console.log("leg duration cleared successfully");
-                // console.log(JSON.stringify(result));
-                sendOK("OK", callback);
-                return;
-            }
-        });
+    if (!checkParam(event.queryStringParameters, "legDuration")) {
+        // vymazanie useku
+        console.log("prevolam zmazanie useku");
+        deleteResults(event, context, callback)
+        // console.log("pre zadanie vysledku musi byt zadana legDuration");
+        // sendError({ message: "pre zadanie vysledku musi byt zadana legDuration" }, callback);
+        return;
     }
+    var legDuration = event.queryStringParameters.legDuration;
+    console.log("set leg " + legID + " to " + legDuration + " for team " + teamID);
+
+    results.setRealDuration(teamID, legID, legDuration, function (err, result) {
+        if (err) {
+            console.log("could not set leg duration");
+            console.log(JSON.stringify(err));
+            sendError(err, callback);
+            return;
+        } else {
+            console.log("leg duration set successfully");
+            // console.log(JSON.stringify(result));
+            sendOK("OK", callback);
+            return;
+        }
+    });
+}
+
+function deleteResults(event, context, callback) {
+    console.log("delete results processing ...");
+    if (event.queryStringParameters === null || event.queryStringParameters === undefined) {
+        // bez parametrov
+        console.log("neda sa zmazat vysledok bez parametrov");
+        sendError({ message: "neda sa zmazat vysledok bez parametrov" }, callback);
+        return;
+    }
+    if (!checkParam(event.queryStringParameters, "teamID")) {
+        console.log("pre zmazat vysledku musi byt definovany team");
+        sendError({ message: "pre zmazat vysledku musi byt definovany team" }, callback);
+        return;
+    }
+    var teamID = parseInt(event.queryStringParameters.teamID);
+    console.log("Delete results for team: " + teamID);
+
+    if (!checkParam(event.queryStringParameters, "legID")) {
+        console.log("pre zmazat vysledku musi byt definovany leg");
+        sendError({ message: "pre zmazat vysledku musi byt definovany leg" }, callback);
+        return;
+    }
+    var legID = parseInt(event.queryStringParameters.legID);
+    console.log("Delete results for leg: " + legID);
+
+    console.log("clear leg " + legID + " for team " + teamID);
+    results.clearRealDuration(teamID, legID, function (err, result) {
+        if (err) {
+            console.log("could not clear leg duration");
+            console.log(JSON.stringify(err));
+            sendError(err, callback);
+            return;
+        } else {
+            console.log("leg duration cleared successfully");
+            // console.log(JSON.stringify(result));
+            sendOK("OK", callback);
+            return;
+        }
+    });
 }
 
 function processPlan(event, context, callback) {
@@ -222,6 +257,23 @@ function processPlan(event, context, callback) {
                 sendError(err, callback);
             } else {
                 console.log("start set successfully");
+                // console.log(JSON.stringify(result));
+                sendOK("OK", callback);
+            }
+        });
+        return;
+    }  
+    
+    if (checkParam(event.queryStringParameters, "runner")) {
+        var runner = event.queryStringParameters.runner;
+        console.log("zmena bezca na useku " + legID + " na " + runner);
+        results.setRunner(teamID, legID, runner, function (err, result) {
+            if (err) {
+                console.log("could not set runner");
+                console.log(JSON.stringify(err));
+                sendError(err, callback);
+            } else {
+                console.log("runner set successfully");
                 // console.log(JSON.stringify(result));
                 sendOK("OK", callback);
             }

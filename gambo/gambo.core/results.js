@@ -104,6 +104,21 @@ function setDistance(teamID, legID, distance, callback) {
     });
 }
 
+function setRunner(teamID, legID, runner, callback) {
+    dataAccess.getTeam(teamID, function (err, team) {
+        if (err) {
+            callback(err, null);
+        } else {
+            // set leg distance
+            team.legs[legID - 1].runnerName = runner;
+            // ak sa prepocitavaju vysledky bezcov ...
+            team = resultCalculator.recalculate(team);
+            // store new results
+            dataAccess.putTeam(team, callback);
+        }
+    });
+}
+
 function recalculate(teamID, callback) {
     dataAccess.getTeam(teamID, function (err, team) {
         if (err) {
@@ -125,5 +140,6 @@ exports.setPlannedTempo = setPlannedTempo;
 exports.setStart = setStart;
 exports.clearStart = clearStart;
 exports.setDistance = setDistance;
+exports.setRunner = setRunner;
 
 exports.recalculate = recalculate;

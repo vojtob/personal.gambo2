@@ -38,8 +38,8 @@ paths:
             type: string
         - name: legDuration
           in: query
-          description: Ak je zadaná dĺžka úseku, tak sa zapíše výsledok, ak nie je, tak sa vymaže výsledok. Formát je "01:13:47"
-          required: false
+          description: Dĺžka úseku sa zapíše ako realDuration, skutočný výsledok. Formát je "01:13:47". Ak nie je tak sa vymaze
+          required: true
           schema:
             type: string
       responses:
@@ -77,6 +77,12 @@ paths:
         - name: dist
           in: query
           description: Ak je zadané, tak sa nastaví vzdialenosť úseku. Formát je "12.45"
+          required: false
+          schema:
+            type: string
+        - name: runner
+          in: query
+          description: Ak je zadané, tak sa nastaví bezec na tomto useku "Vojto Bálint"
           required: false
           schema:
             type: string
