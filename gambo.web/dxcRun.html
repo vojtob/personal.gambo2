@@ -33,12 +33,8 @@
         $.get(serviceAddress + "/results?teamID=" + teamID, function (response) {
           $("body").data("legID", response.lastLegDone + 2);
           var output = '';
-		  var legs = response.legs;
+		      var legs = response.legs;
 
-          for (let index = 0; index < legs.length; index++) {
-            const leg = legs[index];
-            output += getLeg(leg, index, response.lastLegDone);
-          }
           output += '<div class="card bg-secondary text-white">' +
             '<div class="card-body">' +
             '<p class="card-text">';
@@ -50,7 +46,13 @@
           }
           output +=
             response.route.distance + ' km za ' + response.real.duration +
-            " tempom " + response.real.tempo + '.';
+            " tempom " + response.real.tempo + '.</p></div></div>';
+
+          for (let index = 0; index < legs.length; index++) {
+            var indexShift = (index+1+response.lastLegDone)%legs.length;
+            const leg = legs[indexShift];
+            output += getLeg(leg, indexShift, response.lastLegDone);
+          }
 
           document.getElementById("resultsTablePlaceholder").innerHTML = output;
           console.log(typeof response);

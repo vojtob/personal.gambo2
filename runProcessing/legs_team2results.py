@@ -2,12 +2,12 @@ import json
 import pandas as pd
 
 # import runners and their paces
-runners = pd.read_csv('VltavaRun/res/Vltava Run 2019 - DXC Dream Team - bezci2.tsv', '\t')
+runners = pd.read_csv('runProcessing/VltavaRun/res/Vltava Run 2019 - DXC Dream Team - bezci2.tsv', '\t')
 # for i in range(36):
 #     print("{:>2d}.  {:<20}  {}".format(i, runners.loc[i]['meno'], runners.loc[i]['pace']))
 
 # import legs description
-with open('VltavaRun/res/2019-exportedLegs.json', 'r', encoding='utf8') as f:
+with open('runProcessing/VltavaRun/res/2019-exportedLegs.json', 'r', encoding='utf8') as f:
     route = json.load(f)
 
 # create team results
@@ -44,7 +44,7 @@ for i in range(len(route['legs'])):
     
     teamResult["legs"].append(legOut)
 
-with open('teamResult.js', 'w', encoding='utf8') as f:
+with open('runProcessing/VltavaRun/res/teamResult.js', 'w', encoding='utf8') as f:
     f.write(json.dumps(teamResult, ensure_ascii=False, indent=4))
 #    print(json.dumps(route, ensure_ascii=False, indent=4))
 

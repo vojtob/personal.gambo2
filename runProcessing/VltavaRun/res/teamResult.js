@@ -18,7 +18,7 @@
             "gpxtoLat": "49.0195900",
             "gpxtoLng": "13.7325347",
             "runnerName": "Silvia Glesková",
-            "plannedTempo": "04:28"
+            "plannedTempo": "05:30"
         },
         {
             "legID": 2,
@@ -33,7 +33,7 @@
             "gpxtoLat": "48.9863586",
             "gpxtoLng": "13.7808561",
             "runnerName": "Braňo Gereg",
-            "plannedTempo": "05:53"
+            "plannedTempo": "06:00"
         },
         {
             "legID": 3,
@@ -48,7 +48,7 @@
             "gpxtoLat": "48.9197733",
             "gpxtoLng": "13.7956967",
             "runnerName": "Vlado Dudlák",
-            "plannedTempo": "04:59"
+            "plannedTempo": "05:20"
         },
         {
             "legID": 4,
@@ -63,7 +63,7 @@
             "gpxtoLat": "48.8592456",
             "gpxtoLng": "13.8191339",
             "runnerName": "Maťa Hanckova",
-            "plannedTempo": "04:41"
+            "plannedTempo": "06:30"
         },
         {
             "legID": 5,
@@ -78,7 +78,7 @@
             "gpxtoLat": "48.7915017",
             "gpxtoLng": "13.9488361",
             "runnerName": "Vojto Bálint",
-            "plannedTempo": "05:04"
+            "plannedTempo": "05:00"
         },
         {
             "legID": 6,
@@ -93,7 +93,7 @@
             "gpxtoLat": "48.7614844",
             "gpxtoLng": "14.0251931",
             "runnerName": "Janka Bálintová",
-            "plannedTempo": "06:01"
+            "plannedTempo": "05:50"
         },
         {
             "legID": 7,
@@ -108,7 +108,7 @@
             "gpxtoLat": "48.7778781",
             "gpxtoLng": "14.0926225",
             "runnerName": "Matúš Ševčík",
-            "plannedTempo": "04:39"
+            "plannedTempo": "05:25"
         },
         {
             "legID": 8,
@@ -123,7 +123,7 @@
             "gpxtoLat": "48.7450900",
             "gpxtoLng": "14.1190883",
             "runnerName": "Mišo Ševčík",
-            "plannedTempo": "05:09"
+            "plannedTempo": "05:24"
         },
         {
             "legID": 9,
@@ -138,7 +138,7 @@
             "gpxtoLat": "48.6948239",
             "gpxtoLng": "14.1516231",
             "runnerName": "Danka Redechová",
-            "plannedTempo": "05:35"
+            "plannedTempo": "05:00"
         },
         {
             "legID": 10,
@@ -153,7 +153,7 @@
             "gpxtoLat": "48.6420389",
             "gpxtoLng": "14.2201736",
             "runnerName": "Majo Almasi",
-            "plannedTempo": "04:14"
+            "plannedTempo": "04:55"
         },
         {
             "legID": 11,
@@ -168,7 +168,7 @@
             "gpxtoLat": "48.6219342",
             "gpxtoLng": "14.3046672",
             "runnerName": "Peťo Škorík",
-            "plannedTempo": "05:35"
+            "plannedTempo": "05:20"
         },
         {
             "legID": 12,
@@ -183,7 +183,7 @@
             "gpxtoLat": "48.6544903",
             "gpxtoLng": "14.3668597",
             "runnerName": "Ľubka Fenclová",
-            "plannedTempo": "05:08"
+            "plannedTempo": "05:48"
         },
         {
             "legID": 13,
@@ -198,7 +198,7 @@
             "gpxtoLat": "48.7029336",
             "gpxtoLng": "14.3877975E",
             "runnerName": "Maťa Hanckova",
-            "plannedTempo": "04:58"
+            "plannedTempo": "06:30"
         },
         {
             "legID": 14,
@@ -213,7 +213,7 @@
             "gpxtoLat": "48.7763739",
             "gpxtoLng": "14.4104000",
             "runnerName": "Braňo Gereg",
-            "plannedTempo": "05:16"
+            "plannedTempo": "06:00"
         },
         {
             "legID": 15,
@@ -228,7 +228,7 @@
             "gpxtoLat": "48.8531814",
             "gpxtoLng": "14.3715283",
             "runnerName": "Vlado Dudlák",
-            "plannedTempo": "05:04"
+            "plannedTempo": "05:20"
         },
         {
             "legID": 16,
@@ -243,7 +243,7 @@
             "gpxtoLat": "48.9264900",
             "gpxtoLng": "14.4419222",
             "runnerName": "Silvia Glesková",
-            "plannedTempo": "04:05"
+            "plannedTempo": "05:30"
         },
         {
             "legID": 17,
@@ -258,7 +258,7 @@
             "gpxtoLat": "48.9804506",
             "gpxtoLng": "14.4652242",
             "runnerName": "Matúš Ševčík",
-            "plannedTempo": "05:51"
+            "plannedTempo": "05:10"
         },
         {
             "legID": 18,
@@ -273,7 +273,7 @@
             "gpxtoLat": "49.0509536",
             "gpxtoLng": "14.4450961",
             "runnerName": "Janka Bálintová",
-            "plannedTempo": "05:31"
+            "plannedTempo": "05:50"
         },
         {
             "legID": 19,
@@ -288,7 +288,7 @@
             "gpxtoLat": "49.1292275",
             "gpxtoLng": "14.4512708",
             "runnerName": "Mišo Ševčík",
-            "plannedTempo": "04:49"
+            "plannedTempo": "05:24"
         },
         {
             "legID": 20,
@@ -303,7 +303,7 @@
             "gpxtoLat": "49.1957567",
             "gpxtoLng": "14.4468686",
             "runnerName": "Vojto Bálint",
-            "plannedTempo": "04:45"
+            "plannedTempo": "05:00"
         },
         {
             "legID": 21,
@@ -318,7 +318,7 @@
             "gpxtoLat": "49.2954036",
             "gpxtoLng": "14.3874211",
             "runnerName": "Danka Redechová",
-            "plannedTempo": "03:03"
+            "plannedTempo": "05:00"
         },
         {
             "legID": 22,
@@ -333,7 +333,7 @@
             "gpxtoLat": "49.3263925",
             "gpxtoLng": "14.3378289",
             "runnerName": "Majo Almasi",
-            "plannedTempo": "09:42"
+            "plannedTempo": "04:55"
         },
         {
             "legID": 23,
@@ -348,7 +348,7 @@
             "gpxtoLat": "49.3844567",
             "gpxtoLng": "14.2917136",
             "runnerName": "Peťo Škorík",
-            "plannedTempo": "05:14"
+            "plannedTempo": "05:25"
         },
         {
             "legID": 24,
@@ -363,7 +363,7 @@
             "gpxtoLat": "49.4258694",
             "gpxtoLng": "14.2754147",
             "runnerName": "Ľubka Fenclová",
-            "plannedTempo": "04:33"
+            "plannedTempo": "05:48"
         },
         {
             "legID": 25,
@@ -378,7 +378,7 @@
             "gpxtoLat": "49.5003922",
             "gpxtoLng": "14.2157667",
             "runnerName": "Maťa Hanckova",
-            "plannedTempo": "04:53"
+            "plannedTempo": "06:30"
         },
         {
             "legID": 26,
@@ -393,7 +393,7 @@
             "gpxtoLat": "49.5536372",
             "gpxtoLng": "14.2119794",
             "runnerName": "Braňo Gereg",
-            "plannedTempo": "05:22"
+            "plannedTempo": "06:00"
         },
         {
             "legID": 27,
@@ -408,7 +408,7 @@
             "gpxtoLat": "49.6125714",
             "gpxtoLng": "14.1877458",
             "runnerName": "Vlado Dudlák",
-            "plannedTempo": "05:05"
+            "plannedTempo": "05:20"
         },
         {
             "legID": 28,
@@ -423,7 +423,7 @@
             "gpxtoLat": "49.6420669",
             "gpxtoLng": "14.2515394",
             "runnerName": "Silvia Glesková",
-            "plannedTempo": "04:57"
+            "plannedTempo": "05:30"
         },
         {
             "legID": 29,
@@ -438,7 +438,7 @@
             "gpxtoLat": "49.6761881",
             "gpxtoLng": "14.3194369",
             "runnerName": "Matúš Ševčík",
-            "plannedTempo": "05:19"
+            "plannedTempo": "05:18"
         },
         {
             "legID": 30,
@@ -453,7 +453,7 @@
             "gpxtoLat": "49.7289150",
             "gpxtoLng": "14.3495675",
             "runnerName": "Janka Bálintová",
-            "plannedTempo": "06:50"
+            "plannedTempo": "06:00"
         },
         {
             "legID": 31,
@@ -468,7 +468,7 @@
             "gpxtoLat": "49.7579672",
             "gpxtoLng": "14.4220328",
             "runnerName": "Mišo Ševčík",
-            "plannedTempo": "05:22"
+            "plannedTempo": "05:24"
         },
         {
             "legID": 32,
@@ -483,7 +483,7 @@
             "gpxtoLat": "49.8078381",
             "gpxtoLng": "14.4278694",
             "runnerName": "Vojto Bálint",
-            "plannedTempo": "06:36"
+            "plannedTempo": "06:00"
         },
         {
             "legID": 33,
@@ -498,7 +498,7 @@
             "gpxtoLat": "49.8128219",
             "gpxtoLng": "14.3972767",
             "runnerName": "Danka Redechová",
-            "plannedTempo": "04:51"
+            "plannedTempo": "05:00"
         },
         {
             "legID": 34,
@@ -513,7 +513,7 @@
             "gpxtoLat": "49.8889419",
             "gpxtoLng": "14.4012028",
             "runnerName": "Majo Almasi",
-            "plannedTempo": "02:36"
+            "plannedTempo": "04:55"
         },
         {
             "legID": 35,
@@ -528,7 +528,7 @@
             "gpxtoLat": "49.9367672",
             "gpxtoLng": "14.3784467",
             "runnerName": "Peťo Škorík",
-            "plannedTempo": "05:55"
+            "plannedTempo": "05:30"
         },
         {
             "legID": 36,
@@ -543,7 +543,7 @@
             "gpxtoLat": "50.0277653",
             "gpxtoLng": "14.4008633",
             "runnerName": "Ľubka Fenclová",
-            "plannedTempo": "05:01"
+            "plannedTempo": "05:48"
         }
     ]
 }
