@@ -39,7 +39,7 @@
             '<div class="card-body">' +
             '<p class="card-text">';
               output += "O <strong>" + response.legs[legs.length-1].endTime + '</strong> ' + getDiffText(response.real.diff);
-          if (response.lastLegDone == legs.length) {
+          if (response.lastLegDone == (legs.length-1)) {
             output += " sme dorazili do cieľa. ";
           } else {
             output += " dorazíme do cieľa. ";
@@ -142,7 +142,8 @@
 
         legText = getLegDesc(leg);
         legArray.push(legText);
-        legText = getLegDesc2(leg, lastLeg);
+        // legText = getLegDesc2(leg, lastLeg);
+        legText = getLegDesc2(leg, false);
         legArray.push(legText);
 
         console.log(legArray);

@@ -39,7 +39,7 @@ paths:
         - name: legDuration
           in: query
           description: Dĺžka úseku sa zapíše ako realDuration, skutočný výsledok. Formát je "01:13:47". Ak nie je tak sa vymaze
-          required: true
+          required: false
           schema:
             type: string
       responses:
