@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <title>História DXC Dream Team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    .tablecenter {
+        text-align: center;
+    }
+    </style>
+</head>
+
+
+<body>
+  <div class="container">
+  <h1>Run - DXC Dream Team</h1>
+
+    <p id="resultsTablePlaceholder"></p>
+
+    <script>
+      $("body").data("teamID", 100);
+      var serviceAddress = '';
+      drawTable();
+
+      function drawTable() {
+        var races =  [
+          {
+            "name" : "Vltava Run",
+            "year" : "2019",
+            "teamID" : 100,
+            "result" : 126,
+            "numberOfTeams" : 300,
+            "time" : "32:34:00",
+            "distance" : 368.47,
+            "tempo" : "05:18",
+            "up" : 5651,
+            "down" : 6534
+          },
+          {
+            "name" : "The Run",
+            "year" : "2018",
+            "teamID" : 29,
+            "result" : 3,
+            "numberOfTeams" : 30,
+            "time" : "45:03:58",
+            "distance" : 522.31,
+            "tempo" : "05:11",
+            "up" : 8793,
+            "down" : 8714
+          },
+          {
+            "name" : "Vltava Run",
+            "year" : "2018",
+            "teamID" : 2018001,
+            "result" : 93,
+            "numberOfTeams" : 300,
+            "time" : "31:10:06",
+            "distance" : 363.89,
+            "tempo" : "05:08",
+            "up" : 5460,
+            "down" : 6341
+          },
+          {
+            "name" : "The Run",
+            "year" : "2017",
+            "teamID" : 2017001,
+            "result" : 5,
+            "numberOfTeams" : 14,
+            "time" : "46:08:30",
+            "distance" : 534.12,
+            "tempo" : "05:11",
+            "up" : 8793,
+            "down" : 8714
+          },
+          {
+            "name" : "The Run",
+            "year" : "2016",
+            "teamID" : 2016002,
+            "result" : 3,
+            "numberOfTeams" : 5,
+            "time" : "42:53:05",
+            "distance" : 514.62,
+            "tempo" : "05:00",
+            "up" : 8793,
+            "down" : 8714
+          },
+          {
+            "name" : "Od Tatier k Dunaju",
+            "year" : "2016",
+            "teamID" : 2016001,
+            "result" : 3,
+            "numberOfTeams" : 199,
+            "time" : "24:33:51",
+            "distance" : 345.43,
+            "tempo" : "04:16"
+          },
+          {
+            "name" : "Od Tatier k Dunaju",
+            "year" : "2015",
+            "teamID" : 2015001,
+            "result" : 9,
+            "numberOfTeams" : 188,
+            "time" : "26:15:48",
+            "distance" : 343.81,
+            "tempo" : "04:35"
+          },
+          {
+            "name" : "Od Tatier k Dunaju",
+            "year" : "2014",
+            "teamID" : 2014001,
+            "result" : 15,
+            "numberOfTeams" : 154,
+            "time" : "26:37:41",
+            "distance" : 344.82,
+            "tempo" : "04:38"
+          },
+          {
+            "name" : "Od Tatier k Dunaju",
+            "year" : "2013",
+            "teamID" : 2013001,
+            "result" : 7,
+            "numberOfTeams" : 52,
+            "time" : "27:02:00",
+            "distance" : 345.11,
+            "tempo" : "04:42"
+          }
+        ]
+
+        var output = "";
+        // output += '<div class="card"><div class="card-body"><p>';
+        output += '<p>';
+          output += '<table class="table table-responsive table-striped">';
+            output += '<thead class="thead-dark"><tr>';
+              output += '<th scope="col">Preteky</th>';
+              output += '<th scope="col">Rok</th>';
+              output += '<th scope="col" class="tablecenter"><i class="fas fa-arrows-alt-h"></i></th>';
+              output += '<th scope="col" class="tablecenter"><i class="fas fa-stopwatch"></th>';
+              output += '<th scope="col" class="tablecenter"><i class="fas fa-tachometer-alt"></i></th>';
+              output += '<th scope="col" class="tablecenter"><i class="fas fa-flag-checkered"></i></th>';
+            output += '</tr></thead >';
+
+            output += '<tbody>';
+            for (let i = 0; i < races.length; i++) {
+              const run = races[i];
+              output += '<tr>';
+                output += '<th>' + run.name + '</th>';
+                output += '<td>' + run.year + '</td>';
+                output += '<td>' + run.distance + '</td>';
+                output += '<td>' + run.time + '</td>';
+                output += '<td>' + run.tempo + '</td>';
+                output += '<td align="right">' + run.result + '.</td>';
+              output += '</tr>';
+            }
+          output += '</tbody></table>';
+        // output += '</p></div></div>';
+        output += '</p>';
+
+
+        document.getElementById("resultsTablePlaceholder").innerHTML = output;
+      }
+    </script>
+
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

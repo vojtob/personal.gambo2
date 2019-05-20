@@ -1,10 +1,3 @@
-// var fs = require('fs');
-// var st = require("../gambo.core/simpleTime");
-var dataAccess = require("./gambo/gambo.core/dataAccess");
-var legCalculator = require("./gambo/gambo.core/resultCalculator");
+var st = require("./simpleTime");
 
-dataAccess.getTeam(100, function (err, data) {
-    teamResults = data;
-    teamResults = legCalculator.recalculate(teamResults);
-    console.log(teamResults.runners);
-});
+console.log(st.timeToSec("46:08:30"));

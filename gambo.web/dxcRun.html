@@ -37,9 +37,9 @@
 
           output += '<div class="card bg-secondary text-white">' +
             '<div class="card-body">' +
-            '<p class="card-text">';
-              output += "O <strong>" + response.legs[legs.length-1].endTime + '</strong> ' + getDiffText(response.real.diff);
-          if (response.lastLegDone == (legs.length-1)) {
+              '<p class="card-text">';
+                output += "O <strong>" + response.legs[legs.length-1].endTime + '</strong> ' + getDiffText(response.real.diff);
+                  if (response.lastLegDone == (legs.length-1)) {
             output += " sme dorazili do cieľa. ";
           } else {
             output += " dorazíme do cieľa. ";
