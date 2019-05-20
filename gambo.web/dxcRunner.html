@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <title>Bežci - DXC Dream Team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    .tablecenter {
+        text-align: center;
+    }
+    </style>
+</head>
+
+
+<body>
+  <div class="container">
+
+    <p id="resultsTablePlaceholder"></p>
+
+    <script>
+      // $("body").data("teamID", 100);
+      var serviceAddress = '';
+      // var teamID = $("body").data("teamID");
+      var url = new URL(window.location.href);
+      var teamID = url.searchParams.get("teamID");
+
+      var raceName = url.searchParams.get("raceName");
+      var raceYear = url.searchParams.get("raceYear");
+
+      drawTable();
+
+      function drawTable() {
+        $.get(serviceAddress + "/results?teamID=" + teamID, function (response) {
+          $("body").data("legID", response.lastLegDone + 2);
+          var output = "";
+
+          var team = response;
+          output += '<div class="card text-white bg-dark">';
+            output += '<div class="card-body">';
+            output += '<div class="row">';
+              output += '<div class="col"><h5 class="card-title">' + raceName + ' ' + raceYear + '</h5></div>';
+              output += '<div class="col">';
+              output += '<div class="float-right">'
+              output += '<a class="btn btn-outline-light btn-sm" href="dxcRun.html?teamID=' + teamID + '&raceName=' + raceName + '&raceYear=' + raceYear + '"><i class="fas fa-route"></i></a>';
+              output += ' <a class="btn btn-outline-light btn-sm" href="dxcHistory.html"><i class="fas fa-home"></i></a>';
+              output += '</div>';
+              output += '</div>';
+            output += '</div>'; // row
+            output += '<div class="card-text"><div class="row">';
+              output += '<div class="col-auto"><i class="fas fa-arrows-alt-h"></i> ' + team.route.distance + ' km</div>';
+              output += '<div class="col-auto"><i class="fas fa-stopwatch"></i> ' + team.real.duration + '</div>';
+              output += '<div class="col-auto"><i class="fas fa-tachometer-alt"></i> ' + team.real.tempo + '</div>';
+              output += '<div class="col-auto"><i class="fas fa-long-arrow-alt-up"></i>' + team.route.up + ' </div>';
+              output += '<div class="col-auto"><i class="fas fa-long-arrow-alt-down"></i>' + team.route.down + '</div>';
+              // output += '<div class="col-auto"><i class="fas fa-heartbeat"></i>' + team.route.difficulty + '</div>';
+            output += '</div>'; // row
+            output += '</div>'; // text
+            // output += '<div class="card-text">';
+            //   output += '<a class="btn btn-outline-light btn-sm" href="dxcRun.html?teamID=' + teamID + '&raceName=' + raceName + '&raceYear=' + raceYear + '">Zobraz úseky <i class="fas fa-route"></i></a>';
+            // output += '</div>'; // text
+          output += '</div>'; // body
+          output += '</div>'; // card
+
+          var runnersCount = response.runners.length;
+          for (let runnerIndex = 0; runnerIndex < runnersCount; runnerIndex++) {
+            var runner = response.runners[runnerIndex];
+            output += '<div class="card"><div class="card-body">';
+            output += '<div class="card-text"><div class="row">';
+            output += '<div class="col-auto">' + (1+runnerIndex).toString() + '. ' + runner.name + '</div>';
+            output += '<div class="col-auto"><i class="fas fa-arrows-alt-h"></i> ' + runner.route.distance + ' km</div>';
+            output += '<div class="col-auto"><i class="fas fa-tachometer-alt"></i> ' + runner.tempo + '</div>';
+            // output += '<div class="col-auto"><i class="fas fa-stopwatch"></i> ' + runner.duration + '</div>';
+            // output += '<div class="col-auto"><i class="fas fa-long-arrow-alt-up"></i>' + runner.route.up + ' </div>';
+            // output += '<div class="col-auto"><i class="fas fa-long-arrow-alt-down"></i>' + runner.route.down + '</div>';
+            // output += '<div class="col-auto"><i class="fas fa-heartbeat"></i>' + runner.route.difficulty + '</div>';
+            output += '<div class="col-auto">' +
+              '<a data-toggle="collapse" href="#legs' + runnerIndex + '" role="button" aria-expanded="false" aria-controls="collapseExample">' +
+              '<i class="far fa-list-alt"></i></a></div>';
+            // output += '</div><div class="row">';
+            output += '</div></div > ';
+
+            output += '<p><div class="collapse" id="legs' + runnerIndex + '">';
+            output += '<table class="table table-responsive">';
+            output += '<tr>';
+            output += '<th scope="col">Úsek</th>';
+            output += '<th scope="col" class="tablecenter"><i class="fas fa-arrows-alt-h"></i></th>';
+            output += '<th scope="col" class="tablecenter"><i class="fas fa-stopwatch"></th>';
+            output += '<th scope="col" class="tablecenter"><i class="fas fa-tachometer-alt"></i></th>';
+            output += '<th scope="col" class="tablecenter"><i class="fas fa-long-arrow-alt-up"></i></th>';
+            output += '<th scope="col" class="tablecenter"><i class="fas fa-long-arrow-alt-down"></i></th>';
+            output += '<th scope="col" class="tablecenter"><i class="fas fa-heartbeat"></i></th>';
+            output += '</tr>';
+            output += '</thead >';
+
+            output += '<tbody>';
+            pocetUsekov = runner.legs.length;
+            for (let sada = 0; sada < pocetUsekov; sada++) {
+              const leg = response.legs[runner.legs[sada]];
+              output += '<tr>';
+              output += '<td>' + leg.legID + ". " + leg.from + " - " + leg.to + '</td>';
+              output += '<td>' + leg.distance + '</td>';
+              // if('realDuration' in leg) {
+              if(leg.hasOwnProperty('realDuration')) {
+                output += '<td>' + leg.realDuration + '</td>';
+                output += '<td>' + leg.realTempo + '</td>';
+              } else {
+                output += '<td>' + leg.plannedDuration + '</td>';
+                output += '<td>' + leg.plannedTempo + '</td>';
+              }
+              output += '<td>' + leg.up + '</td>';
+              output += '<td>' + leg.down + '</td>';
+              output += '<td>' + leg.difficulty + '</td>';
+              output += '</tr>';
+            }
+            output += '<tr>';
+            output += '<td>Spolu</td>';
+            output += '<td>' + runner.route.distance + '</td>';
+            output += '<td>' + runner.duration + '</td>';
+            output += '<td>' + runner.tempo + '</td>';
+            output += '<td>' + runner.route.up + '</td>';
+            output += '<td>' + runner.route.down + '</td>';
+            output += '<td>' + runner.route.difficulty + '</td>';
+            output += '</tr>';
+            output += '</tbody></table>';
+            output += '</div></p>';
+
+            output += '</div></div > ';
+          }
+
+
+          document.getElementById("resultsTablePlaceholder").innerHTML = output;
+          console.log(typeof response);
+          console.log(response);
+        });
+      }
+
+
+    </script>
+
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

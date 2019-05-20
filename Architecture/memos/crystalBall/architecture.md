@@ -22,6 +22,10 @@
 * simpleTime - prevod medzi číselným a textovým vyjadrením času, napr. "01:23:45" je 5025 sekúnd a naopak ... 
 
 
+## Súbory v gambo
+
+![štruktúra html](../img/cb_files.png)
+
 ## Resources v gambo
 
 ???
