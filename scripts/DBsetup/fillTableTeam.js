@@ -4,8 +4,10 @@ var resultCalculator = require("./gambo/gambo.core/resultCalculator");
 
 console.log(process.cwd());
 
-// fs.readFile('../../../runProcessing/VltavaRun/res/teamResult.js', 'utf8', function (err, data) {
-fs.readFile('../../../runProcessing/teamResult.json', 'utf8', function (err, data) {
+folderName = '../../../runProcessing/TheRun/res2019';
+// folderName = '../../../runProcessing/VltavaRun/res'
+
+fs.readFile(folderName + '/teamResult.json', 'utf8', function (err, data) {
     if (err) {
         console.error("ERROR: Unable to read team results ", JSON.stringify(err, null, 2));
     } else {

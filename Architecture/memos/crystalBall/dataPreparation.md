@@ -5,12 +5,19 @@ Spracovanie je v adresári `runProcessing`. Popis je podľa Vltava Run 2019.
 ![data preparation](../img/crystalBall_dataPreparation.png)
 
 ## 1. Popis úsekov a odovzdávok
-Vytvorím súbor s úsekmi `exportedLegs.json`. Tento krok je špecifický pre každý beh, záleží v akom formáte dostaneme popis trasy. Script `legs2csv.py` môžem použiť na export, v ktorom viem jednoducho okontrolovať úseky, že sú správne vyexportované.
+Vytvorím súbor s úsekmi `route.json`. Tento krok je špecifický pre každý beh, záleží v akom formáte dostaneme popis trasy. Script `legs2csv.py` môžem použiť na export, v ktorom viem jednoducho okontrolovať úseky, že sú správne vyexportované.
 
-1. Skopírujem pdf ako text do `2019-trasa.txt`
-1. Spustím `VltavaRun/text2legs.py`, ktorý z toho urobí súbor `2019-exportedLegs.json`
+**Vltava Run**
 
-### Štruktúra súboru s úsekmi `exportedLegs.json`
+1. Skopírujem pdf ako text do `trasa.txt`
+1. Spustím `VltavaRun/text2legs.py`, ktorý z toho urobí súbor `route.json`
+
+**The Run**
+
+1. Scrap route to file `scrapRoute.py`
+1. Convert scrap to json `scrap2json.py`
+
+### Štruktúra súboru s úsekmi `route.json`
 
 ``` JSON
 {
@@ -64,13 +71,13 @@ nr.	meno	pace
 
 ## 3. Súbor s výsledkami `teamResult.json`
 
-Súbor s úsekmi `exportedLegs.json` a súbor s bežcami `bezci.tsv` skombinujem dokopy pomocou scriptu `legs_team2results.py` a vznikne súbor výsledkov tímu `teamResult.json`. Ten sa potom nahrá do databázy gambo ako základ výsledkov, čo je popísané v [setupe](crystalBall_setup.md)
+Súbor s úsekmi `route.json` a súbor s bežcami `bezci.tsv` skombinujem dokopy pomocou scriptu `legs_team2results.py` a vznikne súbor výsledkov tímu `teamResult.json`. Ten sa potom nahrá do databázy gambo ako základ výsledkov, čo je popísané v [setupe](deployment.md)
 
 ### Štruktúra súboru s úsekmi `teamResult.json`
 
 ```JSON
 {
-	"team": 29
+	"team": 2019001
 	"name": "DXC Dream Team",
 	"startTimes": {
 		0 : "08:20:00"

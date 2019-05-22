@@ -1,12 +1,15 @@
 graph TD
-    PDF[Propozicie.pdf] -. ručne skopírovať .-> TXT[Propozicie.txt]
-    TXT -- text2legs.py --> Useky[Popis úsekov a odovzdávok<br/>exportedLegs.json]
+    TheRun[Web TheRun] -- scrapRoute.py --> Data[data.json]
+    Data -- scrap2json.py --> Useky[Popis úsekov a odovzdávok<br/>route.json]
+    PDF[Vltava.pdf] -. ručne skopírovať .-> TXT[trasa.txt]
+    TXT -- text2legs.py --> Useky[Popis úsekov a odovzdávok<br/>route.json]
     XLS[Plán behu v google sheet] -. export z xls .-> TSV[Priradenie bežcov k úsekom<br/>bezci.tsv]
-    Useky -- legs_team2results.py --> Result[Výsledky tímu<br/>teamResult.json]
-    TSV -- legs_team2results.py --> Result
+    Useky --> temp( )
+    TSV  --> temp
+    temp -- legs_team2results.py --> Result[Výsledky tímu<br/>teamResult.json]
     classDef important fill:#ffed00,stroke:#000000,stroke-width:2px
     classDef processFile fill:#ffffff,stroke:#000000,stroke-width:1px
     classDef sourceFile fill:#ffffff,stroke:#000000,stroke-width:1px,stroke-dasharray: 5, 5
     class Result important;
-    class PDF,XLS sourceFile;
-    class TXT,TSV,Useky processFile;
+    class PDF,XLS,TheRun,temp sourceFile;
+    class TXT,TSV,Useky,Data processFile;

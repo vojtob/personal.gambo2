@@ -1,21 +1,25 @@
 import json
 import pandas as pd
 
+folderName = 'runProcessing/TheRun/res2019'
+teamID = 2019002
+
 # import runners and their paces
-runners = pd.read_csv('runProcessing/VltavaRun/res/Vltava Run 2019 - DXC Dream Team - bezci2.tsv', '\t')
+runners = pd.read_csv(folderName + '/bezci.tsv', '\t')
 # for i in range(36):
 #     print("{:>2d}.  {:<20}  {}".format(i, runners.loc[i]['meno'], runners.loc[i]['pace']))
 
 # import legs description
-with open('runProcessing/VltavaRun/res/2019-exportedLegs.json', 'r', encoding='utf8') as f:
+with open(folderName + '/route.json', 'r', encoding='utf8') as f:
     route = json.load(f)
 
 # create team results
 teamResult = {}
-teamResult["team"] = 100
+teamResult["team"] = teamID
 teamResult["name"] = "DXC Dream Team"
 teamResult["startTimes"] = {}
-teamResult["startTimes"][0] = "7:20:00"
+teamResult["startTimes"][0] = "10:00:00"
+teamResult["startTimes"][28] = "17:00:00"
 teamResult["legs"] = []
     
 for i in range(len(route['legs'])):
@@ -40,11 +44,12 @@ for i in range(len(route['legs'])):
     legOut["gpxtoLng"] = gps[1][0:-1]
 
     legOut["runnerName"] = runners.loc[i]['meno']
-    legOut["plannedTempo"] = runners.loc[i]['pace']
+    parts = runners.loc[i]['pace'].split(':')
+    legOut["plannedTempo"] = "{:0>2s}:{:0>2s}".format(parts[0], parts[1])
     
     teamResult["legs"].append(legOut)
 
-with open('runProcessing/VltavaRun/res/teamResult.js', 'w', encoding='utf8') as f:
+with open(folderName + '/teamResult.json', 'w', encoding='utf8') as f:
     f.write(json.dumps(teamResult, ensure_ascii=False, indent=4))
 #    print(json.dumps(route, ensure_ascii=False, indent=4))
 
