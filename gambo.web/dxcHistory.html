@@ -35,6 +35,18 @@
       function drawTable() {
         var races =  [
           {
+            "name" : "The Run",
+            "year" : "2019",
+            "teamID" : 2019002,
+            "result" : "-",
+            "numberOfTeams" : "-",
+            "time" : "-",
+            "distance" : "-",
+            "tempo" : "-",
+            "up" : "-",
+            "down" : "-"
+          },
+          {
             "name" : "Vltava Run",
             "year" : "2019",
             "teamID" : 100,
@@ -44,7 +56,8 @@
             "distance" : 368.47,
             "tempo" : "05:18",
             "up" : 5651,
-            "down" : 6534
+            "down" : 6534,
+            "hasResult" : "true"
           },
           {
             "name" : "The Run",
@@ -56,7 +69,8 @@
             "distance" : 522.31,
             "tempo" : "05:11",
             "up" : 8793,
-            "down" : 8714
+            "down" : 8714,
+            "hasResult" : "true"
           },
           {
             "name" : "Vltava Run",
@@ -154,7 +168,7 @@
               const run = races[i];
               output += '<tr>';
                 // output += '<th>' + run.name + '</th>';
-                if(i<2) {
+                if(run.hasResult) {
                   output += '<td><a class="nav-link active" href="dxcRoute.html?teamID=' + run.teamID + '&raceName=' + run.name + '&raceYear=' + run.year + '">' + run.name + '</a></td>';
                 } else {
                   output += '<td>' + run.name + '</td>';
