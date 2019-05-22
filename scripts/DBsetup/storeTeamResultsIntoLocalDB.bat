@@ -1,12 +1,10 @@
-rmdir /S /Q .\temp
-mkdir .\temp
+rmdir /S /Q .\release
+mkdir .\release
 
-cp -r ..\..\gambo.core\ .\temp
-cp ..\..\config\configLocal.js .\temp\gambo.core\config.js
-cp .\fillTableTeam.js .\temp\fillTableTeam.js
+cp -r ..\..\gambo .\release
+cp ..\..\config\configLocal.js .\release\gambo\gambo.core\config.js
+cp .\fillTableTeam.js .\release\fillTableTeam.js
 
-cd .\temp
+cd .\release
 node .\fillTableTeam.js
 cd ..
-
-rmdir /S /Q .\temp

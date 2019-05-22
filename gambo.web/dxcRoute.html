@@ -36,6 +36,7 @@
           $("body").data("legID", response.lastLegDone + 2);
           var output = '';
 		      var legs = response.legs;
+          var dobehnute = (response.lastLegDone == (legs.length-1));
 
           // output += '<div class="card text-white bg-secondary">';
           output += '<div class="card text-white bg-dark">';
@@ -50,8 +51,8 @@
               output += '</div>';
             output += '</div>'; // row
               output += '<div class="card-subtitle">';
-                if (response.lastLegDone == (legs.length-1)) {
-                  output += 'Prebehli sme ' + response.route.distance + ' km za ' + response.real.duration +" hodín, tempom " + response.real.tempo + '.';
+                if (dobehnute) {
+                  output += 'Prebehli sme ' + response.route.distance + ' km za ' + response.real.duration +" hodín tempom " + response.real.tempo + '.';
                 } else {
                    output += "V cieli budeme o " + response.legs[legs.length-1].endTime + ". Pobežíme " + response.real.duration + ' ' + getDiffText(response.real.diff) + " hodín tempom " + response.real.tempo + '.';
                 }
@@ -62,7 +63,7 @@
           for (let index = 0; index < legs.length; index++) {
             var indexShift = (index+1+response.lastLegDone)%legs.length;
             const leg = legs[indexShift];
-            output += getLeg(leg, indexShift, response.lastLegDone);
+            output += getLeg(leg, indexShift, response.lastLegDone, dobehnute);
           }
 
           document.getElementById("resultsTablePlaceholder").innerHTML = output;
@@ -71,13 +72,13 @@
         });
       }
 
-      function getLeg(leg, legIndex, lastLegDoneIndex) {
+      function getLeg(leg, legIndex, lastLegDoneIndex, dobehnute) {
         var output = "";
 
         if (legIndex <= lastLegDoneIndex) {
           // uz zabehnute
           output = '<div class="card"><div class="card-body">';
-          getZabehnutyLegText(legIndex, leg, legIndex == lastLegDoneIndex).forEach(textElement => {
+          getZabehnutyLegText(legIndex, leg, dobehnute).forEach(textElement => {
             output += '<div class="card-text">' + textElement + '</div>';
           });
           output += '</div></div > ';
@@ -128,7 +129,7 @@
         return ' (<span style="color:' + diffColor + '">' + plusSign + diff + '</span>)';
       }
 
-      function getZabehnutyLegText(legIndex, leg, lastLeg) {
+      function getZabehnutyLegText(legIndex, leg, dobehnute) {
         // uz zabehnute
         var diffColor;
         var zabehol;
@@ -148,7 +149,10 @@
 
         var legArray = [];
         var legText = (legIndex + 1) + '. ' + leg.runnerName + zabehol + ' tempom ' + leg.realTempo +
-          ' za ' + leg.realDuration + getDiffText(leg.diff);
+          ' za ' + leg.realDuration;
+        if(!dobehnute) {
+          legText +=  getDiffText(leg.diff);
+        }  
         legArray.push(legText);
 
         legText = getLegDesc(leg);
@@ -214,32 +218,32 @@
           '<div class="col-auto"><i class="fas fa-long-arrow-alt-up"></i>' + leg.up + ' </div>' +
           '<div class="col-auto"><i class="fas fa-long-arrow-alt-down"></i>' + leg.down + '</div>' +
           '<div class="col-auto"><i class="fas fa-heartbeat"></i>' + leg.difficulty + '</div>';
-        text += '<div class="col-auto">' +
-          '<a data-toggle="collapse" href="#desc' + leg.legID + '" role="button" aria-expanded="false" aria-controls="collapseExample">' +
-          '<i class="far fa-list-alt"></i></a></div>';
+        // text += '<div class="col-auto">' +
+        //   '<a data-toggle="collapse" href="#desc' + leg.legID + '" role="button" aria-expanded="false" aria-controls="collapseExample">' +
+        //   '<i class="far fa-list-alt"></i></a></div>';
           // '<i class="fas fa-route"></i></a></div>';
-        if (addDelete) {
-          text += '<div class="col-auto">' +
-            '<a data-toggle="collapse" href="#deleteDuration" role="button" aria-expanded="false" aria-controls="collapseExample">' +
-            '<i class="far fa-trash-alt"></i></a></div>';
-        }
+        // if (addDelete) {
+        //   text += '<div class="col-auto">' +
+        //     '<a data-toggle="collapse" href="#deleteDuration" role="button" aria-expanded="false" aria-controls="collapseExample">' +
+        //     '<i class="far fa-trash-alt"></i></a></div>';
+        // }
         text += '</div>';
-        text += '<p><div class="collapse" id="desc' + leg.legID + '">';
+        // text += '<p><div class="collapse" id="desc' + leg.legID + '">';
         /*leg.desc.forEach(descLine => {
           text += '<div class="card-text">' + descLine + '</div>';
         });*/
-        text += '</div></p>';
+        // text += '</div></p>';
 
-        if (addDelete) {
-          // zmazanie
-          text += '<p><div class="collapse" id="deleteDuration">';
-          text += '<div class="row">' +
-            '<div class="col-auto"><label for="legDuration">Naozaj zmazať čas na úseku?</label></div>' +
-            '<div class="col-auto"><button data-toggle="collapse" href="#deleteDuration" type="button" class="btn btn-outline-dark">Nezmazať</button></div>' +
-            '<div class="col-auto"><button type="button" class="btn btn-danger" onclick="clearLegDuration()"><i class="fas fa-exclamation-triangle"></i> Zmazať</button></div>' +
-            '</div>';
-          text += '</div></p>';
-        }
+        // if (addDelete) {
+        //   // zmazanie
+        //   text += '<p><div class="collapse" id="deleteDuration">';
+        //   text += '<div class="row">' +
+        //     '<div class="col-auto"><label for="legDuration">Naozaj zmazať čas na úseku?</label></div>' +
+        //     '<div class="col-auto"><button data-toggle="collapse" href="#deleteDuration" type="button" class="btn btn-outline-dark">Nezmazať</button></div>' +
+        //     '<div class="col-auto"><button type="button" class="btn btn-danger" onclick="clearLegDuration()"><i class="fas fa-exclamation-triangle"></i> Zmazať</button></div>' +
+        //     '</div>';
+        //   text += '</div></p>';
+        // }
 
         return text;
       }

@@ -49,7 +49,7 @@
           {
             "name" : "The Run",
             "year" : "2018",
-            "teamID" : 29,
+            "teamID" : 2018002,
             "result" : 3,
             "numberOfTeams" : 30,
             "time" : "45:03:58",
@@ -154,8 +154,8 @@
               const run = races[i];
               output += '<tr>';
                 // output += '<th>' + run.name + '</th>';
-                if(i<1) {
-                  output += '<td><a class="nav-link active" href="dxcRun.html?teamID=' + run.teamID + '&raceName=' + run.name + '&raceYear=' + run.year + '">' + run.name + '</a></td>';
+                if(i<2) {
+                  output += '<td><a class="nav-link active" href="dxcRoute.html?teamID=' + run.teamID + '&raceName=' + run.name + '&raceYear=' + run.year + '">' + run.name + '</a></td>';
                 } else {
                   output += '<td>' + run.name + '</td>';
                 }

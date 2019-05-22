@@ -1,5 +1,7 @@
 # Architektúra Kryštálovej gule
 
+## Gambo packages
+
 | Package, File | Popis |
 | :------------ | :---- |
 | gambo         | Toto je samotná aplikácia, zvyšok sú pomocné veci. Na AWS sa nahrá ako lambda. |
@@ -21,10 +23,6 @@
 * data-access - prístup k dátam, tu sa volajú AWS metódy pre tabuľky
 * simpleTime - prevod medzi číselným a textovým vyjadrením času, napr. "01:23:45" je 5025 sekúnd a naopak ... 
 
-
-## Súbory v gambo
-
-![štruktúra html](../img/cb_files.png)
 
 ## Resources v gambo
 
