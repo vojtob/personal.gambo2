@@ -35,50 +35,62 @@
           $("body").data("legID", response.lastLegDone + 2);
           var output = '';
 		      var legs = response.legs;
-          var dobehnute = (response.lastLegDone == (legs.length-1));
 
-          // output += '<div class="card text-white bg-secondary">';
-          output += '<div class="card text-white bg-dark">';
-            output +=  '<div class="card-body">';
-              output += '<div class="row">';
-              output += '<div class="col"><h5 class="card-title">' + raceName + ' ' + raceYear + '</h5></div>';
-              output += '<div class="col">';
-              output += '<div class="float-right">'
-              output += '<a class="btn btn-outline-light btn-sm" href="dxcRunner.html?teamID=' + teamID + '&raceName=' + raceName + '&raceYear=' + raceYear + '"><i class="fas fa-running"></i></a>';
-              output += ' <a class="btn btn-outline-light btn-sm" href="dxcHistory.html"><i class="fas fa-home"></i></a>';
-              output += '</div>';
-              output += '</div>';
-            output += '</div>'; // row
-              output += '<div class="card-subtitle">';
-                if (dobehnute) {
-                  output += 'Prebehli sme ' + response.route.distance + ' km za ' + response.real.duration +" hodín tempom " + response.real.tempo + '.';
-                } else {
-                   output += "V cieli budeme o " + response.legs[legs.length-1].endTime + ". Pobežíme " + response.real.duration + ' ' + getDiffText(response.real.diff) + " hodín tempom " + response.real.tempo + '.';
-                }
-              output += '</div>'; // text
-            output += '</div>'; // body
-          output += '</div>'; // card
-
+          if(response.lastLegDone == (legs.length-1)) {
+            output += getSummary(response);
+          }
           for (let index = 0; index < legs.length; index++) {
-            var indexShift = (index+1+response.lastLegDone)%legs.length;
-            const leg = legs[indexShift];
-            output += getLeg(leg, indexShift, response.lastLegDone, dobehnute);
+            // var indexShift = (index+1+response.lastLegDone)%legs.length;
+            output += getLeg(response, index);
           }
 
           document.getElementById("resultsTablePlaceholder").innerHTML = output;
+          var elmnt = document.getElementById("summaryCard");
+          elmnt.scrollIntoView();
           console.log(typeof response);
           console.log(response);
         });
       }
 
-      function getSummary() {
+      function getSummary(response) {
         var output = "";
+        var dobehnute = (response.lastLegDone == (response.legs.length-1));
+
+        output += '<div id="summaryCard" class="card text-white bg-dark">';
+          output +=  '<div class="card-body">';
+            output += '<div class="row">';
+              output += '<div class="col"><h5 class="card-title">';
+              if(!dobehnute) {
+                output += '<a class="btn btn-success btn-lg" href="dxcRoute.html?teamID=' + teamID + '&raceName=' + raceName + '&raceYear=' + raceYear + '"><i class="fas fa-sync-alt"></i></a> ';
+              }
+              output += raceName + ' ' + raceYear + '</h5></div>';
+
+              output += '<div class="col">';
+              output += '<div class="float-right">'
+                output += '<a class="btn btn-outline-light btn-sm" href="dxcRunner.html?teamID=' + teamID + '&raceName=' + raceName + '&raceYear=' + raceYear + '"><i class="fas fa-running"></i></a>';
+                output += ' <a class="btn btn-outline-light btn-sm" href="dxcHistory.html"><i class="fas fa-home"></i></a>';
+              output += '</div>';
+              output += '</div>';
+            output += '</div>'; // row
+            output += '<div class="card-text">';
+              if (dobehnute) {
+                output += 'Prebehli sme ' + response.route.distance + ' km za ' + response.real.duration +" hodín tempom " + response.real.tempo + '.';
+              } else {
+                  output += "V cieli budeme o " + response.legs[response.legs.length-1].endTime + ". Pobežíme " + response.real.duration + ' ' + getDiffText(response.real.diff) + " hodín tempom " + response.real.tempo + '.';
+              }
+            output += '</div>'; // text
+          output += '</div>'; // body
+        output += '</div>'; // card
         
         return output;
       }
 
-      function getLeg(leg, legIndex, lastLegDoneIndex, dobehnute) {
+      function getLeg(response, legIndex) {
         var output = "";
+
+        const leg = response.legs[legIndex];
+        const lastLegDoneIndex = response.lastLegDone;
+        const dobehnute = (response.lastLegDone == (response.legs.length-1));
 
         if (legIndex <= lastLegDoneIndex) {
           // uz zabehnute
@@ -87,7 +99,6 @@
             output += '<div class="card-text">' + textElement + '</div>';
           });
           output += '</div></div > ';
-
         } else if ((lastLegDoneIndex + 1) < legIndex) {
           // este sa len pobezi
           output = '<div class="card"><div class="card-body">';
@@ -97,7 +108,8 @@
           output += '</div></div > ';
         } else {
           // prave bezi
-          output = '<div class="card bg-warning"><div class="card-body">';
+          output = getSummary(response);
+          output += '<div class="card bg-warning"><div class="card-body">';
           getAktualyLegText(legIndex, leg).forEach(textElement => {
             output += '<div class="card-text">' + textElement + '</div>';
           });
@@ -214,11 +226,6 @@
       }
 
       function getLegDesc(leg) {
-        // text = '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxfromLat + ',' + leg.gpxfromLng + '" target="_blank">' + leg.from + '</a>' +
-        //   ' <i class="fas fa-caret-right"></i> ' +
-        //   '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank">' + leg.to + '</a>';
-        // return text;
-
         return '<a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxfromLat + ',' + leg.gpxfromLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i></a> ' +
           leg.from +
           ' <a class="card-link" href="https://www.google.com/maps/place/' + leg.gpxtoLat + ',' + leg.gpxtoLng + '" target="_blank"><i class="fas fa-map-marker-alt"></i> </a>' +

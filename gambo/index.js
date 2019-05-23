@@ -159,7 +159,7 @@ function postResults(event, context, callback) {
     } else {
         // vymazanie useku
         console.log("prevolam zmazanie useku");
-        deleteResults(event, context, callback)
+        deleteResults(event, context, callback);
         // console.log("pre zadanie vysledku musi byt zadana legDuration");
         // sendError({ message: "pre zadanie vysledku musi byt zadana legDuration" }, callback);
         return;
