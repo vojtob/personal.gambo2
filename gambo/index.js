@@ -120,7 +120,43 @@ function postResults(event, context, callback) {
     var legID = parseInt(event.queryStringParameters.legID);
     console.log("Post results for leg: " + legID);
 
-    if (!checkParam(event.queryStringParameters, "legDuration")) {
+    if (checkParam(event.queryStringParameters, "legDuration")) {
+        // duration of leg
+        var legDuration = event.queryStringParameters.legDuration;
+        console.log("set leg " + legID + " to " + legDuration + " for team " + teamID);
+    
+        results.setRealDuration(teamID, legID, legDuration, function (err, result) {
+            if (err) {
+                console.log("could not set leg duration");
+                console.log(JSON.stringify(err));
+                sendError(err, callback);
+                return;
+            } else {
+                console.log("leg duration set successfully");
+                // console.log(JSON.stringify(result));
+                sendOK("OK", callback);
+                return;
+            }
+        });
+    } else if (checkParam(event.queryStringParameters, "legEndTime")) {
+        // set real end time
+        var legEndTime = event.queryStringParameters.legEndTime;
+        console.log("set leg " + legID + "  end time to " + legEndTime + " for team " + teamID);
+    
+        results.setRealEndTime(teamID, legID, legEndTime, function (err, result) {
+            if (err) {
+                console.log("could not set leg end time");
+                console.log(JSON.stringify(err));
+                sendError(err, callback);
+                return;
+            } else {
+                console.log("leg end time set successfully");
+                // console.log(JSON.stringify(result));
+                sendOK("OK", callback);
+                return;
+            }
+        });
+    } else {
         // vymazanie useku
         console.log("prevolam zmazanie useku");
         deleteResults(event, context, callback)
@@ -128,22 +164,9 @@ function postResults(event, context, callback) {
         // sendError({ message: "pre zadanie vysledku musi byt zadana legDuration" }, callback);
         return;
     }
-    var legDuration = event.queryStringParameters.legDuration;
-    console.log("set leg " + legID + " to " + legDuration + " for team " + teamID);
 
-    results.setRealDuration(teamID, legID, legDuration, function (err, result) {
-        if (err) {
-            console.log("could not set leg duration");
-            console.log(JSON.stringify(err));
-            sendError(err, callback);
-            return;
-        } else {
-            console.log("leg duration set successfully");
-            // console.log(JSON.stringify(result));
-            sendOK("OK", callback);
-            return;
-        }
-    });
+    if (!checkParam(event.queryStringParameters, "legDuration")) {
+    }
 }
 
 function deleteResults(event, context, callback) {

@@ -28,6 +28,27 @@ function setRealDuration(teamID, legID, duration, callback) {
             callback(err, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
         } else {
             // set real duration
+            // ensure good format
+            duration = st.secToDuration(st.timeToSec(duration));
+            team.legs[legID - 1].realDuration = duration;
+            team = resultCalculator.recalculate(team);
+            // store new results
+            dataAccess.putTeam(team, callback);
+        }
+    });
+}
+
+function setRealEndTime(teamID, legID, realEndTime, callback) {
+    dataAccess.getTeam(teamID, function (err, team) {
+        if (err) {
+            callback(err, "Nepodarilo sa mi zistiť info o tíme, skús prosím ešte raz.");
+        } else {
+            leg = team.legs[legID - 1];
+            duration = st.timeToSec(realEndTime) - st.timeToSec(leg.startTime);
+            if(duration < 0) {
+                duration += st.timeToSec("24:00:00");
+            }
+            duration = st.secToDuration(duration);
             team.legs[legID - 1].realDuration = duration;
             team = resultCalculator.recalculate(team);
             // store new results
@@ -55,6 +76,8 @@ function setPlannedTempo(teamID, leg, tempo, callback) {
         if (err) {
             callback(err, null);
         } else {
+            // ensure good format
+            tempo = st.secToDuration(st.timeToSec(tempo));
             team.legs[leg - 1].plannedTempo = tempo;
             team = resultCalculator.recalculate(team);
             dataAccess.putTeam(team, callback);
@@ -68,6 +91,8 @@ function setStart(teamID, legID, startTime, callback) {
             callback(err, null);
         } else {
             // set real duration
+            // ensure good format
+            startTime = st.secToTime(st.timeToSec(startTime));
             team.startTimes[legID-1] = startTime;
             team = resultCalculator.recalculate(team);
             // store new results
@@ -135,6 +160,7 @@ exports.getResult = getResult;
 exports.getTeamResult = getTeamResult;
 
 exports.setRealDuration = setRealDuration;
+exports.setRealEndTime = setRealEndTime;
 exports.clearRealDuration = clearRealDuration;
 exports.setPlannedTempo = setPlannedTempo;
 exports.setStart = setStart;

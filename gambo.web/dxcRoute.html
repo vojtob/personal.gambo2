@@ -17,17 +17,16 @@
 
 <body>
   <div class="container">
-    <!-- <p id="resultsRunnersPlaceholder"></p> -->
     <p id="resultsTablePlaceholder"></p>
 
     <script>
-      // $("body").data("teamID", 100);
       var serviceAddress = '';
-      // var teamID = $("body").data("teamID");
       var url = new URL(window.location.href);
       var teamID = url.searchParams.get("teamID");
+      // var teamID = $("body").data("teamID");
       var raceName = url.searchParams.get("raceName");
       var raceYear = url.searchParams.get("raceYear");
+      $("body").data("teamID", teamID);
 
       drawTable();
 
@@ -72,6 +71,12 @@
         });
       }
 
+      function getSummary() {
+        var output = "";
+        
+        return output;
+      }
+
       function getLeg(leg, legIndex, lastLegDoneIndex, dobehnute) {
         var output = "";
 
@@ -97,16 +102,24 @@
             output += '<div class="card-text">' + textElement + '</div>';
           });
           output += '<p><form class="form-inline">' +
+
+            '<div class="btn-group btn-group-toggle mb-2 mr-sm-2" data-toggle="buttons">' + 
+              '<label class="btn btn-outline-success btn-lg active">' +
+                '<input type="radio" name="realTimeType" id="realTimeDuration" autocomplete="off" checked><i class="fas fa-stopwatch"></i>' +
+              '</label>' +
+              '<label class="btn btn-outline-success btn-lg">' +
+                '<input type="radio" name="realTimeType" id="realTimeTime" autocomplete="off"><i class="fas fa-clock"></i>' +
+              '</label>' +
+            '</div>' +
+
             '<div class="input-group mb-2 mr-sm-2">' +
-            '<div class="input-group-prepend">' +
-            '<div class="input-group-text">' +
-            '<i class="fas fa-stopwatch"></i>' +
+              '<input type="text" class="form-control" id="legDurationInput" placeholder="skutočnosť, napr. 0:45:23" onkeydown = "if (event.keyCode == 13) {document.getElementById(\'setLegDurationBtn\').click()}">' +
             '</div>' +
-            '</div>' +
-            '<input type="text" class="form-control" id="legDurationInput" placeholder="skutočnosť, napr. 0:45:23" onkeydown = "if (event.keyCode == 13) {document.getElementById(\'setLegDurationBtn\').click()}">' +
-            '</div>' +
+
             '<button type="button" id="setLegDurationBtn" class="btn btn-success mb-2" onclick="setLegDuration()">' +
-            '<i class="fas fa-check-circle"></i> Dobehnuté</button>' +
+              '<i class="fas fa-check-circle"></i> Dobehnuté' +
+            '</button>' +
+
             '</form></p>';
           output += '</div></div > ';
         }
@@ -250,21 +263,27 @@
 
       function setLegDuration() {
         console.log("POST set result!");
+        var isTimeDuration = document.getElementById("realTimeDuration").checked;
+        console.log("is duration: " + isTimeDuration);
         var teamID = $("body").data("teamID");
         var legID = $("body").data("legID");
         var legDuration = document.getElementById("legDurationInput").value;
-        console.log("post set legDuration to " + legDuration + " on leg " + legID + " for team " + teamID);
-        // $.ajax({
-        //   url: 'serviceAddress + "/result?legDuration=" + legDuration',
-        //   type: 'PUT',
-        //   success: function (response) {
-        //   }
-        // });
-        $.post(serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID + "&legDuration=" + legDuration, function (response, status) {
-          console.log("POST response: " + JSON.stringify(response));
-          console.log("Status: " + status);
-          drawTable();
-        });
+        if(isTimeDuration) {
+          console.log("post set legDuration to " + legDuration + " on leg " + legID + " for team " + teamID);
+          $.post(serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID + "&legDuration=" + legDuration, function (response, status) {
+            console.log("POST response: " + JSON.stringify(response));
+            console.log("Status: " + status);
+            drawTable();
+          });
+          
+        } else {
+          console.log("post set legEndTime to " + legDuration + " on leg " + legID + " for team " + teamID);
+          $.post(serviceAddress + "/results?teamID=" + teamID + "&legID=" + legID + "&legEndTime=" + legDuration, function (response, status) {
+            console.log("POST response: " + JSON.stringify(response));
+            console.log("Status: " + status);
+            drawTable();
+          });
+        }
       }
 
       function clearLegDuration() {
@@ -295,21 +314,6 @@
     </script>
 
   </div>
-
-  <!-- <script>
-    var input = document.getElementById("legDurationInput");
-    input.addEventListener("keyup", function (event) {
-      console.log("ENTER !!!!!!!!");
-      // Cancel the default action, if needed
-      event.preventDefault();
-      // Number 13 is the "Enter" key on the keyboard
-      if (event.keyCode === 13) {
-        // Trigger the button element with a click
-        document.getElementById("setLegDurationBtn").click();
-        // setLegDuration();
-      }
-    });
-  </script> -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

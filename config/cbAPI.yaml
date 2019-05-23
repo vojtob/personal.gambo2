@@ -38,7 +38,13 @@ paths:
             type: string
         - name: legDuration
           in: query
-          description: Dĺžka úseku sa zapíše ako realDuration, skutočný výsledok. Formát je "01:13:47". Ak nie je tak sa vymaze
+          description: Dĺžka úseku sa zapíše ako realDuration, skutočný výsledok. Formát je "01:13:47". Ak nie je zadaný legDuration ani legEndTime tak sa vymaze realDuration.
+          required: false
+          schema:
+            type: string
+        - name: legEndTime
+          in: query
+          description: Skutočný čas dobehnutia, podľa neho sa dopočíta realDuration. Formát je "17:23:47". Ak nie je zadaný legDuration ani legEndTime tak sa vymaze realDuration.
           required: false
           schema:
             type: string
