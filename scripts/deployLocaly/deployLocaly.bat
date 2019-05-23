@@ -14,8 +14,8 @@ C:\prg\fart\fart .\release\dxcRoute.html "var serviceAddress = ''" "var serviceA
 cp ..\..\gambo.web\dxcRunner.html .\release\dxcRunner.html
 C:\prg\fart\fart .\release\dxcRunner.html "var serviceAddress = ''" "var serviceAddress = 'http://localhost:3000'"
 
-REM cp ..\..\gambo.web\gamboStats.html .\release\gamboStats.html
-REM C:\prg\fart\fart .\release\gamboStats.html "var serviceAddress = ''" "var serviceAddress = 'http://localhost:3000'"
+py ..\..\gambo.web\utilities\generateSetupHtml.py
+C:\prg\fart\fart .\release\dxcSetup.html "var serviceAddress = ''" "var serviceAddress = 'http://localhost:3000'"
 
 cd .\release
 node .\gamboAPI.js
