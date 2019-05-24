@@ -114,18 +114,17 @@
             output += '<div class="card-text">' + textElement + '</div>';
           });
           output += '<p><form class="form-inline">' +
-
             '<div class="btn-group btn-group-toggle mb-2 mr-sm-2" data-toggle="buttons">' + 
-              '<label class="btn btn-outline-success btn-lg active">' +
+              '<label class="btn btn-outline-success btn-lg active" onclick="setTimeHintDuration()">' +
                 '<input type="radio" name="realTimeType" id="realTimeDuration" autocomplete="off" checked><i class="fas fa-stopwatch"></i>' +
               '</label>' +
-              '<label class="btn btn-outline-success btn-lg">' +
+              '<label class="btn btn-outline-success btn-lg" onclick="setTimeHintTime()">' +
                 '<input type="radio" name="realTimeType" id="realTimeTime" autocomplete="off"><i class="fas fa-clock"></i>' +
               '</label>' +
             '</div>' +
 
             '<div class="input-group mb-2 mr-sm-2">' +
-              '<input type="text" class="form-control" id="legDurationInput" placeholder="skutočnosť, napr. 0:45:23" onkeydown = "if (event.keyCode == 13) {document.getElementById(\'setLegDurationBtn\').click()}">' +
+              '<input type="text" class="form-control" id="legDurationInput" placeholder="trvanie napr. 45:20" onkeydown = "if (event.keyCode == 13) {document.getElementById(\'setLegDurationBtn\').click()}">' +
             '</div>' +
 
             '<button type="button" id="setLegDurationBtn" class="btn btn-success mb-2" onclick="setLegDuration()">' +
@@ -266,6 +265,15 @@
         // }
 
         return text;
+      }
+
+      function setTimeHintDuration() {
+        console.log("Set time hint duration");
+        document.getElementById("legDurationInput").placeholder = 'trvanie napr. 45:20';
+      }
+      function setTimeHintTime() {
+        console.log("Set time hint time");
+        document.getElementById("legDurationInput").placeholder = 'čas napr. 17:58:20';
       }
 
       function setLegDuration() {
