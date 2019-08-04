@@ -16,7 +16,7 @@ Tieto údaje získam parsovaním popisov trás, od organizátorov, z excelov, ..
 1. Musím mať spustenú lokálnu databázu, to zabezpečí script `scripts\startCmder.bat`
 1. Na záložke lokalApp cmdera spustiť script `scripts\deployLocaly\deployLocaly.bat`. Ten vytvorí adresár `gambo` do ktorého sa nahrajú zdrojáky z `gambo` a súbor `mockAPI\gamboAPI.js` ktorý simuluje aws api (a pri deployi na aws nie je potrebný). Pribalí sa tam `config` s lokálnymi hodnotami. Potom sa spustí mock `gamboAPI.js`, ten obsahuje webserver, ktorý počúva na porte 3000 a simuluje aws.
 1. Script zároveň nakopíruje súbor `gambo.web\dxcRun.html` do adresára `web`, pričom v ňom upraví, aby requesty išli na lokálny service `http://localhost:3000`
-1. V browseri otvoriť [web\dxcRun.html](file:///C:/Projects_src/Personal/gambo2/scripts/deployLocaly/release/dxcRun.html)
+1. V browseri otvoriť [web\dxcHistory.html](file:///C:/Projects_src/Personal/gambo2/scripts/deployLocaly/release/dxcHistory.html)
 
 ![deployment](../img/CrystalBall-deployment-Local.png)
 

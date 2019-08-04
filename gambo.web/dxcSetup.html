@@ -16,29 +16,35 @@
 
 
 <body>
-  <div class="container">
-    <div class="card text-white bg-dark">
-    <!-- <div class="card border-dark"> -->
-      <div class="card-body">
-        <h5 class="card-title"><i class="fas fa-wrench"></i> The Run 2019</h5>
-      </div>
-    </div>
-
-    <!-- SETUP CARDS -->
-
-  </div> <!-- container -->
-      
   <script>
     var serviceAddress = '';
-    // var serviceAddress = 'http://localhost:3000';
-    var teamID = 2019002;
+    var url = new URL(window.location.href);
+    var teamID = url.searchParams.get("teamID");
+    console.log("teamID: " + teamID);
+    var raceName = url.searchParams.get("raceName");
+    var raceYear = url.searchParams.get("raceYear");
     $("body").data("teamID", teamID);
 
     // SETUP FUNCTIONS
 
+</script>
 
-  </script>
+  <div class="container">
+    <div class="card text-white bg-dark">
+    <!-- <div class="card border-dark"> -->
+      <div class="card-body">
+        <h5 class="card-title"><i class="fas fa-wrench"></i><span id="raceNamePlaceholder"></span></h5>
+      </div>
+    </div>
 
+    <script>
+        document.getElementById("raceNamePlaceholder").innerHTML = raceName;
+    </script>
+    
+    <!-- SETUP CARDS -->
+
+  </div> <!-- container -->
+      
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
