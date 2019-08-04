@@ -13,7 +13,9 @@ Architecture/memos/img/crystalBall_dataPreparation.png
 Architecture/model/gambo.archimate.bak
 scripts/deploy2AWS/release
 scripts/deployLocaly/release
+scripts/DBsetup/release/
+
 runProcessing/TheRun/res2019
 runProcessing/VltavaRun/res2018
 runProcessing/VltavaRun/res2019
-
+runProcessing/OTKD/res2019

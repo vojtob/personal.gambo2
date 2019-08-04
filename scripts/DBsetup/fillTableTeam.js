@@ -4,7 +4,8 @@ var resultCalculator = require("./gambo/gambo.core/resultCalculator");
 
 console.log(process.cwd());
 
-folderName = '../../../runProcessing/TheRun/res2019';
+folderName = '../../../runProcessing/OTKD/res2019';
+// folderName = '../../../runProcessing/TheRun/res2019';
 // folderName = '../../../runProcessing/VltavaRun/res'
 
 fs.readFile(folderName + '/teamResult.json', 'utf8', function (err, data) {
