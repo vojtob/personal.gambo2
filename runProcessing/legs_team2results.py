@@ -1,8 +1,8 @@
 import json
 import pandas as pd
 
-folderName = 'runProcessing/TheRun/res2019'
-teamID = 2019002
+folderName = 'runProcessing/OTKD/res2019'
+teamID = 6511001
 
 # import runners and their paces
 runners = pd.read_csv(folderName + '/bezci.tsv', '\t')
@@ -16,10 +16,9 @@ with open(folderName + '/route.json', 'r', encoding='utf8') as f:
 # create team results
 teamResult = {}
 teamResult["team"] = teamID
-teamResult["name"] = "DXC Dream Team"
+teamResult["name"] = "Felix"
 teamResult["startTimes"] = {}
-teamResult["startTimes"][0] = "10:00:00"
-teamResult["startTimes"][28] = "17:00:00"
+teamResult["startTimes"][0] = "9:00:00"
 teamResult["legs"] = []
     
 for i in range(len(route['legs'])):
