@@ -77,7 +77,7 @@ function setPlannedTempo(teamID, leg, tempo, callback) {
             callback(err, null);
         } else {
             // ensure good format
-            tempo = st.secToDuration(st.timeToSec(tempo));
+            tempo = st.secToTempo(st.timeToSec(tempo));
             team.legs[leg - 1].plannedTempo = tempo;
             team = resultCalculator.recalculate(team);
             dataAccess.putTeam(team, callback);

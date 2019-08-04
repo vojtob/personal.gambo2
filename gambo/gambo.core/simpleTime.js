@@ -24,6 +24,10 @@ function secToDuration(timeSec) {
     return secToString(timeSec, 2);
 }
 
+function secToTempo(timeSec) {
+    return secToString(timeSec, 3);
+}
+
 function getTempo(duration, distance) {
     var sec = timeToSec(duration);
     var secTempo = Math.round(sec / distance);
@@ -74,4 +78,5 @@ function secToString(timeSec, mode) {
 exports.timeToSec = timeToSec;
 exports.secToTime = secToTime;
 exports.secToDuration = secToDuration;
+exports.secToTempo = secToTempo;
 exports.getTempo = getTempo;
