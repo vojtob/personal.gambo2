@@ -24,6 +24,6 @@ Tieto údaje získam parsovaním popisov trás, od organizátorov, z excelov, ..
 
 1. Na záložke aws cmdera spustiť script `scripts\deploy2AWS\deploy2AWS.bat`. Ten vytvorí adresár `gambo` do ktorého sa nahrajú zdrojáky z `gambo`. Pribalí sa tam `config` s aws hodnotami. Celé sa to zozipuje a nahrá na AWS.
 1. Script zároveň nakopíruje súbor `gambo.web\dxcRun.html` do adresára `web`, pričom v ňom upraví, aby requesty išli na AWS service `https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod`
-1. V browseri otvoriť [AWS - dxcRun.html](http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com/dxcRun.html)
+1. V browseri otvoriť [AWS - dxcRun.html](http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com/dxcHistory.html)
 
 ![deployment](../img/CrystalBall-deployment-AWS.png)
