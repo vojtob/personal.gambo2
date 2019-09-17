@@ -3,83 +3,98 @@ import pandas as pd
 import cv2 as cv2
 
 import simpleTime as st
+import readRaceData as readRaceData
 
-def getTeams():
-    folderName = 'runProcessing/OTKD/res2019'
-    results = pd.read_csv(folderName + '/results.txt', '\t')
-    results.dropna(subset=['Výsledný čas tímu'], inplace=True)
-    # print(results.count())
+def getRawFrame(resultsFrame, time, teams, highlightedTeam='xsdoig35nv8'):
+    '''draw results in a particular time. No margin, no axis, only team positions returned'''
 
-    teams = []
-    for index, row in results.iterrows():
-        team = {}
-        team['ID'] = row['#']
-        team['name'] = row['Názov tímu']
-        team['startTime'] = row['Čas štartu'][10:] + ':00'
-        team['startTimeNumber'] = st.timeToSec(team['startTime'])
-        team['resultTime'] = row['Výsledný čas tímu']
-        team['resultTimeNumber'] = st.timeToSec(team['resultTime'])
-        teams.append(team)
+    height, width = resultsFrame.shape[:2]
+    # for each time calculate position and add circle into frame
+    for teamID, team in enumerate(teams):
+        # team start time
+        ts = team['startTimeNumber']
+        # team end time
+        te = team['durationNumber']+ts
+        # calculate team position - x axis
+        if(t <= ts):
+            #if the team have not started yet
+            x = 0 
+        elif((te-t) <= 300):
+            # if the team is in finish already
+            x = width 
+        else:
+            # percentage of route for the team
+            p = (t-ts)/(te-ts) 
+            x = int(p*width)
+        # y position (start time of team) is equal of teamID   
+        y = int((teamID/len(teams))*height)
 
-    def getStartTime(elem):
-        return elem['startTimeNumber']
-    teams.sort(key=getStartTime)
+        if(team['name'] == highlightedTeam):
+            cv2.circle(resultsFrame, (x,y), 6, (200,0,0), -1)
+        else:
+            cv2.circle(resultsFrame, (x,y), 3, (0,0,200), -1)
 
-    return teams
+    return resultsFrame
+
+def getDecoratedFrame(resultWidth, resultHeight, margin, time, teams, highlightedTeam='xsdoig35nv8'):
+    '''create frame with border, axis, ... and add team positions in a given time'''
+    fullWidth  = resultWidth  + 2*margin
+    fullHeight = resultHeight + 2*margin
+    legsCount = 36
+    colorGray = (230,230,230)
+    colorAxes = (100,100,100)
+
+    # create empty white frame
+    frame = np.full((fullHeight, fullWidth, 3), 255, dtype=np.uint8)
+    # add distance separators
+    for d in np.linspace(0, resultWidth, legsCount+1):
+        cv2.line(frame, (int(d)+margin,0+margin), (int(d)+margin,resultHeight+margin), colorGray, 1)
+    # add axes
+    cv2.line(frame, (0+margin,resultHeight+margin), (resultWidth+margin,resultHeight+margin), colorAxes, 1) # x axis
+    cv2.line(frame, (0+margin,0+margin), (0+margin,resultHeight+margin), colorAxes, 1) # y axis
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    cv2.putText(frame, 'Distance', (fullWidth//2,margin+margin//2+resultHeight), font, 1, colorAxes, 2, cv2.LINE_AA)
+
+    resultsFrame = getRawFrame(frame[margin:(margin+resultHeight), margin:(margin+resultWidth)], time, teams, highlightedTeam)
+    frame[margin:(margin+resultHeight), margin:(margin+resultWidth)] = resultsFrame
+    return frame
 
 
-teams = getTeams()
+# raceName = 'otkd2019'
+# teamName = 'Felix'
+raceName = 'vltava2019'
+teamName = 'DXC Dream Team'
+videoDuration = 20
+
+videoName = readRaceData.getFileName(raceName, videoDuration)
+print('start processing ... ', videoName)
+
+teams = readRaceData.getTeam(raceName)
+# find when the race started = the earliest start time
+# find when the race finished = the latest finish time
 startTime = st.timeToSec("23:59:59")
 endTime= 0
 for team in teams:
     if(team['startTimeNumber'] < startTime):
         startTime = team['startTimeNumber']
-    if((team['startTimeNumber']+team['resultTimeNumber']) > endTime):
-        endTime = team['startTimeNumber']+team['resultTimeNumber']
+    if((team['startTimeNumber']+team['durationNumber']) > endTime):
+        endTime = team['startTimeNumber']+team['durationNumber']
 
-videoDuration = 30
-width = 1280
-height = 720
 FPS = 24
+resultWidth = 1280
+resultHeight = 720
+margin = 50
+
 fourcc = cv2.VideoWriter_fourcc(*'MP42')
-video = cv2.VideoWriter('./relay'+str(videoDuration)+'.avi', fourcc, float(FPS), (width, height))
+video = cv2.VideoWriter(videoName, fourcc, float(FPS), (2*margin+resultWidth,2*margin+resultHeight))
 
 for frameIndex in range(FPS*videoDuration):
-    # convert frame to time, 
-    # time start at relayStartTime (relayTimes[0])
-    # duration is relayTimes[2]
+    # convert frame to time
     t = int(startTime + (frameIndex*(endTime-startTime))/(FPS*videoDuration) )
-
-    # create white frame
-    frame = np.full((height, width, 3), 255, dtype=np.uint8)
-    # for each time calculate position and add circle into frame
-    for teamID in range(len(teams)):
-        # percentage of route of team
-        team = teams[teamID]
-        ts = team['startTimeNumber']
-        te = team['resultTimeNumber']+ts
-        if(t <= ts):
-            p = 0
-        elif(t >= te):
-            p = 1
-        else:
-            p = (t-ts)/(te-ts)
-        # p = (frameIndex)/(FPS*videoDuration)
-        # x position (distance) is percentage position of team in given time
-        x = int(p*width)
-        # y position (start time of team) is equal of teamID   
-        y = int((teamID/len(teams))*height)
-        if(team['name'] == 'Felix'):
-            c = (200,0,0)
-            r = 6
-        else:
-            c = (0,0,200)
-            r = 3
-        cv2.circle(frame, (x,y), r, c, -1)
-
     # add frame to video
+    frame = getDecoratedFrame(resultWidth, resultHeight, margin, t, teams, teamName)
     video.write(frame)
 
 video.release()
 
-print('DONE')
+print('DONE', videoName)
