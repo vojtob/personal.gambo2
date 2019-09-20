@@ -71,7 +71,7 @@ def getRaceVltava2019():
 
     teams = []
     for teamData in teamsData:
-        print('process team', teamData)
+        # print('process team', teamData)
         team = {}
         team['ID'] = teamData['id']
         team['name'] = teamData['name']
@@ -97,8 +97,10 @@ def getTeam(raceName):
         return getRaceOTKD2019()
     elif(raceName == 'vltava2019'):
         return getRaceVltava2019()
+    elif(raceName == 'vltava2018'):
+        return getRaceVltava2018()
     else:
-        print('Poznam iba otkd2019, vltava2019')
+        print('Poznam iba otkd2019, vltava2019, vltava2018')
         print(raceName, 'nepoznam')
         return None
 
@@ -107,8 +109,10 @@ def getFileName(raceName, videoDuration):
         return './gambo.visualization/otkd/otkd2019_'+str(videoDuration)+'.avi'
     elif(raceName == 'vltava2019'):
         return './gambo.visualization/vltava/vltava2019_'+str(videoDuration)+'.avi'
+    elif(raceName == 'vltava2018'):
+        return './gambo.visualization/vltava/vltava2018_'+str(videoDuration)+'.avi'
     else:
-        print('Poznam iba otkd2019, vltava2019')
+        print('Poznam iba otkd2019, vltava2019, vltava2018')
         print(raceName, 'nepoznam')
         return 'xxx.avi'
 
@@ -116,5 +120,6 @@ def getFileName(raceName, videoDuration):
 if __name__ == "__main__":  
     # execute only if run as a script
     # scrapRaceVltava2019()
-    teams = getRaceVltava2019()
+    scrapRaceVltava2018()
+    # teams = getRaceVltava2019()
     print('DONE read data')
