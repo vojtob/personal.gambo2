@@ -3,7 +3,7 @@
     "name": "DXC Dream Team",
     "race": "Vltava Run 2021",
     "startTimes": {
-        "0": "07:20:00"
+        "0": "7:20:00"
     },
     "legs": [
         {
@@ -20,7 +20,7 @@
             "gpxtoLng": "13.6637092",
             "runnerName": "Vlado Dudlák",
             "plannedTempo": "05:30",
-            "startTime": "07:20:00",
+            "startTime": "7:20:00",
             "plannedDuration": "1:01:03",
             "endTime": "8:21:03"
         },

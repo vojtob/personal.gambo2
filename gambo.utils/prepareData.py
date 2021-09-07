@@ -8,7 +8,11 @@ import pandas as pd
 import boto3
 
 def combineRunnersWithRoute(args):
-    runners = pd.read_csv('bezci.tsv', '\t')
+    if args.file:
+        runnersfilename = args.file
+    else:
+        runnersfilename = 'bezci.tsv'
+    runners = pd.read_csv(runnersfilename, '\t')
     # for i in range(36):
     #     print("{:>2d}.  {:<20}  {}".format(i, runners.loc[i]['meno'], runners.loc[i]['pace']))
     # import legs description
