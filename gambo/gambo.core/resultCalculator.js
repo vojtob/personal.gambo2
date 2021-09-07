@@ -1,6 +1,7 @@
 var st = require("./simpleTime");
 
 function recalculate(team) {
+    console.log('!!!!! Start Recalculate')
     team = calculateLegs(team);
     team = calculateRunners(team);
     team = calculateSummary(team);

@@ -1,5 +1,7 @@
-# Kryštálová guľa - Setup a Deployment
-
+---
+title: "Setup a Deployment"
+weight: 3
+---
 
 ## 1. Pripraviť data v potrebnej štruktúre
 
@@ -18,7 +20,7 @@ Tieto údaje získam parsovaním popisov trás, od organizátorov, z excelov, ..
 1. Script zároveň nakopíruje súbor `gambo.web\dxcRun.html` do adresára `web`, pričom v ňom upraví, aby requesty išli na lokálny service `http://localhost:3000`
 1. V browseri otvoriť [web\dxcHistory.html](file:///C:/Projects_src/Personal/gambo2/scripts/deployLocaly/release/dxcHistory.html)
 
-![deployment](../img/CrystalBall-deployment-Local.png)
+![deployment](/img/CrystalBall-deployment-Local.png)
 
 ## 4. Deployment na AWS
 
@@ -26,4 +28,4 @@ Tieto údaje získam parsovaním popisov trás, od organizátorov, z excelov, ..
 1. Script zároveň nakopíruje súbor `gambo.web\dxcRun.html` do adresára `web`, pričom v ňom upraví, aby requesty išli na AWS service `https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod`
 1. V browseri otvoriť [AWS - dxcRun.html](http://gambo-vojtob.s3-website.eu-central-1.amazonaws.com/dxcHistory.html)
 
-![deployment](../img/CrystalBall-deployment-AWS.png)
+![deployment](/img/CrystalBall-deployment-AWS.png)

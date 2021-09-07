@@ -1,5 +1,6 @@
 import json
 import re
+import os
 
 def processPage(pageNumber, pageLines, route):
     pageNumber += 1
@@ -22,18 +23,23 @@ def processPage(pageNumber, pageLines, route):
         if not "START" in processed:
             # start zakazdym
 #            print("START: " + line)
-            route['handovers'].append(line)
+            route['handovers'].append(processOdovzdavkaLine(line))
             processed.append("START")
         elif not "CIEL" in processed:
             processed.append("CIEL")
             # ciel iba pri poslednom useku
             if (pageNumber == 36):
 #                print("CIEL: " + line)
-                route['handovers'].append(line)
+                route['handovers'].append(processOdovzdavkaLine(line))
         elif ((not "DIFF" in processed) and (re.fullmatch("\d*,?\d*", line))):
             # narocnost
 #            print("narocnost")
             leg['difficulty'] = line.strip()
+            processed.append("DIFF")
+        elif ((not "DIFF" in processed) and (re.fullmatch("\d*,?\d* \(.*\)", line))):
+            # narocnost
+#            print("narocnost")
+            leg['difficulty'] = re.fullmatch("(\d*,?\d*) \(.*\)", line).group(1).strip()
             processed.append("DIFF")
         elif ((not "LENGTH" in processed) and re.fullmatch("\d*,?\d* km", line)):
 #            print("LENGTH")
@@ -51,6 +57,15 @@ def processPage(pageNumber, pageLines, route):
     route['legs'].append(leg)
     return route
 
+def processOdovzdavkaLine(lineText):
+    igpx = lineText.find('/')
+    idetail = lineText.find(',', 0, igpx)
+    handover = {}
+    handover['name'] = lineText[:idetail].strip()
+    handover['detail'] = lineText[idetail+1:igpx].strip()
+    handover['gps'] = lineText[igpx+1:].strip()
+    return handover
+
 def processSurface(lineText, leg):
     # print('Proces surface: ', lineText)
     tag = lineText.find('Povrch')
@@ -60,8 +75,11 @@ def processSurface(lineText, leg):
 
 route = { 'handovers' : [], 'legs' : []}
 
-with open('res/2019-trasa.txt', 'r', encoding="utf8") as fInput:
-    with open('res/2019-exportedLegs.json', 'w', encoding='utf8') as f:
+# with open('res/2019-trasa.txt', 'r', encoding="utf8") as fInput:
+    # with open('res/2019-exportedLegs.json', 'w', encoding='utf8') as f:
+print(os.getcwd())
+with open('trasa.txt', 'r', encoding="utf8") as fInput:
+    with open('exportedLegs.json', 'w', encoding='utf8') as f:
         # skip until Propozice Vltava Run 2018
         while True:
             line = fInput.readline()

@@ -1,0 +1,1 @@
+@call python C:\Projects_src\Personal\ify\src\ify.py %1 %2 %3 %4 %5

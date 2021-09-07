@@ -1,0 +1,1 @@
+@call python C:\Projects_src\Personal\afy\src\afy.py %1 %2 %3 %4 %5

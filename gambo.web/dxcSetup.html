@@ -2,7 +2,7 @@
 <html lang="sk">
 
 <head>
-  <title>SETUP Kryštáľová guľa - DXC Dream Team</title>
+  <title>SETUP Krištáľová guľa</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,15 +17,33 @@
 
 <body>
   <script>
-    var serviceAddress = '';
+    var serviceAddress = 'https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod';
     var url = new URL(window.location.href);
     var teamID = url.searchParams.get("teamID");
     console.log("teamID: " + teamID);
-    var raceName = url.searchParams.get("raceName");
-    var raceYear = url.searchParams.get("raceYear");
     $("body").data("teamID", teamID);
+    $.get(serviceAddress + "/results?teamID=" + teamID, function (response) {
+      $("body").data("legID", response.lastLegDone + 2);
+      raceName = response.name + ' - ' + response.race;
+      console.log("raceName: " + raceName);
+      document.getElementById("raceNamePlaceholder").innerHTML = raceName;
+    });
 
-    // SETUP FUNCTIONS
+
+    function setTeamData(resourceName, parameterName) {
+      console.log("POST " + resourceName + ' ' + parameterName);
+      var teamID = $("body").data("teamID");
+      var legID = document.getElementById(resourceName + parameterName + "LegID").value;
+      var data = document.getElementById(resourceName + parameterName + "Data").value;
+      console.log("POST " + resourceName + ' ' + parameterName + " " + data + " on leg " + legID);
+      $.post(serviceAddress + "/" + resourceName + 
+        "?teamID=" + teamID + 
+        "&legID=" + legID + 
+        "&" + parameterName + "=" + data, function (response, status) {
+          console.log("POST " + resourceName + ' ' + parameterName + " response: " + JSON.stringify(response));
+          console.log("Status " + resourceName + ' ' + parameterName + " : " + status);
+      });
+    }
 
 </script>
 
@@ -37,12 +55,165 @@
       </div>
     </div>
 
-    <script>
+    <!-- <script>
         document.getElementById("raceNamePlaceholder").innerHTML = raceName;
-    </script>
+    </script> -->
     
-    <!-- SETUP CARDS -->
-
+<div class="card border-success">
+<h5 class="card-header">
+<a data-toggle="collapse" href="#plantempoCollapse" id="plantempoHeading" aria-expanded="false" aria-controls="plantempoCollapse" class="d-block">
+<i class="fa fa-tachometer-alt"></i> Plánované tempo
+</a>
+</h5>
+<div id="plantempoCollapse" class="collapse" aria-labelledby="plantempoHeading">
+<div class="card-body">
+<p class="card-text">Zmena plánovaného tempa</p>
+<form class="form-inline">
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fas fa-list-ol"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="plantempoLegID" placeholder="číslo úseku 1,2, ..."/>
+</div>
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fa fa-tachometer-alt"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="plantempoData" placeholder="Plánované tempo 05:13"/>
+</div>
+<button type="button" id="setplantempoBtn" class="btn btn-success mb-2" onclick="setTeamData('plan', 'tempo')">Nastav plánované tempo</button>
+</form>
+</div>
+</div>
+</div>
+<div class="card border-success">
+<h5 class="card-header">
+<a data-toggle="collapse" href="#planstartTimeCollapse" id="planstartTimeHeading" aria-expanded="false" aria-controls="planstartTimeCollapse" class="d-block">
+<i class="fas fa-flag-checkered"></i> Čas štartu
+</a>
+</h5>
+<div id="planstartTimeCollapse" class="collapse" aria-labelledby="planstartTimeHeading">
+<div class="card-body">
+<p class="card-text">Ak je zadané, tak sa nastaví štartový čas na tomto úseku. Štart je úsek 1, Teplička je 29. Ak nie je zadaný čas, tak sa na úseku vymaže plánovaný štart (ak zadáte omylom na iný úsek).</p>
+<form class="form-inline">
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fas fa-list-ol"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="planstartTimeLegID" placeholder="číslo úseku 1,2, ..."/>
+</div>
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fas fa-flag-checkered"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="planstartTimeData" placeholder="Čas štartu, napr. 10:20:00"/>
+</div>
+<button type="button" id="setplanstartTimeBtn" class="btn btn-success mb-2" onclick="setTeamData('plan', 'startTime')">Nastav čas štartu</button>
+</form>
+</div>
+</div>
+</div>
+<div class="card border-success">
+<h5 class="card-header">
+<a data-toggle="collapse" href="#planrunnerCollapse" id="planrunnerHeading" aria-expanded="false" aria-controls="planrunnerCollapse" class="d-block">
+<i class="fa fa-running"></i> Bežec na úseku
+</a>
+</h5>
+<div id="planrunnerCollapse" class="collapse" aria-labelledby="planrunnerHeading">
+<div class="card-body">
+<p class="card-text">Zadaj číslo úseku a meno bežca.</p>
+<form class="form-inline">
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fas fa-list-ol"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="planrunnerLegID" placeholder="číslo úseku 1,2, ..."/>
+</div>
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fa fa-running"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="planrunnerData" placeholder="Bežec, napr. Janko Hraško"/>
+</div>
+<button type="button" id="setplanrunnerBtn" class="btn btn-success mb-2" onclick="setTeamData('plan', 'runner')">Nastav bežec na úseku</button>
+</form>
+</div>
+</div>
+</div>
+<div class="card border-success">
+<h5 class="card-header">
+<a data-toggle="collapse" href="#plandistCollapse" id="plandistHeading" aria-expanded="false" aria-controls="plandistCollapse" class="d-block">
+<i class="fas fa-arrows-alt-h"></i> Dĺžka úseku
+</a>
+</h5>
+<div id="plandistCollapse" class="collapse" aria-labelledby="plandistHeading">
+<div class="card-body">
+<p class="card-text">Ak má niekto v skutočnosti dlhší úsek ako hovorili propozície a teda mu to kazí tempo, tu sa dá nastaviť dĺžka úseku.</p>
+<form class="form-inline">
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fas fa-list-ol"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="plandistLegID" placeholder="číslo úseku 1,2, ..."/>
+</div>
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fas fa-arrows-alt-h"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="plandistData" placeholder="Dĺžka úseku, napr. 12.4"/>
+</div>
+<button type="button" id="setplandistBtn" class="btn btn-success mb-2" onclick="setTeamData('plan', 'dist')">Nastav dĺžka úseku</button>
+</form>
+</div>
+</div>
+</div>
+<div class="card border-success">
+<h5 class="card-header">
+<a data-toggle="collapse" href="#resultslegDurationCollapse" id="resultslegDurationHeading" aria-expanded="false" aria-controls="resultslegDurationCollapse" class="d-block">
+<i class="fas fa-stopwatch"></i> Skutočná doba behu
+</a>
+</h5>
+<div id="resultslegDurationCollapse" class="collapse" aria-labelledby="resultslegDurationHeading">
+<div class="card-body">
+<p class="card-text">Ako dlho sa bežal úsek. Ak sa nezadá čas, tak sa dobeh na tomto úseku vymaže (ak niekto zadal omylom). Nová hodnota prepíše starú, nič sa nezálohuje, nedá sa to vrátiť späť!</p>
+<form class="form-inline">
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fas fa-list-ol"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="resultslegDurationLegID" placeholder="číslo úseku 1,2, ..."/>
+</div>
+<div class="input-group mb-2 mr-sm-2">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="fas fa-stopwatch"></i>
+</div>
+</div>
+<input type="text" class="form-control" id="resultslegDurationData" placeholder="Trvanie behu, napr. 0:35:19"/>
+</div>
+<button type="button" id="setresultslegDurationBtn" class="btn btn-success mb-2" onclick="setTeamData('results', 'legDuration')">Nastav skutočná doba behu</button>
+</form>
+</div>
+</div>
+</div>
   </div> <!-- container -->
       
   <!-- Optional JavaScript -->

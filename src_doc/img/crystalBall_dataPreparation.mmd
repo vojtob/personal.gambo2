@@ -7,9 +7,12 @@ graph TD
     Useky --> temp( )
     TSV  --> temp
     temp -- legs_team2results.py --> Result[Výsledky tímu<br/>teamResult.json]
-    classDef important fill:#ffed00,stroke:#000000,stroke-width:2px
-    classDef processFile fill:#ffffff,stroke:#000000,stroke-width:1px
-    classDef sourceFile fill:#ffffff,stroke:#000000,stroke-width:1px,stroke-dasharray: 5, 5
+
+    classDef default fill:#ffffff,stroke:#000000,stroke-width:1px
+
+    classDef important fill:#5F249F,color:#FFFFFF,stroke:#000000,stroke-width:2px
     class Result important;
+
+    classDef sourceFile fill:#ffffff,stroke:#000000,stroke-width:1px,stroke-dasharray: 5, 5
     class PDF,XLS,TheRun,temp sourceFile;
-    class TXT,TSV,Useky,Data processFile;
+    

@@ -1,0 +1,9 @@
+graph LR
+    S((.)) -- http volanie --> Index[index.js<br/>Mapovanie resources] --> Results[results.js<br/>Nastavenie dát]
+    Results -- načítanie objektu --> Data[data-access.js<br/>Prístup k DB]
+    Results -- výpočet --> Vypocet[resultCalculator.js<br/>Core výpočty] -- práca s časmi --> Time[simpleTime.js<br/>Práca s časmi]
+
+    classDef default fill:#ffffff,stroke:#000000,stroke-width:1px
+
+    classDef important fill:#5F249F,color:#FFFFFF,stroke:#000000,stroke-width:2px
+    class Vypocet important;

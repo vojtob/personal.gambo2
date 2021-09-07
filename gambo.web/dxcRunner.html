@@ -26,13 +26,10 @@
 
     <script>
       // $("body").data("teamID", 100);
-      var serviceAddress = '';
+      var serviceAddress = 'https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod';
       // var teamID = $("body").data("teamID");
       var url = new URL(window.location.href);
       var teamID = url.searchParams.get("teamID");
-
-      var raceName = url.searchParams.get("raceName");
-      var raceYear = url.searchParams.get("raceYear");
 
       drawTable();
 
@@ -45,10 +42,10 @@
           output += '<div class="card text-white bg-dark">';
             output += '<div class="card-body">';
             output += '<div class="row">';
-              output += '<div class="col"><h5 class="card-title">' + raceName + ' ' + raceYear + '</h5></div>';
+              output += '<div class="col"><h5 class="card-title">' + response.name + ' - ' + response.race + '</h5></div>';
               output += '<div class="col">';
               output += '<div class="float-right">'
-              output += '<a class="btn btn-outline-light btn-sm" href="dxcRoute.html?teamID=' + teamID + '&raceName=' + raceName + '&raceYear=' + raceYear + '"><i class="fas fa-route"></i></a>';
+              output += '<a class="btn btn-outline-light btn-sm" href="dxcRoute.html?teamID=' + teamID + '"><i class="fas fa-route"></i></a>';
               output += ' <a class="btn btn-outline-light btn-sm" href="dxcHistory.html"><i class="fas fa-home"></i></a>';
               output += '</div>';
               output += '</div>';

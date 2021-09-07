@@ -1,4 +1,8 @@
-# Kryštálová guľa - ako to funguje?
+---
+title: "Ako to funguje?"
+weight: 4
+---
+
 
 Vstup je tabuľka s úsekmi, priradenými bežcami a plánovanými tempami, tak ako je to popísané v [príprave dát](dataPreparation.md). Pri každej zmene sa vstupných dát alebo pri zadaní skutočného výkonu, celá tabuľka pre daný team prepočíta. Vypočítajú sa tieto údaje:
 

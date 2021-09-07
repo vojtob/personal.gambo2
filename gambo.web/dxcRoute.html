@@ -20,7 +20,7 @@
     <p id="resultsTablePlaceholder"></p>
 
     <script>
-      var serviceAddress = '';
+      var serviceAddress = 'https://5ron7xepdc.execute-api.eu-central-1.amazonaws.com/prod';
       var url = new URL(window.location.href);
       var teamID = url.searchParams.get("teamID");
       // var teamID = $("body").data("teamID");
@@ -61,13 +61,14 @@
             output += '<div class="row">';
               output += '<div class="col"><h5 class="card-title">';
               if(!dobehnute) {
-                output += '<a class="btn btn-success btn-lg" href="dxcRoute.html?teamID=' + teamID + '&raceName=' + raceName + '&raceYear=' + raceYear + '"><i class="fas fa-sync-alt"></i></a> ';
+                output += '<a class="btn btn-success btn-lg" href="dxcRoute.html?teamID=' + teamID + '"><i class="fas fa-sync-alt"></i></a> ';
               }
-              output += raceName + ' ' + raceYear + '</h5></div>';
+              // output += raceName + ' ' + raceYear + '</h5></div>';
+              output += response.name + ' - ' + response.race + '</h5></div>';
 
               output += '<div class="col">';
               output += '<div class="float-right">'
-                output += '<a class="btn btn-outline-light btn-sm" href="dxcRunner.html?teamID=' + teamID + '&raceName=' + raceName + '&raceYear=' + raceYear + '"><i class="fas fa-running"></i></a>';
+                output += '<a class="btn btn-outline-light btn-sm" href="dxcRunner.html?teamID=' + teamID + '"><i class="fas fa-running"></i></a>';
                 output += ' <a class="btn btn-outline-light btn-sm" href="dxcHistory.html"><i class="fas fa-home"></i></a>';
               output += '</div>';
               output += '</div>';

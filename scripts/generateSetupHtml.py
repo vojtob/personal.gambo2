@@ -1,7 +1,8 @@
 cardCode = []
 functionCode = []
 
-def generateCard(cardName, cardHeader, iconName, cardInfo, dataInfo):
+def generateCard(resourceName, parameterName, cardHeader, iconName, cardInfo, dataInfo):
+    cardName = resourceName + parameterName
     cardCode.append('<div class="card border-success">')
     cardCode.append('<h5 class="card-header">')
     cardCode.append('<a data-toggle="collapse" href="#' + cardName + 'Collapse" ' +

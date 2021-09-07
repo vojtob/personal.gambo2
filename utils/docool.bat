@@ -1,0 +1,1 @@
+@call python C:\Projects_src\Personal\docool\src\docool.py %1 %2 %3 %4 %5

@@ -1,8 +1,18 @@
-# Príprava súboru s priebežnými výsledkami tímu 
+---
+title: "Príprava súboru s priebežnými výsledkami tímu"
+weight: 2
+---
 
-Spracovanie je v adresári `runProcessing`. Popis je podľa Vltava Run 2019.
 
-![data preparation](../img/crystalBall_dataPreparation.png)
+Spracovanie je v adresári `runProcessing`. Cieľom je mať dva súbory:
+* route.json - popis trasy, jednotlivé úseky, jeho vytvorenie je pre každý beh špecifické
+* bezci.tsc - zoznam bezcov na jednotlivých úsekoch aj s ich predpokladanými tempami.
+
+Tieto súbory sa zložia dokopy do teamResult.json. Na začiatku sú tam iba očakávané časy, takže čiste krištálová guľa. Postupne pribúdajú reálne dáta a stáva sa z toho záznam priebehu.
+
+Aby to celé fungovalo, potrebujem mať python knižnicu `boto3` - to je AWS API.
+
+![data preparation](/img/crystalBall_dataPreparation.png)
 
 ## 1. Popis úsekov a odovzdávok
 Vytvorím súbor s úsekmi `route.json`. Tento krok je špecifický pre každý beh, záleží v akom formáte dostaneme popis trasy. Script `legs2csv.py` môžem použiť na export, v ktorom viem jednoducho okontrolovať úseky, že sú správne vyexportované.
@@ -71,17 +81,26 @@ nr.	meno	pace
 
 ## 3. Súbor s výsledkami `teamResult.json`
 
-Súbor s úsekmi `route.json` a súbor s bežcami `bezci.tsv` skombinujem dokopy pomocou scriptu `legs_team2results.py` a vznikne súbor výsledkov tímu `teamResult.json`. Ten sa potom nahrá do databázy gambo ako základ výsledkov, čo je popísané v [setupe](deployment.md)
+Súbor s úsekmi `route.json` a súbor s bežcami `bezci.tsv` skombinujem dokopy pomocou scriptu `gambo` a príkazu `combine`. Vznikne súbor výsledkov tímu `teamResult.json`. Napríklad:
+
+```Batchfile
+python ..\..\..\gambo.utils\gambo.py -d combine 202101 "DXC Dream Team" "Vltava Run 2021" 7:20:00
+```
+
+Potom ho potrebujeme dať prepočítať, aby sa doplnili ďalšie atribúty `gambo.py -v recalculate`.
+
+A nahrať ho do dabázy pomocou `gambo.py -v store --AWS`. Ak nedám `--AWS` tak sa ukladá lokálne (to je default), ak zadám, tak prepíše databázu (všetko doteraz sa stratí).
 
 ### Štruktúra súboru s úsekmi `teamResult.json`
 
 ```JSON
 {
-	"team": 2019001
+	"team": 2019001,
 	"name": "DXC Dream Team",
+	"race": "Vltava Run 2021",
 	"startTimes": {
 		0 : "08:20:00"
-	}
+	},
     "legs": [
         {
             "distance": 14.10,
@@ -99,7 +118,7 @@ Súbor s úsekmi `route.json` a súbor s bežcami `bezci.tsv` skombinujem dokopy
 			
             "runnerName": "Vojto Bálint",
             "plannedTempo": "04:45",
-        }, ... dalsie useky
+        },
 	]
 }		
 ```

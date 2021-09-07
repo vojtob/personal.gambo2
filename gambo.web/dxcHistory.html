@@ -35,9 +35,22 @@
       function drawTable() {
         var races =  [
         {
-            "name" : "Vltava Run",
-            "year" : "2020",
-            "teamID" : 202001,
+            "name" : "Vltava Run -DXC",
+            "year" : "2021",
+            "teamID" : 202101,
+            "result" : "-",
+            "numberOfTeams" : "-",
+            "time" : "-",
+            "distance" : "-",
+            "tempo" : "-",
+            "up" : "-",
+            "down" : "-",
+            "hasResult" : "true"
+          },
+          {
+            "name" : "Vltava Run - Felix",
+            "year" : "2021",
+            "teamID" : 202102,
             "result" : "-",
             "numberOfTeams" : "-",
             "time" : "-",
@@ -51,10 +64,10 @@
             "name" : "OTKD - Felix",
             "year" : "2019",
             "teamID" : 6511001,
-            "result" : "-",
-            "numberOfTeams" : "-",
-            "time" : "-",
-            "distance" : "-",
+            "result" : "109",
+            "numberOfTeams" : "210",
+            "time" : "31:21:43",
+            "distance" : "346.15",
             "tempo" : "-",
             "up" : "-",
             "down" : "-",
@@ -196,7 +209,7 @@
               output += '<tr>';
                 // output += '<th>' + run.name + '</th>';
                 if(run.hasResult) {
-                  output += '<td><a class="nav-link active" href="dxcRoute.html?teamID=' + run.teamID + '&raceName=' + run.name + '&raceYear=' + run.year + '">' + run.name + '</a></td>';
+                  output += '<td><a class="nav-link active" href="dxcRoute.html?teamID=' + run.teamID + '">' + run.name + '</a></td>';
                 } else {
                   output += '<td>' + run.name + '</td>';
                 }
