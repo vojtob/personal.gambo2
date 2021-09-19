@@ -1,7 +1,6 @@
 import json
 
-folderName = './runProcessing/TheRun/res2019'
-with open(folderName + '/data.json', 'r', encoding='UTF-8') as inFile:
+with open('data.json', 'r', encoding='UTF-8') as inFile:
     data = json.load(inFile)
 data = data["data"]
 
@@ -41,7 +40,7 @@ route["handovers"] = handovers
 route["legs"] = legs
 print(route)
 
-with open(folderName + '/route.json', 'w', encoding='UTF-8') as outfile:
+with open('route.json', 'w', encoding='UTF-8') as outfile:
     json.dump(route, outfile, ensure_ascii=False)
 
 print("DONE")

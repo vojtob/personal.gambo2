@@ -70,12 +70,13 @@
             var runner = response.runners[runnerIndex];
             output += '<div class="card"><div class="card-body">';
             output += '<div class="card-text"><div class="row">';
-            output += '<div class="col-auto">' + (1+runnerIndex).toString() + '. ' + runner.name + '</div>';
-            output += '<div class="col-auto"><i class="fas fa-arrows-alt-h"></i> ' + runner.route.distance + ' km</div>';
-            output += '<div class="col-auto"><i class="fas fa-tachometer-alt"></i> ' + runner.tempo + '</div>';
+            output += '<div class="col-3">' + (1+runnerIndex).toString() + '. ' + runner.name + '</div>';
+            output += '<div class="col-2"><i class="fas fa-tachometer-alt"></i> ' + runner.tempo + '</div>';
+            // output += '<div class="col-2"><i class="fas fa-arrows-alt-h"></i> ' + runner.route.distance + ' km</div>';
+            output += '<div class="col-2"> ' + runner.route.distance + ' km</div>';
             // output += '<div class="col-auto"><i class="fas fa-stopwatch"></i> ' + runner.duration + '</div>';
-            // output += '<div class="col-auto"><i class="fas fa-long-arrow-alt-up"></i>' + runner.route.up + ' </div>';
-            // output += '<div class="col-auto"><i class="fas fa-long-arrow-alt-down"></i>' + runner.route.down + '</div>';
+            output += '<div class="col-2"><i class="fas fa-long-arrow-alt-up"></i>' + runner.route.up + ' </div>';
+            output += '<div class="col-2"><i class="fas fa-long-arrow-alt-down"></i>' + runner.route.down + '</div>';
             // output += '<div class="col-auto"><i class="fas fa-heartbeat"></i>' + runner.route.difficulty + '</div>';
             output += '<div class="col-auto">' +
               '<a data-toggle="collapse" href="#legs' + runnerIndex + '" role="button" aria-expanded="false" aria-controls="collapseExample">' +
