@@ -26,7 +26,11 @@ def combineRunnersWithRoute(args):
     teamResult["race"] = args.raceName
     teamResult["startTimes"] = {}
     teamResult["startTimes"][0] = args.startTime
-    # if args.additionalStartTimes:
+    if args.additionalStartTimes:
+        i = 0
+        while i < len(args.additionalStartTimes):
+            teamResult["startTimes"][args.additionalStartTimes[i]] = args.additionalStartTimes[i+1]
+            i = i+2
     teamResult["legs"] = []
     for i in range(len(route['legs'])):
         legIn = route['legs'][i]

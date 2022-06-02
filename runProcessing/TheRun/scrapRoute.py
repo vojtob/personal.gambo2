@@ -7,7 +7,8 @@ print(os.getcwd())
 
 
 # page = requests.get('https://therun.sk/propozicie#segment-29')
-page = requests.get('https://therun.sk/data/track/segments')
+# page = requests.get('https://therun.sk/data/track/segments')
+page = requests.get('https://therun.sk/api/v1/run/segments')
 data = page.json()
 print(data)
 

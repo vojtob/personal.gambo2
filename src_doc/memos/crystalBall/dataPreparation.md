@@ -91,6 +91,13 @@ Potom ho potrebujeme dať prepočítať, aby sa doplnili ďalšie atribúty `gam
 
 A nahrať ho do dabázy pomocou `gambo.py -v store --AWS`. Ak nedám `--AWS` tak sa ukladá lokálne (to je default), ak zadám, tak prepíše databázu (všetko doteraz sa stratí).
 
+Ešte treba upraviť historickú tabuľku. Ručne editovať súbor dxcHistory.html. Potom ho nahrať na AWS pomocou príkazu
+
+```Batchfile
+python gambo.py -d web --AWS history
+```
+
+
 ### Štruktúra súboru s úsekmi `teamResult.json`
 
 ```JSON

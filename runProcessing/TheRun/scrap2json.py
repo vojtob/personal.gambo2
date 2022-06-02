@@ -11,15 +11,18 @@ handovers = []
 for i in range(len(data)):
     d = data[i]
     handover = {}
-    names = d["name_from"].split('-')
+    # names = d["name_from"].split('-')
+    names = d["name"].split('-')
     handover["name"] = names[0].strip()
     if(len(names)>1):
         handover["detail"] = names[1].strip()
-    handover["gps"] = str(d["fromPoint"]["data"]["lat"]) + "N, " + str(d["fromPoint"]["data"]["lng"]) + "E"
+    # handover["gps"] = str(d["fromPoint"]["data"]["lat"]) + "N, " + str(d["fromPoint"]["data"]["lng"]) + "E"
+    handover["gps"] = str(d["from_point"]["location"]["coordinates"][0]) + "N, " + str(d["from_point"]["location"]["coordinates"][1]) + "E"
     handovers.append(handover)
 
     leg = {}
-    leg["length"] = str(round(d["distance"]/10)/100).replace(".",",")
+    # leg["length"] = str(round(d["distance"]/10)/100).replace(".",",")
+    leg["length"] = str(round(d["length"]/10)/100).replace(".",",")
     leg["difficulty"] = str(d["difficulty"])
     leg["upHill"] = str(int(round(d["incline"])))
     leg["downHill"] = str(int(round(d["decline"])))
@@ -28,11 +31,13 @@ for i in range(len(data)):
 # ciel
 d = data[len(data)-1]
 handover = {}
-names = d["name_to"].split('-')
+# names = d["name_to"].split('-')
+names = d["name_next"].split('-')
 handover["name"] = names[0].strip()
 if(len(names)>1):
     handover["detail"] = names[1].strip()
-handover["gps"] = str(d["toPoint"]["data"]["lat"]) + "N, " + str(d["toPoint"]["data"]["lng"]) + "E"
+# handover["gps"] = str(d["toPoint"]["data"]["lat"]) + "N, " + str(d["toPoint"]["data"]["lng"]) + "E"
+handover["gps"] = str(d["to_point"]["location"]["coordinates"][0]) + "N, " + str(d["to_point"]["location"]["coordinates"][1]) + "E"
 handovers.append(handover)
 
 route = {}

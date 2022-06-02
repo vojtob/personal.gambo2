@@ -3,7 +3,7 @@
     "name": "DXC Dream Team",
     "race": "The Run 2021",
     "startTimes": {
-        "0": "09:00:00"
+        "0": "10:20:00"
     },
     "legs": [
         {
@@ -33,7 +33,7 @@
             "to": "Veľká Lodina",
             "gpxtoLat": "48.859714",
             "gpxtoLng": "21.157798",
-            "runnerName": "Maťa Hancková",
+            "runnerName": "Maťa Hanckova",
             "plannedTempo": "05:48"
         },
         {
@@ -93,7 +93,7 @@
             "to": "Spišské Vlachy",
             "gpxtoLat": "48.94859",
             "gpxtoLng": "20.79456",
-            "runnerName": "Maňo Král",
+            "runnerName": "Vladimír Dudlák",
             "plannedTempo": "05:18"
         },
         {
@@ -108,7 +108,7 @@
             "to": "Spišské Podhradie",
             "gpxtoLat": "49.000082",
             "gpxtoLng": "20.751715",
-            "runnerName": "Vladimír Dudlák",
+            "runnerName": "Oliver Dudlák",
             "plannedTempo": "05:12"
         },
         {
@@ -123,7 +123,7 @@
             "to": "Levoča",
             "gpxtoLat": "49.025898",
             "gpxtoLng": "20.588289",
-            "runnerName": "Oliver Dudlák",
+            "runnerName": "Maňo Kráľ",
             "plannedTempo": "05:30"
         },
         {
@@ -138,7 +138,7 @@
             "to": "Vlkovce",
             "gpxtoLat": "49.04924",
             "gpxtoLng": "20.49929",
-            "runnerName": "Vojto Bálint",
+            "runnerName": "Peter Škorík",
             "plannedTempo": "05:12"
         },
         {
@@ -168,7 +168,7 @@
             "to": "Veľká Lomnica",
             "gpxtoLat": "49.11404",
             "gpxtoLng": "20.35944",
-            "runnerName": "Peter Škorík",
+            "runnerName": "Vojto Bálint",
             "plannedTempo": "04:48"
         },
         {
@@ -213,7 +213,7 @@
             "to": "Štrbské Pleso",
             "gpxtoLat": "49.11092",
             "gpxtoLng": "20.07066",
-            "runnerName": "Maťa Hancková",
+            "runnerName": "Maťa Hanckova",
             "plannedTempo": "05:48"
         },
         {
@@ -273,7 +273,7 @@
             "to": "Liptovský Mikuláš",
             "gpxtoLat": "49.08789",
             "gpxtoLng": "19.60344",
-            "runnerName": "Maňo Král",
+            "runnerName": "Maňo Kráľ",
             "plannedTempo": "05:00"
         },
         {
@@ -318,7 +318,7 @@
             "to": "Chlebnice",
             "gpxtoLat": "49.23008",
             "gpxtoLng": "19.46272",
-            "runnerName": "Vojto Bálint",
+            "runnerName": "Peter Škorík",
             "plannedTempo": "05:00"
         },
         {
@@ -348,7 +348,7 @@
             "to": "Dolný Kubín",
             "gpxtoLat": "49.222335",
             "gpxtoLng": "19.298134",
-            "runnerName": "Peter Škorík",
+            "runnerName": "Vojto Bálint",
             "plannedTempo": "05:12"
         },
         {
@@ -393,7 +393,7 @@
             "to": "Terchová",
             "gpxtoLat": "49.253632",
             "gpxtoLng": "19.013891",
-            "runnerName": "Maťa Hancková",
+            "runnerName": "Maťa Hanckova",
             "plannedTempo": "05:42"
         },
         {
@@ -453,7 +453,7 @@
             "to": "Kľače",
             "gpxtoLat": "49.10648",
             "gpxtoLng": "18.64601",
-            "runnerName": "Maňo Král",
+            "runnerName": "Maňo Kráľ",
             "plannedTempo": "05:12"
         },
         {
@@ -498,7 +498,7 @@
             "to": "Košecké Rovné",
             "gpxtoLat": "48.96104",
             "gpxtoLng": "18.40962",
-            "runnerName": "Vojto Bálint",
+            "runnerName": "Peter Škorík",
             "plannedTempo": "05:06"
         },
         {
@@ -528,7 +528,7 @@
             "to": "Príles",
             "gpxtoLat": "48.95735",
             "gpxtoLng": "18.13055",
-            "runnerName": "Peter Škorík",
+            "runnerName": "Vojto Bálint",
             "plannedTempo": "04:54"
         },
         {
@@ -573,7 +573,7 @@
             "to": "Nové Mesto nad Váhom",
             "gpxtoLat": "48.75707",
             "gpxtoLng": "17.84167",
-            "runnerName": "Maťa Hancková",
+            "runnerName": "Maťa Hanckova",
             "plannedTempo": "05:42"
         },
         {
@@ -633,7 +633,7 @@
             "to": "Boleráz",
             "gpxtoLat": "48.48629",
             "gpxtoLng": "17.48305",
-            "runnerName": "Maňo Král",
+            "runnerName": "Maňo Kráľ",
             "plannedTempo": "05:18"
         },
         {
@@ -678,7 +678,7 @@
             "to": "Slovenský Grob",
             "gpxtoLat": "48.256612",
             "gpxtoLng": "17.2635",
-            "runnerName": "Vojto Bálint",
+            "runnerName": "Peter Škorík",
             "plannedTempo": "05:00"
         },
         {
@@ -708,7 +708,7 @@
             "to": "Bratislava",
             "gpxtoLat": "48.129882",
             "gpxtoLng": "17.15855",
-            "runnerName": "Peter Škorík",
+            "runnerName": "Vojto Bálint",
             "plannedTempo": "04:54"
         },
         {
