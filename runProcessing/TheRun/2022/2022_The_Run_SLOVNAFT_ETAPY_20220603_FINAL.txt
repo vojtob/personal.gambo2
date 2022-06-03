@@ -1,0 +1,50 @@
+				
+Etapa	ŠTART	nr.	meno	pace
+1. Košice - ul. Hlavná -> Družstevná pri Hornáde	10.6.2022 10:40	1	Karol	05:30
+2. Družstevná pri Hornáde -> Ve?ká Lodina	10.6.2022 11:43	2	?uri	05:30
+3. Ve?ká Lodina -> Ružín - priehrada	10.6.2022 13:03	3	Matej	05:30
+4. Ružín - priehrada -> Margecany	10.6.2022 13:51	4	Dávid	04:42
+5. Margecany -> Kluknava	10.6.2022 14:45	5	Patrik	05:30
+6. Kluknava -> Spišské Vlachy	10.6.2022 15:37	6	Vlado	05:30
+7. Spišské Vlachy -> Spišské Podhradie	10.6.2022 16:57	7	?uri	05:30
+8. Spišské Podhradie -> Levo?a	10.6.2022 17:59	8	Luki	04:42
+9. Levo?a -> Vlkovce	10.6.2022 19:08	9	Dávid	04:42
+10. Vlkovce -> Vrbov	10.6.2022 19:56	10	Ela	06:00
+11. Vrbov -> Ve?ká Lomnica	10.6.2022 20:46	11	Patrik	05:30
+12. Ve?ká Lomnica -> Tatranská Lomnica	10.6.2022 21:37	12	Matej	05:30
+13. Tatranská Lomnica -> Tatranská Polianka	10.6.2022 22:18	13	Kubo	04:30
+14. Tatranská Polianka -> Štrbské Pleso	10.6.2022 23:04	14	Robo	04:30
+15. Štrbské Pleso -> Podbanské 	10.6.2022 23:50	15	Gabi	06:30
+16. Podbanské -> Pribylina	11.6.2022 1:03	16	Laci	05:30
+17. Pribylina -> Jamník	11.6.2022 2:19	17	Baška	05:30
+18. Jamník -> Liptovský Mikuláš	11.6.2022 3:13	18	Janko	07:00
+19. Liptovský Mikuláš -> Liptovská Sielnica	11.6.2022 4:15	19	Robo	04:30
+20. Liptovská Sielnica -> Huty	11.6.2022 5:03	20	Kubo	04:30
+21. Huty -> Chlebnice	11.6.2022 5:42	21	Janka	05:30
+22. Chlebnice -> Oravský Podzámok	11.6.2022 6:32	22	Laci	05:30
+23. Oravský Podzámok -> Dolný Kubín - Záskalie	11.6.2022 7:35	23	Gabi	06:30
+24. Dolný Kubín - Záskalie -> Párnica	11.6.2022 8:43	24	Baška	05:30
+25. Párnica -> Zázrivá	11.6.2022 9:38	25	Karol	05:30
+26. Zázrivá -> Terchová	11.6.2022 10:37	26	?uri	05:30
+27. Terchová -> Kras?any	11.6.2022 11:34	27	Vlado	05:30
+28. Kras?any -> Tepli?ka nad Váhom (STOP & RESTART) LIMIT od 08:00 do 14:00	11.6.2022 12:38	28	Ela	06:00
+29. Tepli?ka nad Váhom -> Turie	11.6.2022 16:40	29	Patrik	05:30
+30. Turie -> K?a?e	11.6.2022 17:46	30	Matej	05:30
+31. K?a?e -> Fa?kov	11.6.2022 18:45	31	Dávid	04:42
+32. Fa?kov -> ?i?many centrum	11.6.2022 19:43	32	Luki	04:42
+33. ?i?many centrum -> Košecké Rovné	11.6.2022 20:30	33	Karol	05:30
+34. Košecké Rovné -> Košeca	11.6.2022 21:32	34	Vlado	05:30
+35. Košeca -> Príles - hrádza	11.6.2022 22:51	35	Ela	06:00
+36. Príles - hrádza -> Tren?ín - hrádza	12.6.2022 0:07	36	Luki	04:42
+37. Tren?ín - hrádza -> Biskupický kanál	12.6.2022 1:06	37	Baška	05:30
+38. Biskupický kanál -> Nové Mesto nad Váhom	12.6.2022 2:09	38	Janka	05:30
+39. Nové Mesto nad Váhom -> ?astkovce	12.6.2022 3:09	39	Janko	07:00
+40. ?astkovce -> Vrbové	12.6.2022 4:17	40	Robo	04:30
+41. Vrbové -> Dechtice	12.6.2022 5:09	41	Kubo	04:30
+42. Dechtice -> Boleráz - priehrada	12.6.2022 6:08	42	Mike	05:30
+43. Boleráz - priehrada -> Do?any	12.6.2022 7:18	43	Janka	05:30
+44. Do?any -> Modra - Tri kríže	12.6.2022 8:29	44	Robo	04:30
+45. Modra - Tri kríže -> Slovenský Grob	12.6.2022 9:26	45	Gabi	06:30
+46. Slovenský Grob -> Ivánka pri Dunaji - Mohyla M.R.Štefánika	12.6.2022 10:46	46	Laci	05:30
+47. Ivánka pri Dunaji - Mohyla M.R.Štefánika -> Bratislava - hrádza (Bufet Šimani)	12.6.2022 11:50	47	Mike	05:30
+48. Bratislava - hrádza (Bufet Šimani) -> Bratislava - Hviezdoslavovo námestie	12.6.2022 12:42	48	Janko	07:00

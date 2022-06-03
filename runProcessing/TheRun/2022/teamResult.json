@@ -1,9 +1,9 @@
 {
-    "team": 202202,
-    "name": "DXC Dream Team",
+    "team": 202204,
+    "name": "Slovnaft",
     "race": "The Run 2022",
     "startTimes": {
-        "0": "10:00:00",
+        "0": "10:40:00",
         "28": "17:00:00"
     },
     "legs": [
@@ -19,8 +19,8 @@
             "to": "Družstevná pri Hornáde",
             "gpxtoLat": "21.244824",
             "gpxtoLng": "48.800521",
-            "runnerName": "Peťo Škorík",
-            "plannedTempo": "05:00"
+            "runnerName": "Karol",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 2,
@@ -34,8 +34,8 @@
             "to": "Veľká Lodina",
             "gpxtoLat": "21.157798",
             "gpxtoLng": "48.859714",
-            "runnerName": "Vojto",
-            "plannedTempo": "05:00"
+            "runnerName": "Ďuri",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 3,
@@ -49,8 +49,8 @@
             "to": "Ružín",
             "gpxtoLat": "21.092436",
             "gpxtoLng": "48.862817",
-            "runnerName": "Evka",
-            "plannedTempo": "05:50"
+            "runnerName": "Matej",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 4,
@@ -64,8 +64,8 @@
             "to": "Margecany",
             "gpxtoLat": "21.022318",
             "gpxtoLng": "48.892197",
-            "runnerName": "Silvia",
-            "plannedTempo": "05:30"
+            "runnerName": "Dávid",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 5,
@@ -79,7 +79,7 @@
             "to": "Kluknava",
             "gpxtoLat": "20.93915",
             "gpxtoLng": "48.920902",
-            "runnerName": "Maťa",
+            "runnerName": "Patrik",
             "plannedTempo": "05:30"
         },
         {
@@ -94,8 +94,8 @@
             "to": "Spišské Vlachy",
             "gpxtoLat": "20.794207",
             "gpxtoLng": "48.948954",
-            "runnerName": "Peter Šišolák",
-            "plannedTempo": "05:10"
+            "runnerName": "Vlado",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 7,
@@ -109,8 +109,8 @@
             "to": "Spišské Podhradie",
             "gpxtoLat": "20.751715",
             "gpxtoLng": "49.000082",
-            "runnerName": "Braňo",
-            "plannedTempo": "05:25"
+            "runnerName": "Ďuri",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 8,
@@ -124,8 +124,8 @@
             "to": "Levoča",
             "gpxtoLat": "20.588289",
             "gpxtoLng": "49.025898",
-            "runnerName": "Martin Veselý",
-            "plannedTempo": "04:30"
+            "runnerName": "Luki",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 9,
@@ -139,8 +139,8 @@
             "to": "Vlkovce",
             "gpxtoLat": "20.49929",
             "gpxtoLng": "49.04924",
-            "runnerName": "Pujdo",
-            "plannedTempo": "05:35"
+            "runnerName": "Dávid",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 10,
@@ -154,8 +154,8 @@
             "to": "Vrbov",
             "gpxtoLat": "20.424642",
             "gpxtoLng": "49.087782",
-            "runnerName": "Maňo",
-            "plannedTempo": "05:20"
+            "runnerName": "Ela",
+            "plannedTempo": "06:00"
         },
         {
             "legID": 11,
@@ -169,7 +169,7 @@
             "to": "Veľká Lomnica",
             "gpxtoLat": "20.34948",
             "gpxtoLng": "49.122279",
-            "runnerName": "Vlado",
+            "runnerName": "Patrik",
             "plannedTempo": "05:30"
         },
         {
@@ -184,8 +184,8 @@
             "to": "Tatranská Lomnica",
             "gpxtoLat": "20.281126",
             "gpxtoLng": "49.166218",
-            "runnerName": "Fero",
-            "plannedTempo": "05:45"
+            "runnerName": "Matej",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 13,
@@ -199,8 +199,8 @@
             "to": "Tatranská Polianka",
             "gpxtoLat": "20.183029",
             "gpxtoLng": "49.122359",
-            "runnerName": "Peťo Škorík",
-            "plannedTempo": "05:05"
+            "runnerName": "Kubo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 14,
@@ -214,8 +214,8 @@
             "to": "Štrbské Pleso",
             "gpxtoLat": "20.07066",
             "gpxtoLng": "49.11092",
-            "runnerName": "Vojto",
-            "plannedTempo": "05:05"
+            "runnerName": "Robo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 15,
@@ -229,8 +229,8 @@
             "to": "Podbanské",
             "gpxtoLat": "19.94654",
             "gpxtoLng": "49.13895",
-            "runnerName": "Evka",
-            "plannedTempo": "05:45"
+            "runnerName": "Gabi",
+            "plannedTempo": "06:30"
         },
         {
             "legID": 16,
@@ -244,7 +244,7 @@
             "to": "Pribylina",
             "gpxtoLat": "19.79684",
             "gpxtoLng": "49.097969",
-            "runnerName": "Silvia",
+            "runnerName": "Laci",
             "plannedTempo": "05:30"
         },
         {
@@ -259,7 +259,7 @@
             "to": "Jamník",
             "gpxtoLat": "19.7099",
             "gpxtoLng": "49.07165",
-            "runnerName": "Maťa",
+            "runnerName": "Baška",
             "plannedTempo": "05:30"
         },
         {
@@ -274,8 +274,8 @@
             "to": "Liptovský Mikuláš",
             "gpxtoLat": "19.60344",
             "gpxtoLng": "49.08789",
-            "runnerName": "Peter Šišolák",
-            "plannedTempo": "05:50"
+            "runnerName": "Janko",
+            "plannedTempo": "07:00"
         },
         {
             "legID": 19,
@@ -289,8 +289,8 @@
             "to": "Liptovská Sielnica",
             "gpxtoLat": "19.517861",
             "gpxtoLng": "49.145339",
-            "runnerName": "Braňo",
-            "plannedTempo": "05:25"
+            "runnerName": "Robo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 20,
@@ -304,7 +304,7 @@
             "to": "Huty",
             "gpxtoLat": "19.54882",
             "gpxtoLng": "49.207559",
-            "runnerName": "Martin Veselý",
+            "runnerName": "Kubo",
             "plannedTempo": "04:30"
         },
         {
@@ -319,8 +319,8 @@
             "to": "Chlebnice",
             "gpxtoLat": "19.456755",
             "gpxtoLng": "49.243256",
-            "runnerName": "Pujdo",
-            "plannedTempo": "04:40"
+            "runnerName": "Janka",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 22,
@@ -334,8 +334,8 @@
             "to": "Oravský Podzámok",
             "gpxtoLat": "19.35954",
             "gpxtoLng": "49.260608",
-            "runnerName": "Maňo",
-            "plannedTempo": "05:20"
+            "runnerName": "Laci",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 23,
@@ -349,8 +349,8 @@
             "to": "Dolný Kubín",
             "gpxtoLat": "19.298134",
             "gpxtoLng": "49.222335",
-            "runnerName": "Vlado",
-            "plannedTempo": "05:30"
+            "runnerName": "Gabi",
+            "plannedTempo": "06:30"
         },
         {
             "legID": 24,
@@ -364,8 +364,8 @@
             "to": "Párnica",
             "gpxtoLat": "19.194682",
             "gpxtoLng": "49.19126",
-            "runnerName": "Fero",
-            "plannedTempo": "05:45"
+            "runnerName": "Baška",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 25,
@@ -379,8 +379,8 @@
             "to": "Zázrivá",
             "gpxtoLat": "19.14872",
             "gpxtoLng": "49.265421",
-            "runnerName": "Peťo Škorík",
-            "plannedTempo": "05:10"
+            "runnerName": "Karol",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 26,
@@ -394,8 +394,8 @@
             "to": "Terchová",
             "gpxtoLat": "19.013891",
             "gpxtoLng": "49.253632",
-            "runnerName": "Vojto",
-            "plannedTempo": "05:00"
+            "runnerName": "Ďuri",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 27,
@@ -409,8 +409,8 @@
             "to": "Varín",
             "gpxtoLat": "18.878352",
             "gpxtoLng": "49.210507",
-            "runnerName": "Evka",
-            "plannedTempo": "05:45"
+            "runnerName": "Vlado",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 28,
@@ -424,8 +424,8 @@
             "to": "Teplička nad Váhom",
             "gpxtoLat": "18.801296",
             "gpxtoLng": "49.227015",
-            "runnerName": "Silvia",
-            "plannedTempo": "05:30"
+            "runnerName": "Ela",
+            "plannedTempo": "06:00"
         },
         {
             "legID": 29,
@@ -439,7 +439,7 @@
             "to": "Turie",
             "gpxtoLat": "18.754592",
             "gpxtoLng": "49.149774",
-            "runnerName": "Maťa",
+            "runnerName": "Patrik",
             "plannedTempo": "05:30"
         },
         {
@@ -454,8 +454,8 @@
             "to": "Kľače",
             "gpxtoLat": "18.646121",
             "gpxtoLng": "49.106393",
-            "runnerName": "Peter Šišolák",
-            "plannedTempo": "05:10"
+            "runnerName": "Matej",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 31,
@@ -469,8 +469,8 @@
             "to": "Fačkov",
             "gpxtoLat": "18.599558",
             "gpxtoLng": "49.011049",
-            "runnerName": "Braňo",
-            "plannedTempo": "05:25"
+            "runnerName": "Dávid",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 32,
@@ -484,8 +484,8 @@
             "to": "Čičmany",
             "gpxtoLat": "18.5168",
             "gpxtoLng": "48.95604",
-            "runnerName": "Martin Veselý",
-            "plannedTempo": "04:30"
+            "runnerName": "Luki",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 33,
@@ -499,8 +499,8 @@
             "to": "Košecké Rovné",
             "gpxtoLat": "18.40962",
             "gpxtoLng": "48.96104",
-            "runnerName": "Pujdo",
-            "plannedTempo": "04:45"
+            "runnerName": "Karol",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 34,
@@ -514,8 +514,8 @@
             "to": "Košeca",
             "gpxtoLat": "18.261101",
             "gpxtoLng": "49.010004",
-            "runnerName": "Maňo",
-            "plannedTempo": "05:20"
+            "runnerName": "Vlado",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 35,
@@ -529,8 +529,8 @@
             "to": "Príles",
             "gpxtoLat": "18.130503",
             "gpxtoLng": "48.957329",
-            "runnerName": "Vlado",
-            "plannedTempo": "05:30"
+            "runnerName": "Ela",
+            "plannedTempo": "06:00"
         },
         {
             "legID": 36,
@@ -544,8 +544,8 @@
             "to": "Trenčín",
             "gpxtoLat": "18.024004",
             "gpxtoLng": "48.885456",
-            "runnerName": "Fero",
-            "plannedTempo": "05:45"
+            "runnerName": "Luki",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 37,
@@ -559,8 +559,8 @@
             "to": "Biskupický kanál",
             "gpxtoLat": "17.93457",
             "gpxtoLng": "48.82985",
-            "runnerName": "Peťo Škorík",
-            "plannedTempo": "04:55"
+            "runnerName": "Baška",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 38,
@@ -574,8 +574,8 @@
             "to": "Nové Mesto nad Váhom",
             "gpxtoLat": "17.839242",
             "gpxtoLng": "48.757445",
-            "runnerName": "Vojto",
-            "plannedTempo": "04:55"
+            "runnerName": "Janka",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 39,
@@ -589,8 +589,8 @@
             "to": "Častkovce",
             "gpxtoLat": "17.78083",
             "gpxtoLng": "48.68984",
-            "runnerName": "Evka",
-            "plannedTempo": "05:40"
+            "runnerName": "Janko",
+            "plannedTempo": "07:00"
         },
         {
             "legID": 40,
@@ -604,8 +604,8 @@
             "to": "Vrbové",
             "gpxtoLat": "17.724659",
             "gpxtoLng": "48.620788",
-            "runnerName": "Silvia",
-            "plannedTempo": "05:30"
+            "runnerName": "Robo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 41,
@@ -619,8 +619,8 @@
             "to": "Dechtice",
             "gpxtoLat": "17.59586",
             "gpxtoLng": "48.54784",
-            "runnerName": "Maťa",
-            "plannedTempo": "05:30"
+            "runnerName": "Kubo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 42,
@@ -634,8 +634,8 @@
             "to": "Boleráz",
             "gpxtoLat": "17.48305",
             "gpxtoLng": "48.48629",
-            "runnerName": "Peter Šišolák",
-            "plannedTempo": "05:10"
+            "runnerName": "Mike",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 43,
@@ -649,8 +649,8 @@
             "to": "Doľany",
             "gpxtoLat": "17.378594",
             "gpxtoLng": "48.415985",
-            "runnerName": "Braňo",
-            "plannedTempo": "05:25"
+            "runnerName": "Janka",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 44,
@@ -664,7 +664,7 @@
             "to": "Modra",
             "gpxtoLat": "17.29747",
             "gpxtoLng": "48.32918",
-            "runnerName": "Martin Veselý",
+            "runnerName": "Robo",
             "plannedTempo": "04:30"
         },
         {
@@ -679,8 +679,8 @@
             "to": "Slovenský Grob",
             "gpxtoLat": "17.2635",
             "gpxtoLng": "48.256612",
-            "runnerName": "Pujdo",
-            "plannedTempo": "04:45"
+            "runnerName": "Gabi",
+            "plannedTempo": "06:30"
         },
         {
             "legID": 46,
@@ -694,8 +694,8 @@
             "to": "Ivánka pri Dunaji",
             "gpxtoLat": "17.228297",
             "gpxtoLng": "48.170965",
-            "runnerName": "Maňo",
-            "plannedTempo": "05:20"
+            "runnerName": "Laci",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 47,
@@ -709,7 +709,7 @@
             "to": "Bratislava (Bufet K3)",
             "gpxtoLat": "17.15855",
             "gpxtoLng": "48.129882",
-            "runnerName": "Vlado",
+            "runnerName": "Mike",
             "plannedTempo": "05:30"
         },
         {
@@ -724,8 +724,8 @@
             "to": "Bratislava",
             "gpxtoLat": "17.106971",
             "gpxtoLng": "48.14127",
-            "runnerName": "Fero",
-            "plannedTempo": "05:45"
+            "runnerName": "Janko",
+            "plannedTempo": "07:00"
         }
     ]
 }

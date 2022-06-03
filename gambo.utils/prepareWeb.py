@@ -62,15 +62,20 @@ def prepareSetupPage(args):
 def deployWebAWS(args):
     s3_client = boto3.client('s3')
     pages = []
+    icons = set()
     if args.pages in ('all', 'history'):
         pages.append('dxcHistory.html')
+        icons.add('Agile_Sprinter.svg')
     if args.pages in ('all', 'route'):
         pages.append('dxcRoute.html')
+        icons.add('Agile_Sprinter.svg')
     if args.pages in ('all', 'runner'):
         pages.append('dxcRunner.html')
+        icons.add('Agile_Sprinter.svg')
     if args.pages in ('all', 'setup'):
         prepareSetupPage(args)
         pages.append('dxcSetup.html')
+        icons.add('Tools_Wrench.svg')
     try:
         for p in pages:
             if args.verbose:
@@ -78,6 +83,13 @@ def deployWebAWS(args):
             response = s3_client.upload_file(
                 str(Path(args.gambohome, 'gambo.web', p)), 'gambo-vojtob', p, 
                 ExtraArgs={'ContentType' : "text/html"})
+            print(response)
+        for i in icons:
+            if args.verbose:
+                print('copy icon', i)
+            response = s3_client.upload_file(
+                str(Path(args.gambohome, 'gambo.web', i)), 'gambo-vojtob', i, 
+                ExtraArgs={'ContentType' : "image/svg+xml"})
             print(response)
     except ClientError as e:
         print(e)
