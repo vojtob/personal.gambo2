@@ -21,3 +21,5 @@ runProcessing/VltavaRun/res2019
 runProcessing/OTKD/res2019
 *.avi
 *.pyc
+gambo.web/gamboView.html
+runProcessing/TheRun/routeDesc.html

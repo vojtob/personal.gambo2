@@ -66,6 +66,9 @@ def deployWebAWS(args):
     if args.pages in ('all', 'history'):
         pages.append('dxcHistory.html')
         icons.add('Agile_Sprinter.svg')
+    if args.pages in ('all', 'view'):
+        pages.append('gamboView.html')
+        icons.add('Agile_Sprinter.svg')
     if args.pages in ('all', 'route'):
         pages.append('dxcRoute.html')
         icons.add('Agile_Sprinter.svg')

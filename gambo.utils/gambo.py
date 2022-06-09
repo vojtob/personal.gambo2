@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
     parser_deployweb = subparsers.add_parser('web', help='deploy web')
     parser_deployweb.add_argument('--AWS', action='store_true', help='set enviroment to AWS, default is local')
-    parser_deployweb.add_argument('pages', help='history, route, runner, setup, all')
+    parser_deployweb.add_argument('pages', help='history, view, route, runner, setup, all')
     parser_deployweb.set_defaults(command='web')
 
     args = __setup(parser)
