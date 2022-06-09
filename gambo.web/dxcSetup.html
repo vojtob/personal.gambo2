@@ -28,6 +28,7 @@
       raceName = response.name + ' - ' + response.race;
       console.log("raceName: " + raceName);
       document.getElementById("raceNamePlaceholder").innerHTML = raceName;
+      document.getElementById("forward2route").href = "dxcRoute.html?teamID=" + teamID;
     });
 
 
@@ -52,7 +53,12 @@
     <div class="card text-white bg-dark">
     <!-- <div class="card border-dark"> -->
       <div class="card-body">
-        <h5 class="card-title"><i class="fas fa-wrench"></i><span id="raceNamePlaceholder"></span></h5>
+        <h5 class="card-title">
+          <i class="fas fa-wrench"></i><span id="raceNamePlaceholder"></span>
+          <div class="float-right">
+            <a id="forward2route" class="btn btn-outline-light btn-sm" href=""><i class="fas fa-route"></i></a>
+          </div>
+        </h5>
       </div>
     </div>
 

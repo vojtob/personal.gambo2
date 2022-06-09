@@ -17,7 +17,7 @@ for i in range(len(data)):
     if(len(names)>1):
         handover["detail"] = names[1].strip()
     # handover["gps"] = str(d["fromPoint"]["data"]["lat"]) + "N, " + str(d["fromPoint"]["data"]["lng"]) + "E"
-    handover["gps"] = str(d["from_point"]["location"]["coordinates"][0]) + "N, " + str(d["from_point"]["location"]["coordinates"][1]) + "E"
+    handover["gps"] = str(d["from_point"]["location"]["coordinates"][1]) + "N, " + str(d["from_point"]["location"]["coordinates"][0]) + "E"
     handovers.append(handover)
 
     leg = {}
@@ -27,7 +27,7 @@ for i in range(len(data)):
     leg["upHill"] = str(int(round(d["incline"])))
     leg["downHill"] = str(int(round(d["decline"])))
     # descrpition
-    leg["desc"] = d["description"]
+    # leg["desc"] = d["description"]
     legs.append(leg)
 
 # ciel
@@ -39,7 +39,7 @@ handover["name"] = names[0].strip()
 if(len(names)>1):
     handover["detail"] = names[1].strip()
 # handover["gps"] = str(d["toPoint"]["data"]["lat"]) + "N, " + str(d["toPoint"]["data"]["lng"]) + "E"
-handover["gps"] = str(d["to_point"]["location"]["coordinates"][0]) + "N, " + str(d["to_point"]["location"]["coordinates"][1]) + "E"
+handover["gps"] = str(d["to_point"]["location"]["coordinates"][1]) + "N, " + str(d["to_point"]["location"]["coordinates"][0]) + "E"
 handovers.append(handover)
 
 route = {}

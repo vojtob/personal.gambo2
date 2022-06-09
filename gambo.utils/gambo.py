@@ -20,8 +20,8 @@ if __name__ == '__main__':
     parser.add_argument('-d', '--debug', help='add debug info, very low level', action='store_true')
     subparsers = parser.add_subparsers(help='command help')
 
-    parser_clean = subparsers.add_parser('clean', help='clean all generated files and folders')
-    parser_clean.set_defaults(command='clean')
+    # parser_clean = subparsers.add_parser('clean', help='clean all generated files and folders')
+    # parser_clean.set_defaults(command='clean')
 
     parser_combine = subparsers.add_parser('combine', help='combine runners with route and create team results')
     parser_combine.set_defaults(command='combine')

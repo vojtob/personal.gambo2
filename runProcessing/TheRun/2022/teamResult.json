@@ -1,10 +1,10 @@
 {
-    "team": 202203,
-    "name": "VUB",
+    "team": 202204,
+    "name": "Slovnaft",
     "race": "The Run 2022",
     "startTimes": {
-        "0": "9:40:00",
-        "28": "16:00:00"
+        "0": "10:40:00",
+        "28": "17:00:00"
     },
     "legs": [
         {
@@ -14,13 +14,13 @@
             "down": 172,
             "up": 182,
             "from": "Košice",
-            "gpxfromLat": "21.25677",
-            "gpxfromLng": "48.722965",
+            "gpxfromLat": "48.722965",
+            "gpxfromLng": "21.25677",
             "to": "Družstevná pri Hornáde",
-            "gpxtoLat": "21.244787",
-            "gpxtoLng": "48.800569",
-            "runnerName": "Slavo",
-            "plannedTempo": "05:28"
+            "gpxtoLat": "48.800569",
+            "gpxtoLng": "21.244787",
+            "runnerName": "Karol",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 2,
@@ -29,13 +29,13 @@
             "down": 207,
             "up": 242,
             "from": "Družstevná pri Hornáde",
-            "gpxfromLat": "21.244787",
-            "gpxfromLng": "48.800569",
+            "gpxfromLat": "48.800569",
+            "gpxfromLng": "21.244787",
             "to": "Veľká Lodina",
-            "gpxtoLat": "21.15779",
-            "gpxtoLng": "48.8597",
-            "runnerName": "Janci",
-            "plannedTempo": "05:35"
+            "gpxtoLat": "48.8597",
+            "gpxtoLng": "21.15779",
+            "runnerName": "Ďuri",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 3,
@@ -44,13 +44,13 @@
             "down": 107,
             "up": 168,
             "from": "Veľká Lodina",
-            "gpxfromLat": "21.15779",
-            "gpxfromLng": "48.8597",
+            "gpxfromLat": "48.8597",
+            "gpxfromLng": "21.15779",
             "to": "Ružín",
-            "gpxtoLat": "21.092468",
-            "gpxtoLng": "48.862811",
-            "runnerName": "Danka",
-            "plannedTempo": "05:32"
+            "gpxtoLat": "48.862811",
+            "gpxtoLng": "21.092468",
+            "runnerName": "Matej",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 4,
@@ -59,13 +59,13 @@
             "down": 538,
             "up": 558,
             "from": "Ružín",
-            "gpxfromLat": "21.092468",
-            "gpxfromLng": "48.862811",
+            "gpxfromLat": "48.862811",
+            "gpxfromLng": "21.092468",
             "to": "Margecany",
-            "gpxtoLat": "21.022322",
-            "gpxtoLng": "48.892196",
-            "runnerName": "Slavo",
-            "plannedTempo": "05:34"
+            "gpxtoLat": "48.892196",
+            "gpxtoLng": "21.022322",
+            "runnerName": "Dávid",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 5,
@@ -74,13 +74,13 @@
             "down": 167,
             "up": 183,
             "from": "Margecany",
-            "gpxfromLat": "21.022322",
-            "gpxfromLng": "48.892196",
+            "gpxfromLat": "48.892196",
+            "gpxfromLng": "21.022322",
             "to": "Kluknava",
-            "gpxtoLat": "20.939193",
-            "gpxtoLng": "48.920916",
-            "runnerName": "Silvinka",
-            "plannedTempo": "05:33"
+            "gpxtoLat": "48.920916",
+            "gpxtoLng": "20.939193",
+            "runnerName": "Patrik",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 6,
@@ -89,13 +89,13 @@
             "down": 186,
             "up": 223,
             "from": "Kluknava",
-            "gpxfromLat": "20.939193",
-            "gpxfromLng": "48.920916",
+            "gpxfromLat": "48.920916",
+            "gpxfromLng": "20.939193",
             "to": "Spišské Vlachy",
-            "gpxtoLat": "20.794169",
-            "gpxtoLng": "48.948958",
-            "runnerName": "Peto",
-            "plannedTempo": "05:00"
+            "gpxtoLat": "48.948958",
+            "gpxtoLng": "20.794169",
+            "runnerName": "Vlado",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 7,
@@ -104,13 +104,13 @@
             "down": 284,
             "up": 326,
             "from": "Spišské Vlachy",
-            "gpxfromLat": "20.794169",
-            "gpxfromLng": "48.948958",
+            "gpxfromLat": "48.948958",
+            "gpxfromLng": "20.794169",
             "to": "Spišské Podhradie",
-            "gpxtoLat": "20.75174",
-            "gpxtoLng": "49.00008",
-            "runnerName": "Katka",
-            "plannedTempo": "05:33"
+            "gpxtoLat": "49.00008",
+            "gpxtoLng": "20.75174",
+            "runnerName": "Ďuri",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 8,
@@ -119,13 +119,13 @@
             "down": 189,
             "up": 336,
             "from": "Spišské Podhradie",
-            "gpxfromLat": "20.75174",
-            "gpxfromLng": "49.00008",
+            "gpxfromLat": "49.00008",
+            "gpxfromLng": "20.75174",
             "to": "Levoča",
-            "gpxtoLat": "20.58829",
-            "gpxtoLng": "49.025903",
-            "runnerName": "Ivo",
-            "plannedTempo": "05:34"
+            "gpxtoLat": "49.025903",
+            "gpxtoLng": "20.58829",
+            "runnerName": "Luki",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 9,
@@ -134,13 +134,13 @@
             "down": 141,
             "up": 396,
             "from": "Levoča",
-            "gpxfromLat": "20.58829",
-            "gpxfromLng": "49.025903",
+            "gpxfromLat": "49.025903",
+            "gpxfromLng": "20.58829",
             "to": "Vlkovce",
-            "gpxtoLat": "20.49929",
-            "gpxtoLng": "49.04924",
-            "runnerName": "Peto",
-            "plannedTempo": "05:00"
+            "gpxtoLat": "49.04924",
+            "gpxtoLng": "20.49929",
+            "runnerName": "Dávid",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 10,
@@ -149,13 +149,13 @@
             "down": 258,
             "up": 79,
             "from": "Vlkovce",
-            "gpxfromLat": "20.49929",
-            "gpxfromLng": "49.04924",
+            "gpxfromLat": "49.04924",
+            "gpxfromLng": "20.49929",
             "to": "Vrbov",
-            "gpxtoLat": "20.424737",
-            "gpxtoLng": "49.087763",
-            "runnerName": "Slavo",
-            "plannedTempo": "05:35"
+            "gpxtoLat": "49.087763",
+            "gpxtoLng": "20.424737",
+            "runnerName": "Ela",
+            "plannedTempo": "06:00"
         },
         {
             "legID": 11,
@@ -164,13 +164,13 @@
             "down": 89,
             "up": 101,
             "from": "Vrbov",
-            "gpxfromLat": "20.424737",
-            "gpxfromLng": "49.087763",
+            "gpxfromLat": "49.087763",
+            "gpxfromLng": "20.424737",
             "to": "Veľká Lomnica",
-            "gpxtoLat": "20.349559",
-            "gpxtoLng": "49.122229",
-            "runnerName": "Vierka",
-            "plannedTempo": "05:33"
+            "gpxtoLat": "49.122229",
+            "gpxtoLng": "20.349559",
+            "runnerName": "Patrik",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 12,
@@ -179,13 +179,13 @@
             "down": 8,
             "up": 190,
             "from": "Veľká Lomnica",
-            "gpxfromLat": "20.349559",
-            "gpxfromLng": "49.122229",
+            "gpxfromLat": "49.122229",
+            "gpxfromLng": "20.349559",
             "to": "Tatranská Lomnica",
-            "gpxtoLat": "20.281135",
-            "gpxtoLng": "49.16622",
-            "runnerName": "Tomas",
-            "plannedTempo": "05:29"
+            "gpxtoLat": "49.16622",
+            "gpxtoLng": "20.281135",
+            "runnerName": "Matej",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 13,
@@ -194,13 +194,13 @@
             "down": 103,
             "up": 249,
             "from": "Tatranská Lomnica",
-            "gpxfromLat": "20.281135",
-            "gpxfromLng": "49.16622",
+            "gpxfromLat": "49.16622",
+            "gpxfromLng": "20.281135",
             "to": "Tatranská Polianka",
-            "gpxtoLat": "20.183037",
-            "gpxtoLng": "49.122361",
-            "runnerName": "Silvinka",
-            "plannedTempo": "05:35"
+            "gpxtoLat": "49.122361",
+            "gpxtoLng": "20.183037",
+            "runnerName": "Kubo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 14,
@@ -209,13 +209,13 @@
             "down": 107,
             "up": 374,
             "from": "Tatranská Polianka",
-            "gpxfromLat": "20.183037",
-            "gpxfromLng": "49.122361",
+            "gpxfromLat": "49.122361",
+            "gpxfromLng": "20.183037",
             "to": "Štrbské Pleso",
-            "gpxtoLat": "20.07068",
-            "gpxtoLng": "49.11093",
-            "runnerName": "Janci",
-            "plannedTempo": "05:32"
+            "gpxtoLat": "49.11093",
+            "gpxtoLng": "20.07068",
+            "runnerName": "Robo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 15,
@@ -224,13 +224,13 @@
             "down": 266,
             "up": 105,
             "from": "Štrbské Pleso",
-            "gpxfromLat": "20.07068",
-            "gpxfromLng": "49.11093",
+            "gpxfromLat": "49.11093",
+            "gpxfromLng": "20.07068",
             "to": "Podbanské",
-            "gpxtoLat": "19.94654",
-            "gpxtoLng": "49.13895",
-            "runnerName": "Janka",
-            "plannedTempo": "05:34"
+            "gpxtoLat": "49.13895",
+            "gpxtoLng": "19.94654",
+            "runnerName": "Gabi",
+            "plannedTempo": "06:30"
         },
         {
             "legID": 16,
@@ -239,13 +239,13 @@
             "down": 351,
             "up": 20,
             "from": "Podbanské",
-            "gpxfromLat": "19.94654",
-            "gpxfromLng": "49.13895",
+            "gpxfromLat": "49.13895",
+            "gpxfromLng": "19.94654",
             "to": "Pribylina",
-            "gpxtoLat": "19.796924",
-            "gpxtoLng": "49.097998",
-            "runnerName": "Hanka",
-            "plannedTempo": "05:32"
+            "gpxtoLat": "49.097998",
+            "gpxtoLng": "19.796924",
+            "runnerName": "Laci",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 17,
@@ -254,13 +254,13 @@
             "down": 159,
             "up": 80,
             "from": "Pribylina",
-            "gpxfromLat": "19.796924",
-            "gpxfromLng": "49.097998",
+            "gpxfromLat": "49.097998",
+            "gpxfromLng": "19.796924",
             "to": "Jamník",
-            "gpxtoLat": "19.7099",
-            "gpxtoLng": "49.07165",
-            "runnerName": "Danka",
-            "plannedTempo": "05:35"
+            "gpxtoLat": "49.07165",
+            "gpxtoLng": "19.7099",
+            "runnerName": "Baška",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 18,
@@ -269,13 +269,13 @@
             "down": 155,
             "up": 35,
             "from": "Jamník",
-            "gpxfromLat": "19.7099",
-            "gpxfromLng": "49.07165",
+            "gpxfromLat": "49.07165",
+            "gpxfromLng": "19.7099",
             "to": "Liptovský Mikuláš",
-            "gpxtoLat": "19.60344",
-            "gpxtoLng": "49.08789",
-            "runnerName": "Lenka",
-            "plannedTempo": "05:35"
+            "gpxtoLat": "49.08789",
+            "gpxtoLng": "19.60344",
+            "runnerName": "Janko",
+            "plannedTempo": "07:00"
         },
         {
             "legID": 19,
@@ -284,13 +284,13 @@
             "down": 107,
             "up": 117,
             "from": "Liptovský Mikuláš",
-            "gpxfromLat": "19.60344",
-            "gpxfromLng": "49.08789",
+            "gpxfromLat": "49.08789",
+            "gpxfromLng": "19.60344",
             "to": "Liptovská Sielnica",
-            "gpxtoLat": "19.517837",
-            "gpxtoLng": "49.145316",
-            "runnerName": "Katka",
-            "plannedTempo": "05:32"
+            "gpxtoLat": "49.145316",
+            "gpxtoLng": "19.517837",
+            "runnerName": "Robo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 20,
@@ -299,13 +299,13 @@
             "down": 259,
             "up": 498,
             "from": "Liptovská Sielnica",
-            "gpxfromLat": "19.517837",
-            "gpxfromLng": "49.145316",
+            "gpxfromLat": "49.145316",
+            "gpxfromLng": "19.517837",
             "to": "Veľké Borové",
-            "gpxtoLat": "19.52081",
-            "gpxtoLng": "49.196024",
-            "runnerName": "Ivo",
-            "plannedTempo": "05:34"
+            "gpxtoLat": "49.196024",
+            "gpxtoLng": "19.52081",
+            "runnerName": "Kubo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 21,
@@ -314,13 +314,13 @@
             "down": 377,
             "up": 112,
             "from": "Veľké Borové",
-            "gpxfromLat": "19.52081",
-            "gpxfromLng": "49.196024",
+            "gpxfromLat": "49.196024",
+            "gpxfromLng": "19.52081",
             "to": "Chlebnice",
-            "gpxtoLat": "19.456757",
-            "gpxtoLng": "49.243245",
-            "runnerName": "Peto",
-            "plannedTempo": "05:00"
+            "gpxtoLat": "49.243245",
+            "gpxtoLng": "19.456757",
+            "runnerName": "Janka",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 22,
@@ -329,13 +329,13 @@
             "down": 168,
             "up": 123,
             "from": "Chlebnice",
-            "gpxfromLat": "19.456757",
-            "gpxfromLng": "49.243245",
+            "gpxfromLat": "49.243245",
+            "gpxfromLng": "19.456757",
             "to": "Oravský Podzámok",
-            "gpxtoLat": "19.359479",
-            "gpxtoLng": "49.260609",
-            "runnerName": "Slavo",
-            "plannedTempo": "05:33"
+            "gpxtoLat": "49.260609",
+            "gpxtoLng": "19.359479",
+            "runnerName": "Laci",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 23,
@@ -344,13 +344,13 @@
             "down": 192,
             "up": 158,
             "from": "Oravský Podzámok",
-            "gpxfromLat": "19.359479",
-            "gpxfromLng": "49.260609",
+            "gpxfromLat": "49.260609",
+            "gpxfromLng": "19.359479",
             "to": "Dolný Kubín",
-            "gpxtoLat": "19.298142",
-            "gpxtoLng": "49.222343",
-            "runnerName": "Vierka",
-            "plannedTempo": "05:34"
+            "gpxtoLat": "49.222343",
+            "gpxtoLng": "19.298142",
+            "runnerName": "Gabi",
+            "plannedTempo": "06:30"
         },
         {
             "legID": 24,
@@ -359,13 +359,13 @@
             "down": 118,
             "up": 94,
             "from": "Dolný Kubín",
-            "gpxfromLat": "19.298142",
-            "gpxfromLng": "49.222343",
+            "gpxfromLat": "49.222343",
+            "gpxfromLng": "19.298142",
             "to": "Párnica",
-            "gpxtoLat": "19.194704",
-            "gpxtoLng": "49.191246",
-            "runnerName": "Tomas",
-            "plannedTempo": "05:37"
+            "gpxtoLat": "49.191246",
+            "gpxtoLng": "19.194704",
+            "runnerName": "Baška",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 25,
@@ -374,13 +374,13 @@
             "down": 208,
             "up": 334,
             "from": "Párnica",
-            "gpxfromLat": "19.194704",
-            "gpxfromLng": "49.191246",
+            "gpxfromLat": "49.191246",
+            "gpxfromLng": "19.194704",
             "to": "Zázrivá",
-            "gpxtoLat": "19.151702",
-            "gpxtoLng": "49.265613",
-            "runnerName": "Janci",
-            "plannedTempo": "05:29"
+            "gpxtoLat": "49.265613",
+            "gpxtoLng": "19.151702",
+            "runnerName": "Karol",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 26,
@@ -389,13 +389,13 @@
             "down": 468,
             "up": 385,
             "from": "Zázrivá",
-            "gpxfromLat": "19.151702",
-            "gpxfromLng": "49.265613",
+            "gpxfromLat": "49.265613",
+            "gpxfromLng": "19.151702",
             "to": "Terchová",
-            "gpxtoLat": "19.013873",
-            "gpxtoLng": "49.253631",
-            "runnerName": "Lenka",
-            "plannedTempo": "05:36"
+            "gpxtoLat": "49.253631",
+            "gpxtoLng": "19.013873",
+            "runnerName": "Ďuri",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 27,
@@ -404,13 +404,13 @@
             "down": 220,
             "up": 93,
             "from": "Terchová",
-            "gpxfromLat": "19.013873",
-            "gpxfromLng": "49.253631",
+            "gpxfromLat": "49.253631",
+            "gpxfromLng": "19.013873",
             "to": "Varín",
-            "gpxtoLat": "18.878359",
-            "gpxtoLng": "49.210504",
-            "runnerName": "Hanka",
-            "plannedTempo": "05:32"
+            "gpxtoLat": "49.210504",
+            "gpxtoLng": "18.878359",
+            "runnerName": "Vlado",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 28,
@@ -419,13 +419,13 @@
             "down": 51,
             "up": 31,
             "from": "Varín",
-            "gpxfromLat": "18.878359",
-            "gpxfromLng": "49.210504",
+            "gpxfromLat": "49.210504",
+            "gpxfromLng": "18.878359",
             "to": "Teplička nad Váhom",
-            "gpxtoLat": "18.801333",
-            "gpxtoLng": "49.227004",
-            "runnerName": "Silvinka",
-            "plannedTempo": "05:35"
+            "gpxtoLat": "49.227004",
+            "gpxtoLng": "18.801333",
+            "runnerName": "Ela",
+            "plannedTempo": "06:00"
         },
         {
             "legID": 29,
@@ -434,13 +434,13 @@
             "down": 86,
             "up": 179,
             "from": "Teplička nad Váhom",
-            "gpxfromLat": "18.801333",
-            "gpxfromLng": "49.227004",
+            "gpxfromLat": "49.227004",
+            "gpxfromLng": "18.801333",
             "to": "Turie",
-            "gpxtoLat": "18.754624",
-            "gpxtoLng": "49.149783",
-            "runnerName": "Tomas",
-            "plannedTempo": "05:29"
+            "gpxtoLat": "49.149783",
+            "gpxtoLng": "18.754624",
+            "runnerName": "Patrik",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 30,
@@ -449,13 +449,13 @@
             "down": 165,
             "up": 161,
             "from": "Turie",
-            "gpxfromLat": "18.754624",
-            "gpxfromLng": "49.149783",
+            "gpxfromLat": "49.149783",
+            "gpxfromLng": "18.754624",
             "to": "Kľače",
-            "gpxtoLat": "18.646142",
-            "gpxtoLng": "49.106419",
-            "runnerName": "Janka",
-            "plannedTempo": "05:36"
+            "gpxtoLat": "49.106419",
+            "gpxtoLng": "18.646142",
+            "runnerName": "Matej",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 31,
@@ -464,13 +464,13 @@
             "down": 31,
             "up": 130,
             "from": "Kľače",
-            "gpxfromLat": "18.646142",
-            "gpxfromLng": "49.106419",
+            "gpxfromLat": "49.106419",
+            "gpxfromLng": "18.646142",
             "to": "Fačkov",
-            "gpxtoLat": "18.599565",
-            "gpxtoLng": "49.011056",
-            "runnerName": "Katka",
-            "plannedTempo": "05:32"
+            "gpxtoLat": "49.011056",
+            "gpxtoLng": "18.599565",
+            "runnerName": "Dávid",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 32,
@@ -479,13 +479,13 @@
             "down": 191,
             "up": 300,
             "from": "Fačkov",
-            "gpxfromLat": "18.599565",
-            "gpxfromLng": "49.011056",
+            "gpxfromLat": "49.011056",
+            "gpxfromLng": "18.599565",
             "to": "Čičmany",
-            "gpxtoLat": "18.516812",
-            "gpxtoLng": "48.956062",
-            "runnerName": "Ivo",
-            "plannedTempo": "05:31"
+            "gpxtoLat": "48.956062",
+            "gpxtoLng": "18.516812",
+            "runnerName": "Luki",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 33,
@@ -494,13 +494,13 @@
             "down": 402,
             "up": 279,
             "from": "Čičmany",
-            "gpxfromLat": "18.516812",
-            "gpxfromLng": "48.956062",
+            "gpxfromLat": "48.956062",
+            "gpxfromLng": "18.516812",
             "to": "Košecké Rovné",
-            "gpxtoLat": "18.40962",
-            "gpxtoLng": "48.96104",
-            "runnerName": "Peto",
-            "plannedTempo": "05:00"
+            "gpxtoLat": "48.96104",
+            "gpxtoLng": "18.40962",
+            "runnerName": "Karol",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 34,
@@ -509,13 +509,13 @@
             "down": 412,
             "up": 138,
             "from": "Košecké Rovné",
-            "gpxfromLat": "18.40962",
-            "gpxfromLng": "48.96104",
+            "gpxfromLat": "48.96104",
+            "gpxfromLng": "18.40962",
             "to": "Košeca",
-            "gpxtoLat": "18.261116",
-            "gpxtoLng": "49.009988",
-            "runnerName": "Slavo",
-            "plannedTempo": "05:33"
+            "gpxtoLat": "49.009988",
+            "gpxtoLng": "18.261116",
+            "runnerName": "Vlado",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 35,
@@ -524,13 +524,13 @@
             "down": 64,
             "up": 38,
             "from": "Košeca",
-            "gpxfromLat": "18.261116",
-            "gpxfromLng": "49.009988",
+            "gpxfromLat": "49.009988",
+            "gpxfromLng": "18.261116",
             "to": "Príles",
-            "gpxtoLat": "18.13055",
-            "gpxtoLng": "48.95735",
-            "runnerName": "Vierka",
-            "plannedTempo": "05:32"
+            "gpxtoLat": "48.95735",
+            "gpxtoLng": "18.13055",
+            "runnerName": "Ela",
+            "plannedTempo": "06:00"
         },
         {
             "legID": 36,
@@ -539,13 +539,13 @@
             "down": 53,
             "up": 41,
             "from": "Príles",
-            "gpxfromLat": "18.13055",
-            "gpxfromLng": "48.95735",
+            "gpxfromLat": "48.95735",
+            "gpxfromLng": "18.13055",
             "to": "Trenčín",
-            "gpxtoLat": "18.037678",
-            "gpxtoLng": "48.896451",
-            "runnerName": "Tomas",
-            "plannedTempo": "05:32"
+            "gpxtoLat": "48.896451",
+            "gpxtoLng": "18.037678",
+            "runnerName": "Luki",
+            "plannedTempo": "04:42"
         },
         {
             "legID": 37,
@@ -554,13 +554,13 @@
             "down": 41,
             "up": 28,
             "from": "Trenčín",
-            "gpxfromLat": "18.037678",
-            "gpxfromLng": "48.896451",
+            "gpxfromLat": "48.896451",
+            "gpxfromLng": "18.037678",
             "to": "Biskupický kanál",
-            "gpxtoLat": "17.967333",
-            "gpxtoLng": "48.861641",
-            "runnerName": "Janci",
-            "plannedTempo": "05:34"
+            "gpxtoLat": "48.861641",
+            "gpxtoLng": "17.967333",
+            "runnerName": "Baška",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 38,
@@ -569,13 +569,13 @@
             "down": 48,
             "up": 32,
             "from": "Biskupický kanál",
-            "gpxfromLat": "17.967333",
-            "gpxfromLng": "48.861641",
+            "gpxfromLat": "48.861641",
+            "gpxfromLng": "17.967333",
             "to": "Nové Mesto nad Váhom",
-            "gpxtoLat": "17.847348",
-            "gpxtoLng": "48.764196",
-            "runnerName": "Silvinka",
-            "plannedTempo": "05:33"
+            "gpxtoLat": "48.764196",
+            "gpxtoLng": "17.847348",
+            "runnerName": "Janka",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 39,
@@ -584,13 +584,13 @@
             "down": 68,
             "up": 66,
             "from": "Nové Mesto nad Váhom",
-            "gpxfromLat": "17.847348",
-            "gpxfromLng": "48.764196",
+            "gpxfromLat": "48.764196",
+            "gpxfromLng": "17.847348",
             "to": "Častkovce",
-            "gpxtoLat": "17.78083",
-            "gpxtoLng": "48.68984",
-            "runnerName": "Janka",
-            "plannedTempo": "05:30"
+            "gpxtoLat": "48.68984",
+            "gpxtoLng": "17.78083",
+            "runnerName": "Janko",
+            "plannedTempo": "07:00"
         },
         {
             "legID": 40,
@@ -599,13 +599,13 @@
             "down": 55,
             "up": 55,
             "from": "Častkovce",
-            "gpxfromLat": "17.78083",
-            "gpxfromLng": "48.68984",
+            "gpxfromLat": "48.68984",
+            "gpxfromLng": "17.78083",
             "to": "Vrbové",
-            "gpxtoLat": "17.72466",
-            "gpxtoLng": "48.62079",
-            "runnerName": "Lenka",
-            "plannedTempo": "05:36"
+            "gpxtoLat": "48.62079",
+            "gpxtoLng": "17.72466",
+            "runnerName": "Robo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 41,
@@ -614,13 +614,13 @@
             "down": 194,
             "up": 195,
             "from": "Vrbové",
-            "gpxfromLat": "17.72466",
-            "gpxfromLng": "48.62079",
+            "gpxfromLat": "48.62079",
+            "gpxfromLng": "17.72466",
             "to": "Dechtice",
-            "gpxtoLat": "17.59586",
-            "gpxtoLng": "48.54784",
-            "runnerName": "Hanka",
-            "plannedTempo": "05:32"
+            "gpxtoLat": "48.54784",
+            "gpxtoLng": "17.59586",
+            "runnerName": "Kubo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 42,
@@ -629,13 +629,13 @@
             "down": 170,
             "up": 174,
             "from": "Dechtice",
-            "gpxfromLat": "17.59586",
-            "gpxfromLng": "48.54784",
+            "gpxfromLat": "48.54784",
+            "gpxfromLng": "17.59586",
             "to": "Boleráz",
-            "gpxtoLat": "17.48305",
-            "gpxtoLng": "48.48629",
-            "runnerName": "Danka",
-            "plannedTempo": "05:35"
+            "gpxtoLat": "48.48629",
+            "gpxtoLng": "17.48305",
+            "runnerName": "Mike",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 43,
@@ -644,12 +644,12 @@
             "down": 160,
             "up": 220,
             "from": "Boleráz",
-            "gpxfromLat": "17.48305",
-            "gpxfromLng": "48.48629",
+            "gpxfromLat": "48.48629",
+            "gpxfromLng": "17.48305",
             "to": "Doľany",
-            "gpxtoLat": "17.378592",
-            "gpxtoLng": "48.415988",
-            "runnerName": "Katka",
+            "gpxtoLat": "48.415988",
+            "gpxtoLng": "17.378592",
+            "runnerName": "Janka",
             "plannedTempo": "05:30"
         },
         {
@@ -659,13 +659,13 @@
             "down": 175,
             "up": 138,
             "from": "Doľany",
-            "gpxfromLat": "17.378592",
-            "gpxfromLng": "48.415988",
+            "gpxfromLat": "48.415988",
+            "gpxfromLng": "17.378592",
             "to": "Modra",
-            "gpxtoLat": "17.29747",
-            "gpxtoLng": "48.32918",
-            "runnerName": "Ivo",
-            "plannedTempo": "05:33"
+            "gpxtoLat": "48.32918",
+            "gpxtoLng": "17.29747",
+            "runnerName": "Robo",
+            "plannedTempo": "04:30"
         },
         {
             "legID": 45,
@@ -674,13 +674,13 @@
             "down": 158,
             "up": 85,
             "from": "Modra",
-            "gpxfromLat": "17.29747",
-            "gpxfromLng": "48.32918",
+            "gpxfromLat": "48.32918",
+            "gpxfromLng": "17.29747",
             "to": "Slovenský Grob",
-            "gpxtoLat": "17.26348",
-            "gpxtoLng": "48.256618",
-            "runnerName": "Tomas",
-            "plannedTempo": "05:36"
+            "gpxtoLat": "48.256618",
+            "gpxtoLng": "17.26348",
+            "runnerName": "Gabi",
+            "plannedTempo": "06:30"
         },
         {
             "legID": 46,
@@ -689,13 +689,13 @@
             "down": 40,
             "up": 37,
             "from": "Slovenský Grob",
-            "gpxfromLat": "17.26348",
-            "gpxfromLng": "48.256618",
+            "gpxfromLat": "48.256618",
+            "gpxfromLng": "17.26348",
             "to": "Ivánka pri Dunaji",
-            "gpxtoLat": "17.228304",
-            "gpxtoLng": "48.170969",
-            "runnerName": "Slavo",
-            "plannedTempo": "05:31"
+            "gpxtoLat": "48.170969",
+            "gpxtoLng": "17.228304",
+            "runnerName": "Laci",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 47,
@@ -704,13 +704,13 @@
             "down": 51,
             "up": 57,
             "from": "Ivánka pri Dunaji",
-            "gpxfromLat": "17.228304",
-            "gpxfromLng": "48.170969",
+            "gpxfromLat": "48.170969",
+            "gpxfromLng": "17.228304",
             "to": "Bratislava (Bufet K3)",
-            "gpxtoLat": "17.158611",
-            "gpxtoLng": "48.129886",
-            "runnerName": "Vierka",
-            "plannedTempo": "05:34"
+            "gpxtoLat": "48.129886",
+            "gpxtoLng": "17.158611",
+            "runnerName": "Mike",
+            "plannedTempo": "05:30"
         },
         {
             "legID": 48,
@@ -719,13 +719,13 @@
             "down": 76,
             "up": 78,
             "from": "Bratislava (Bufet K3)",
-            "gpxfromLat": "17.158611",
-            "gpxfromLng": "48.129886",
+            "gpxfromLat": "48.129886",
+            "gpxfromLng": "17.158611",
             "to": "Bratislava",
-            "gpxtoLat": "17.106971",
-            "gpxtoLng": "48.14127",
-            "runnerName": "Peto",
-            "plannedTempo": "04:45"
+            "gpxtoLat": "48.14127",
+            "gpxtoLng": "17.106971",
+            "runnerName": "Janko",
+            "plannedTempo": "07:00"
         }
     ]
 }
