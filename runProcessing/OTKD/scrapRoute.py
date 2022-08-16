@@ -8,10 +8,10 @@ route = {}
 route["handovers"] = handovers
 route["legs"] = legs
 
-gpxData = requests.get('https://www.odtatierkdunaju.sk/elite/parts/pins.json').json()
+gpxData = requests.get('http://www.odtatierkdunaju.sk/elite/parts/pins.json').json()
 
 for i in range(36):
-    legURL = 'https://www.odtatierkdunaju.sk/elite/parts/part-{legID}/detail.TXT'.format(legID=(i+1))
+    legURL = 'http://www.odtatierkdunaju.sk/elite/parts/part-{legID}/detail.TXT'.format(legID=(i+1))
     # pageRunner = requests.get('https://www.odtatierkdunaju.sk/elite/parts/part-2/runner.TXT')
     # pageVehicle = requests.get('https://www.odtatierkdunaju.sk/elite/parts/part-2/vehicles.TXT')
     # print("legURL: ", legURL)
@@ -39,7 +39,8 @@ handovers.append(handover)
 
 print(route)
 
-folderName = './runProcessing/OTKD/res2019'
+# folderName = './runProcessing/OTKD'
+folderName = '.'
 with open(folderName + '/route.json', 'w', encoding='utf-8') as outfile:
     json.dump(route, outfile, ensure_ascii=False)
 
