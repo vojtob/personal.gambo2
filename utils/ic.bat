@@ -1,0 +1,1 @@
+@call python C:\Projects_src\Personal\image_converting\src\ic.py %1 %2 %3 %4 %5

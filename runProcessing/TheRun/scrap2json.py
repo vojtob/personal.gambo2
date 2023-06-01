@@ -27,7 +27,7 @@ for i in range(len(data)):
     leg["upHill"] = str(int(round(d["incline"])))
     leg["downHill"] = str(int(round(d["decline"])))
     # descrpition
-    # leg["desc"] = d["description"]
+    leg["desc"] = d["description"]
     legs.append(leg)
 
 # ciel

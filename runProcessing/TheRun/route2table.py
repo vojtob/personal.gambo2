@@ -46,15 +46,15 @@ for i in range(48):
     legto = handovers[i+1]["name"]
     if 'detail' in handovers[i+1]:
         legto = legto + " - " + handovers[i+1]['detail']
-    # print('{0}\t{1}\t{2}\t{3}\t{4}\t{5}'.format(
-    #     legfrom, legto, 
-    #     legs[i]["length"], legs[i]["difficulty"],
-    #     legs[i]["upHill"], legs[i]["downHill"]))
+    print('{0}\t{1}\t{2}\t{3}\t{4}\t{5}'.format(
+        legfrom, legto, 
+        legs[i]["length"], legs[i]["difficulty"],
+        legs[i]["upHill"], legs[i]["downHill"]))
     # print(legfrom)
     # print(legto)
     # print(legs[i]["length"])
     # print(legs[i]["difficulty"])
     # print(legs[i]["upHill"])
-    print(legs[i]["downHill"])
+    # print(legs[i]["downHill"])
 
 print("DONE")

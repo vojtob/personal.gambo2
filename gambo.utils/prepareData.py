@@ -12,7 +12,7 @@ def combineRunnersWithRoute(args):
         runnersfilename = args.file
     else:
         runnersfilename = 'bezci.tsv'
-    runners = pd.read_csv(runnersfilename, '\t')
+    runners = pd.read_csv(runnersfilename, sep='\t')
     # for i in range(36):
     #     print("{:>2d}.  {:<20}  {}".format(i, runners.loc[i]['meno'], runners.loc[i]['pace']))
     # import legs description
