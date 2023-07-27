@@ -3,8 +3,8 @@
     "name": "DXC Dream Team",
     "race": "The Run 2023",
     "startTimes": {
-        "0": "9:40:00",
-        "28": "15:30:00"
+        "0": "10:40:00",
+        "28": "16:30:00"
     },
     "legs": [
         {
@@ -110,7 +110,7 @@
             "gpxtoLat": "49.00008",
             "gpxtoLng": "20.75174",
             "runnerName": "Tomáš Môcik",
-            "plannedTempo": "05:05"
+            "plannedTempo": "04:10"
         },
         {
             "legID": 8,
@@ -125,7 +125,7 @@
             "gpxtoLat": "49.025903",
             "gpxtoLng": "20.58829",
             "runnerName": "Pujdo",
-            "plannedTempo": "04:20"
+            "plannedTempo": "05:20"
         },
         {
             "legID": 9,
@@ -290,7 +290,7 @@
             "gpxtoLat": "49.145316",
             "gpxtoLng": "19.517837",
             "runnerName": "Tomáš Môcik",
-            "plannedTempo": "04:50"
+            "plannedTempo": "04:05"
         },
         {
             "legID": 20,
@@ -305,7 +305,7 @@
             "gpxtoLat": "49.196024",
             "gpxtoLng": "19.52081",
             "runnerName": "Pujdo",
-            "plannedTempo": "05:10"
+            "plannedTempo": "05:30"
         },
         {
             "legID": 21,
@@ -470,7 +470,7 @@
             "gpxtoLat": "49.011697",
             "gpxtoLng": "18.602082",
             "runnerName": "Tomáš Môcik",
-            "plannedTempo": "05:00"
+            "plannedTempo": "04:05"
         },
         {
             "legID": 32,
@@ -485,7 +485,7 @@
             "gpxtoLat": "48.956062",
             "gpxtoLng": "18.516812",
             "runnerName": "Pujdo",
-            "plannedTempo": "04:10"
+            "plannedTempo": "05:10"
         },
         {
             "legID": 33,
@@ -650,7 +650,7 @@
             "gpxtoLat": "48.415988",
             "gpxtoLng": "17.378592",
             "runnerName": "Tomáš Môcik",
-            "plannedTempo": "05:00"
+            "plannedTempo": "04:10"
         },
         {
             "legID": 44,
@@ -665,7 +665,7 @@
             "gpxtoLat": "48.32918",
             "gpxtoLng": "17.29747",
             "runnerName": "Pujdo",
-            "plannedTempo": "04:05"
+            "plannedTempo": "05:00"
         },
         {
             "legID": 45,

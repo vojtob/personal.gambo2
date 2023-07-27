@@ -1,1 +1,1 @@
-@call py ../../../gambo.utils/gambo.py combine 202301 "DXC Dream Team" "The Run 2023" 9:40:00 28 15:30:00 -f bezciDXC.tsv
+@call py ../../../gambo.utils/gambo.py combine 202301 "DXC Dream Team" "The Run 2023" 10:40:00 28 16:30:00 -f bezciDXC.tsv

@@ -3,8 +3,8 @@
     "name": "DXC Dream Team",
     "race": "The Run 2023",
     "startTimes": {
-        "0": "9:40:00",
-        "28": "15:30:00"
+        "0": "10:40:00",
+        "28": "16:30:00"
     },
     "legs": [
         {
@@ -21,9 +21,9 @@
             "gpxtoLng": "21.244787",
             "runnerName": "Maťa Hancková",
             "plannedTempo": "05:42",
-            "startTime": "9:40:00",
+            "startTime": "10:40:00",
             "plannedDuration": "1:05:43",
-            "endTime": "10:45:43"
+            "endTime": "11:45:43"
         },
         {
             "legID": 2,
@@ -39,9 +39,9 @@
             "gpxtoLng": "21.15779",
             "runnerName": "Martin Veselý",
             "plannedTempo": "04:35",
-            "startTime": "10:45:43",
+            "startTime": "11:45:43",
             "plannedDuration": "1:08:48",
-            "endTime": "11:54:31"
+            "endTime": "12:54:31"
         },
         {
             "legID": 3,
@@ -57,9 +57,9 @@
             "gpxtoLng": "21.092468",
             "runnerName": "Patrik Trefný",
             "plannedTempo": "05:30",
-            "startTime": "11:54:31",
+            "startTime": "12:54:31",
             "plannedDuration": "0:47:44",
-            "endTime": "12:42:15"
+            "endTime": "13:42:15"
         },
         {
             "legID": 4,
@@ -75,9 +75,9 @@
             "gpxtoLng": "21.022322",
             "runnerName": "Juraj Kozák",
             "plannedTempo": "05:40",
-            "startTime": "12:42:15",
+            "startTime": "13:42:15",
             "plannedDuration": "1:05:07",
-            "endTime": "13:47:22"
+            "endTime": "14:47:22"
         },
         {
             "legID": 5,
@@ -93,9 +93,9 @@
             "gpxtoLng": "20.939193",
             "runnerName": "Maňo",
             "plannedTempo": "05:25",
-            "startTime": "13:47:22",
+            "startTime": "14:47:22",
             "plannedDuration": "0:50:49",
-            "endTime": "14:38:11"
+            "endTime": "15:38:11"
         },
         {
             "legID": 6,
@@ -111,9 +111,9 @@
             "gpxtoLng": "20.794169",
             "runnerName": "Paľo Stašik",
             "plannedTempo": "05:35",
-            "startTime": "14:38:11",
+            "startTime": "15:38:11",
             "plannedDuration": "1:21:38",
-            "endTime": "15:59:49"
+            "endTime": "16:59:49"
         },
         {
             "legID": 7,
@@ -128,10 +128,10 @@
             "gpxtoLat": "49.00008",
             "gpxtoLng": "20.75174",
             "runnerName": "Tomáš Môcik",
-            "plannedTempo": "05:05",
-            "startTime": "15:59:49",
-            "plannedDuration": "0:56:47",
-            "endTime": "16:56:36"
+            "plannedTempo": "04:10",
+            "startTime": "16:59:49",
+            "plannedDuration": "0:46:33",
+            "endTime": "17:46:22"
         },
         {
             "legID": 8,
@@ -146,10 +146,10 @@
             "gpxtoLat": "49.025903",
             "gpxtoLng": "20.58829",
             "runnerName": "Pujdo",
-            "plannedTempo": "04:20",
-            "startTime": "16:56:36",
-            "plannedDuration": "1:04:31",
-            "endTime": "18:01:07"
+            "plannedTempo": "05:20",
+            "startTime": "17:46:22",
+            "plannedDuration": "1:19:25",
+            "endTime": "19:05:47"
         },
         {
             "legID": 9,
@@ -165,9 +165,9 @@
             "gpxtoLng": "20.49929",
             "runnerName": "Peťo Škorík",
             "plannedTempo": "05:45",
-            "startTime": "18:01:07",
+            "startTime": "19:05:47",
             "plannedDuration": "0:57:40",
-            "endTime": "18:58:47"
+            "endTime": "20:03:27"
         },
         {
             "legID": 10,
@@ -183,9 +183,9 @@
             "gpxtoLng": "20.424737",
             "runnerName": "Vojto",
             "plannedTempo": "05:10",
-            "startTime": "18:58:47",
+            "startTime": "20:03:27",
             "plannedDuration": "0:43:27",
-            "endTime": "19:42:14"
+            "endTime": "20:46:54"
         },
         {
             "legID": 11,
@@ -201,9 +201,9 @@
             "gpxtoLng": "20.325261",
             "runnerName": "Milan Ondruš",
             "plannedTempo": "05:30",
-            "startTime": "19:42:14",
+            "startTime": "20:46:54",
             "plannedDuration": "0:54:53",
-            "endTime": "20:37:07"
+            "endTime": "21:41:47"
         },
         {
             "legID": 12,
@@ -219,9 +219,9 @@
             "gpxtoLng": "20.217934",
             "runnerName": "Janka",
             "plannedTempo": "06:10",
-            "startTime": "20:37:07",
+            "startTime": "21:41:47",
             "plannedDuration": "0:55:37",
-            "endTime": "21:32:44"
+            "endTime": "22:37:24"
         },
         {
             "legID": 13,
@@ -237,9 +237,9 @@
             "gpxtoLng": "20.080579",
             "runnerName": "Maťa Hancková",
             "plannedTempo": "05:50",
-            "startTime": "21:32:44",
+            "startTime": "22:37:24",
             "plannedDuration": "1:04:35",
-            "endTime": "22:37:19"
+            "endTime": "23:41:59"
         },
         {
             "legID": 14,
@@ -255,9 +255,9 @@
             "gpxtoLng": "20.025573",
             "runnerName": "Martin Veselý",
             "plannedTempo": "04:25",
-            "startTime": "22:37:19",
+            "startTime": "23:41:59",
             "plannedDuration": "0:34:14",
-            "endTime": "23:11:33"
+            "endTime": "0:16:13"
         },
         {
             "legID": 15,
@@ -273,9 +273,9 @@
             "gpxtoLng": "19.898703",
             "runnerName": "Patrik Trefný",
             "plannedTempo": "05:25",
-            "startTime": "23:11:33",
+            "startTime": "0:16:13",
             "plannedDuration": "0:55:44",
-            "endTime": "0:07:17"
+            "endTime": "1:11:57"
         },
         {
             "legID": 16,
@@ -291,9 +291,9 @@
             "gpxtoLng": "19.780763",
             "runnerName": "Juraj Kozák",
             "plannedTempo": "05:20",
-            "startTime": "0:07:17",
+            "startTime": "1:11:57",
             "plannedDuration": "0:52:35",
-            "endTime": "0:59:52"
+            "endTime": "2:04:32"
         },
         {
             "legID": 17,
@@ -309,9 +309,9 @@
             "gpxtoLng": "19.709926",
             "runnerName": "Maňo",
             "plannedTempo": "05:25",
-            "startTime": "0:59:52",
+            "startTime": "2:04:32",
             "plannedDuration": "0:50:00",
-            "endTime": "1:49:52"
+            "endTime": "2:54:32"
         },
         {
             "legID": 18,
@@ -327,9 +327,9 @@
             "gpxtoLng": "19.60344",
             "runnerName": "Paľo Stašik",
             "plannedTempo": "05:20",
-            "startTime": "1:49:52",
+            "startTime": "2:54:32",
             "plannedDuration": "0:47:50",
-            "endTime": "2:37:42"
+            "endTime": "3:42:22"
         },
         {
             "legID": 19,
@@ -344,10 +344,10 @@
             "gpxtoLat": "49.145316",
             "gpxtoLng": "19.517837",
             "runnerName": "Tomáš Môcik",
-            "plannedTempo": "04:50",
-            "startTime": "2:37:42",
-            "plannedDuration": "0:51:05",
-            "endTime": "3:28:47"
+            "plannedTempo": "04:05",
+            "startTime": "3:42:22",
+            "plannedDuration": "0:43:10",
+            "endTime": "4:25:32"
         },
         {
             "legID": 20,
@@ -362,10 +362,10 @@
             "gpxtoLat": "49.196024",
             "gpxtoLng": "19.52081",
             "runnerName": "Pujdo",
-            "plannedTempo": "05:10",
-            "startTime": "3:28:47",
-            "plannedDuration": "0:46:24",
-            "endTime": "4:15:11"
+            "plannedTempo": "05:30",
+            "startTime": "4:25:32",
+            "plannedDuration": "0:49:23",
+            "endTime": "5:14:55"
         },
         {
             "legID": 21,
@@ -381,9 +381,9 @@
             "gpxtoLng": "19.456757",
             "runnerName": "Peťo Škorík",
             "plannedTempo": "05:20",
-            "startTime": "4:15:11",
+            "startTime": "5:14:55",
             "plannedDuration": "0:42:56",
-            "endTime": "4:58:07"
+            "endTime": "5:57:51"
         },
         {
             "legID": 22,
@@ -399,9 +399,9 @@
             "gpxtoLng": "19.359479",
             "runnerName": "Vojto",
             "plannedTempo": "05:00",
-            "startTime": "4:58:07",
+            "startTime": "5:57:51",
             "plannedDuration": "0:57:36",
-            "endTime": "5:55:43"
+            "endTime": "6:55:27"
         },
         {
             "legID": 23,
@@ -417,9 +417,9 @@
             "gpxtoLng": "19.298142",
             "runnerName": "Milan Ondruš",
             "plannedTempo": "05:20",
-            "startTime": "5:55:43",
+            "startTime": "6:55:27",
             "plannedDuration": "0:44:06",
-            "endTime": "6:39:49"
+            "endTime": "7:39:33"
         },
         {
             "legID": 24,
@@ -435,9 +435,9 @@
             "gpxtoLng": "19.194704",
             "runnerName": "Janka",
             "plannedTempo": "05:40",
-            "startTime": "6:39:49",
+            "startTime": "7:39:33",
             "plannedDuration": "0:56:30",
-            "endTime": "7:36:19"
+            "endTime": "8:36:03"
         },
         {
             "legID": 25,
@@ -453,9 +453,9 @@
             "gpxtoLng": "19.151702",
             "runnerName": "Maťa Hancková",
             "plannedTempo": "05:55",
-            "startTime": "7:36:19",
+            "startTime": "8:36:03",
             "plannedDuration": "1:03:43",
-            "endTime": "8:40:02"
+            "endTime": "9:39:46"
         },
         {
             "legID": 26,
@@ -471,9 +471,9 @@
             "gpxtoLng": "19.013873",
             "runnerName": "Martin Veselý",
             "plannedTempo": "04:45",
-            "startTime": "8:40:02",
+            "startTime": "9:39:46",
             "plannedDuration": "0:58:37",
-            "endTime": "9:38:39"
+            "endTime": "10:38:23"
         },
         {
             "legID": 27,
@@ -489,9 +489,9 @@
             "gpxtoLng": "18.878541",
             "runnerName": "Patrik Trefný",
             "plannedTempo": "05:35",
-            "startTime": "9:38:39",
+            "startTime": "10:38:23",
             "plannedDuration": "1:12:02",
-            "endTime": "10:50:41"
+            "endTime": "11:50:25"
         },
         {
             "legID": 28,
@@ -507,9 +507,9 @@
             "gpxtoLng": "18.801333",
             "runnerName": "Juraj Kozák",
             "plannedTempo": "05:30",
-            "startTime": "10:50:41",
+            "startTime": "11:50:25",
             "plannedDuration": "0:38:40",
-            "endTime": "11:29:21"
+            "endTime": "12:29:05"
         },
         {
             "legID": 29,
@@ -525,9 +525,9 @@
             "gpxtoLng": "18.754624",
             "runnerName": "Maňo",
             "plannedTempo": "05:35",
-            "startTime": "15:30:00",
+            "startTime": "16:30:00",
             "plannedDuration": "1:08:17",
-            "endTime": "16:38:17"
+            "endTime": "17:38:17"
         },
         {
             "legID": 30,
@@ -543,9 +543,9 @@
             "gpxtoLng": "18.646142",
             "runnerName": "Paľo Stašik",
             "plannedTempo": "05:30",
-            "startTime": "16:38:17",
+            "startTime": "17:38:17",
             "plannedDuration": "0:58:54",
-            "endTime": "17:37:11"
+            "endTime": "18:37:11"
         },
         {
             "legID": 31,
@@ -560,10 +560,10 @@
             "gpxtoLat": "49.011697",
             "gpxtoLng": "18.602082",
             "runnerName": "Tomáš Môcik",
-            "plannedTempo": "05:00",
-            "startTime": "17:37:11",
-            "plannedDuration": "1:00:24",
-            "endTime": "18:37:35"
+            "plannedTempo": "04:05",
+            "startTime": "18:37:11",
+            "plannedDuration": "0:49:20",
+            "endTime": "19:26:31"
         },
         {
             "legID": 32,
@@ -578,10 +578,10 @@
             "gpxtoLat": "48.956062",
             "gpxtoLng": "18.516812",
             "runnerName": "Pujdo",
-            "plannedTempo": "04:10",
-            "startTime": "18:37:35",
-            "plannedDuration": "0:42:25",
-            "endTime": "19:20:00"
+            "plannedTempo": "05:10",
+            "startTime": "19:26:31",
+            "plannedDuration": "0:52:36",
+            "endTime": "20:19:07"
         },
         {
             "legID": 33,
@@ -597,9 +597,9 @@
             "gpxtoLng": "18.40962",
             "runnerName": "Peťo Škorík",
             "plannedTempo": "05:10",
-            "startTime": "19:20:00",
+            "startTime": "20:19:07",
             "plannedDuration": "0:58:48",
-            "endTime": "20:18:48"
+            "endTime": "21:17:55"
         },
         {
             "legID": 34,
@@ -615,9 +615,9 @@
             "gpxtoLng": "18.261116",
             "runnerName": "Vojto",
             "plannedTempo": "04:50",
-            "startTime": "20:18:48",
+            "startTime": "21:17:55",
             "plannedDuration": "1:09:39",
-            "endTime": "21:28:27"
+            "endTime": "22:27:34"
         },
         {
             "legID": 35,
@@ -633,9 +633,9 @@
             "gpxtoLng": "18.13055",
             "runnerName": "Milan Ondruš",
             "plannedTempo": "05:20",
-            "startTime": "21:28:27",
+            "startTime": "22:27:34",
             "plannedDuration": "1:07:25",
-            "endTime": "22:35:52"
+            "endTime": "23:34:59"
         },
         {
             "legID": 36,
@@ -651,9 +651,9 @@
             "gpxtoLng": "18.037994",
             "runnerName": "Janka",
             "plannedTempo": "05:45",
-            "startTime": "22:35:52",
+            "startTime": "23:34:59",
             "plannedDuration": "1:03:12",
-            "endTime": "23:39:04"
+            "endTime": "0:38:11"
         },
         {
             "legID": 37,
@@ -669,9 +669,9 @@
             "gpxtoLng": "17.967333",
             "runnerName": "Maťa Hancková",
             "plannedTempo": "05:45",
-            "startTime": "23:39:04",
+            "startTime": "0:38:11",
             "plannedDuration": "0:47:44",
-            "endTime": "0:26:48"
+            "endTime": "1:25:55"
         },
         {
             "legID": 38,
@@ -687,9 +687,9 @@
             "gpxtoLng": "17.839613",
             "runnerName": "Martin Veselý",
             "plannedTempo": "04:35",
-            "startTime": "0:26:48",
+            "startTime": "1:25:55",
             "plannedDuration": "1:13:15",
-            "endTime": "1:40:03"
+            "endTime": "2:39:10"
         },
         {
             "legID": 39,
@@ -705,9 +705,9 @@
             "gpxtoLng": "17.78083",
             "runnerName": "Patrik Trefný",
             "plannedTempo": "05:30",
-            "startTime": "1:40:03",
+            "startTime": "2:39:10",
             "plannedDuration": "0:52:32",
-            "endTime": "2:32:35"
+            "endTime": "3:31:42"
         },
         {
             "legID": 40,
@@ -723,9 +723,9 @@
             "gpxtoLng": "17.72975",
             "runnerName": "Juraj Kozák",
             "plannedTempo": "05:30",
-            "startTime": "2:32:35",
+            "startTime": "3:31:42",
             "plannedDuration": "1:00:56",
-            "endTime": "3:33:31"
+            "endTime": "4:32:38"
         },
         {
             "legID": 41,
@@ -741,9 +741,9 @@
             "gpxtoLng": "17.59586",
             "runnerName": "Maňo",
             "plannedTempo": "05:40",
-            "startTime": "3:33:31",
+            "startTime": "4:32:38",
             "plannedDuration": "1:17:45",
-            "endTime": "4:51:16"
+            "endTime": "5:50:23"
         },
         {
             "legID": 42,
@@ -759,9 +759,9 @@
             "gpxtoLng": "17.48305",
             "runnerName": "Paľo Stašik",
             "plannedTempo": "05:30",
-            "startTime": "4:51:16",
+            "startTime": "5:50:23",
             "plannedDuration": "1:09:54",
-            "endTime": "6:01:10"
+            "endTime": "7:00:17"
         },
         {
             "legID": 43,
@@ -776,10 +776,10 @@
             "gpxtoLat": "48.415988",
             "gpxtoLng": "17.378592",
             "runnerName": "Tomáš Môcik",
-            "plannedTempo": "05:00",
-            "startTime": "6:01:10",
-            "plannedDuration": "1:05:42",
-            "endTime": "7:06:52"
+            "plannedTempo": "04:10",
+            "startTime": "7:00:17",
+            "plannedDuration": "0:54:45",
+            "endTime": "7:55:02"
         },
         {
             "legID": 44,
@@ -794,10 +794,10 @@
             "gpxtoLat": "48.32918",
             "gpxtoLng": "17.29747",
             "runnerName": "Pujdo",
-            "plannedTempo": "04:05",
-            "startTime": "7:06:52",
-            "plannedDuration": "0:51:32",
-            "endTime": "7:58:24"
+            "plannedTempo": "05:00",
+            "startTime": "7:55:02",
+            "plannedDuration": "1:03:06",
+            "endTime": "8:58:08"
         },
         {
             "legID": 45,
@@ -813,9 +813,9 @@
             "gpxtoLng": "17.233397",
             "runnerName": "Peťo Škorík",
             "plannedTempo": "04:55",
-            "startTime": "7:58:24",
+            "startTime": "8:58:08",
             "plannedDuration": "1:04:39",
-            "endTime": "9:03:03"
+            "endTime": "10:02:47"
         },
         {
             "legID": 46,
@@ -831,9 +831,9 @@
             "gpxtoLng": "17.228304",
             "runnerName": "Vojto",
             "plannedTempo": "04:55",
-            "startTime": "9:03:03",
+            "startTime": "10:02:47",
             "plannedDuration": "1:00:11",
-            "endTime": "10:03:14"
+            "endTime": "11:02:58"
         },
         {
             "legID": 47,
@@ -849,9 +849,9 @@
             "gpxtoLng": "17.158611",
             "runnerName": "Milan Ondruš",
             "plannedTempo": "05:20",
-            "startTime": "10:03:14",
+            "startTime": "11:02:58",
             "plannedDuration": "0:50:43",
-            "endTime": "10:53:57"
+            "endTime": "11:53:41"
         },
         {
             "legID": 48,
@@ -867,9 +867,9 @@
             "gpxtoLng": "17.106971",
             "runnerName": "Janka",
             "plannedTempo": "05:45",
-            "startTime": "10:53:57",
+            "startTime": "11:53:41",
             "plannedDuration": "0:34:37",
-            "endTime": "11:28:34"
+            "endTime": "12:28:18"
         }
     ],
     "lastLegDone": -1,
@@ -984,14 +984,14 @@
                 "down": 621,
                 "difficulty": 5
             },
-            "duration": "3:53:58",
+            "duration": "3:13:48",
             "legs": [
                 6,
                 18,
                 30,
                 42
             ],
-            "tempo": "04:59"
+            "tempo": "04:08"
         },
         {
             "name": "Pujdo",
@@ -1001,14 +1001,14 @@
                 "down": 617,
                 "difficulty": 8
             },
-            "duration": "3:24:52",
+            "duration": "4:04:30",
             "legs": [
                 7,
                 19,
                 31,
                 43
             ],
-            "tempo": "04:23"
+            "tempo": "05:14"
         },
         {
             "name": "Peťo Škorík",
@@ -1086,11 +1086,11 @@
         "difficulty": 71
     },
     "plan": {
-        "duration": "45:47:55",
+        "duration": "45:47:23",
         "tempo": "05:14"
     },
     "real": {
-        "duration": "45:47:55",
+        "duration": "45:47:23",
         "diff": "0:00:00",
         "tempo": "05:14"
     }
